@@ -17,10 +17,10 @@ class Cairo < Formula
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/xz'=> :build
   # harfbuzz requires cairo-ft to build
-  depends_on 'staticfloat/juliadeps/freetype' if build.without? 'x'
+  depends_on 'staticfloat/juliadeps/freetype'
   depends_on 'staticfloat/juliadeps/libpng'
   depends_on 'staticfloat/juliadeps/pixman'
-  depends_on 'staticfloat/juliadeps/glib' => :recommended
+  depends_on 'staticfloat/juliadeps/glib'
   depends_on :x11 if build.with? 'x'
 
   env :std if build.universal?
