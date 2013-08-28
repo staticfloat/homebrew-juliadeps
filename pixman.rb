@@ -7,8 +7,6 @@ class Pixman < Formula
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
-  keg_only :provided_pre_mountain_lion
-
   option :universal
 
   bottle do

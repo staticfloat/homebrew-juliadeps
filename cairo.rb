@@ -9,8 +9,6 @@ class Cairo < Formula
   mirror 'https://downloads.sourceforge.net/project/machomebrew/mirror/cairo-1.12.14.tar.xz'
   sha256 '96d0d1e3f9b74d2ca3469ff187c5e5f25649b1ad35cf06f4f3a83847dff4ac13'
 
-  keg_only :provided_pre_mountain_lion
-
   option :universal
   option 'without-x', 'Build without X11 support'
 

@@ -15,8 +15,6 @@ class Gettext < Formula
     sha1 'f8a5318e40edacf30e7985d5097ec415a0a997a1' => :snow_leopard
   end
 
-  keg_only "OS X provides the BSD gettext library and some software gets confused if both are in the library path."
-
   option :universal
   option 'with-examples', 'Keep example files'
 

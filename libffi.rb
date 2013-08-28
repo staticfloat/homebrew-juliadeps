@@ -6,8 +6,6 @@ class Libffi < Formula
   mirror 'ftp://sourceware.org/pub/libffi/libffi-3.0.13.tar.gz'
   sha1 'f5230890dc0be42fb5c58fbf793da253155de106'
 
-  keg_only :provided_by_osx, "Some formulae require a newer version of libffi."
-
   bottle do
     root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
     cellar :any
