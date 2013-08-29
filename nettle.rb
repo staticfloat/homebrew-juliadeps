@@ -24,8 +24,8 @@ class Nettle < Formula
     binaries = Dir.glob("#{bin}/*").map{ |f| Pathname.new(f) }
     for file in [lib+'libhogweed.dylib', *binaries]
       file.ensure_writable do
-        system "install_name_tool", "-change", '/usr/local/lib/libgmp.10.dylib', '@rpath/libgmp.10.dylib', file
-        system "otool", "-L", file
+        quiet_system "install_name_tool", "-change", '/usr/local/lib/libgmp.10.dylib', '@rpath/libgmp.10.dylib', file
+        quiet_system "otool", "-L", file
       end
     end
   end
