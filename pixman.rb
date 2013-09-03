@@ -12,9 +12,10 @@ class Pixman < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 'b5449011bb17b60fc2ca848ba8a75486eaf805be' => :mountain_lion
-    sha1 'b5449011bb17b60fc2ca848ba8a75486eaf805be' => :lion
-    sha1 'b5449011bb17b60fc2ca848ba8a75486eaf805be' => :snow_leopard
+    revision 1
+    sha1 '232696346b7651e32deba394a113e5a6883e8189' => :mountain_lion
+    sha1 '232696346b7651e32deba394a113e5a6883e8189' => :lion
+    sha1 '232696346b7651e32deba394a113e5a6883e8189' => :snow_leopard
   end
 
   fails_with :llvm do
@@ -35,6 +36,9 @@ class Pixman < Formula
               --prefix=#{prefix}]
 
     args << "--disable-mmx" if ENV.compiler == :clang
+
+    # Don't use TLS, use pthreads instead
+    args << "ac_cv_tls=none"
 
     system "./configure", *args
     system "make install"
