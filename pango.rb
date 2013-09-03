@@ -13,7 +13,7 @@ class Pango < Formula
   depends_on 'staticfloat/juliadeps/harfbuzz'
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :mountain_lion
     sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :lion

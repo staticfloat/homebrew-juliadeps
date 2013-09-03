@@ -14,7 +14,7 @@ class Glib < Formula
   depends_on 'staticfloat/juliadeps/libffi'
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 'b9704c5274ed39b69b1616cfdd75c8e3474b3988' => :mountain_lion
     sha1 'b9704c5274ed39b69b1616cfdd75c8e3474b3988' => :lion

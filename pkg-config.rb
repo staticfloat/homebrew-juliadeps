@@ -7,7 +7,7 @@ class PkgConfig < Formula
   sha256 '6b6eb31c6ec4421174578652c7e141fdaae2dabad1021f420d8713206ac1f845'
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     revision 1
     sha1 '633440ecda8902b62c495fa6fc0e5e014a9b607b' => :mountain_lion

@@ -24,7 +24,7 @@ class Cairo < Formula
   env :std if build.universal?
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :mountain_lion
     sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :lion

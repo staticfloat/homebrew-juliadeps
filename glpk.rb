@@ -7,7 +7,7 @@ class Glpk < Formula
   sha1 'e00c92faa38fd5d865fa27206abbb06680bab7bb'
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 'ffb7607588c792a4cd4b082a6b674aff3f07eba6' => :mountain_lion
     sha1 'ffb7607588c792a4cd4b082a6b674aff3f07eba6' => :lion

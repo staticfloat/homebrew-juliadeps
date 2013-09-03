@@ -7,7 +7,7 @@ class Gettext < Formula
   sha256 '0d8f9a33531b77776b3dc473e7940019ca19bfca5b4c06db6e96065eeb07245d'
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     revision 1
     sha1 'f8a5318e40edacf30e7985d5097ec415a0a997a1' => :mountain_lion

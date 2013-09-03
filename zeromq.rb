@@ -12,7 +12,7 @@ class Zeromq < Formula
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 'c7f8fa6cd907ca58237b8f9e1e3317d0cac785d2' => :mountain_lion
     sha1 'c7f8fa6cd907ca58237b8f9e1e3317d0cac785d2' => :lion

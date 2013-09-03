@@ -8,7 +8,7 @@ class Libpng < Formula
   option :universal
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     revision 1
     sha1 '69bb26ca333d745b8223827a6c4758d2732873f6' => :mountain_lion

@@ -18,7 +18,7 @@ class Git < Formula
   head 'https://github.com/git/git.git'
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 '4a6e395f0e36ee6e4a528cf4fb48e98ab7bca049' => :mountain_lion
     sha1 '4a6e395f0e36ee6e4a528cf4fb48e98ab7bca049' => :lion

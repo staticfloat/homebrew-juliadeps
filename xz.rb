@@ -11,7 +11,7 @@ class Xz < Formula
   option :universal
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 '9d9a6e6c7b8fb6050bb4698957d570f2e3089c7a' => :mountain_lion
     sha1 '9d9a6e6c7b8fb6050bb4698957d570f2e3089c7a' => :lion

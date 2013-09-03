@@ -11,7 +11,7 @@ class Nettle < Formula
   #depends_on 'staticfloat/juliadeps/gmp'
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 'd2018089ade5d43ab362d7ebabba87fb916b7e6f' => :mountain_lion
     sha1 'd2018089ade5d43ab362d7ebabba87fb916b7e6f' => :lion

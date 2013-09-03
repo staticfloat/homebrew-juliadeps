@@ -7,7 +7,7 @@ class Libffi < Formula
   sha1 'f5230890dc0be42fb5c58fbf793da253155de106'
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 'b2c72825f0d070391177aa425f52d22b31c590e1' => :mountain_lion
     sha1 'b2c72825f0d070391177aa425f52d22b31c590e1' => :lion

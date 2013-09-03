@@ -8,7 +8,7 @@ class Freetype < Formula
   option :universal
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     revision 1
     sha1 '5423027b4121ae83bd51240244caca700154e2ec' => :mountain_lion

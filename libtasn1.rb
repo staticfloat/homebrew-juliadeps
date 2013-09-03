@@ -9,7 +9,7 @@ class Libtasn1 < Formula
   option :universal
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 '6db8382603ba32054a7c1e135a2646c5f2580c29' => :mountain_lion
     sha1 '6db8382603ba32054a7c1e135a2646c5f2580c29' => :lion

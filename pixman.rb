@@ -10,7 +10,7 @@ class Pixman < Formula
   option :universal
 
   bottle do
-    root_url 'http://juliabottles.s3-website-us-east-1.amazonaws.com/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 'b5449011bb17b60fc2ca848ba8a75486eaf805be' => :mountain_lion
     sha1 'b5449011bb17b60fc2ca848ba8a75486eaf805be' => :lion
