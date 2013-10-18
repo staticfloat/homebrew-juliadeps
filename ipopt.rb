@@ -38,7 +38,7 @@ class Ipopt < Formula
       for file in [lib+'libcoinmumps.dylib', lib+'libipopt.dylib']
         file.ensure_writable do
           for lib in ["libgfortran.3.dylib", "libgcc_s.1.dylib", "libquadmath.0.dylib"]
-            quiet_system "install_name_tool", "-change", '/usr/local/Cellar/gfortran/4.8.1/gfortran/lib/#{lib}', '@rpath/#{lib}', file
+            quiet_system "install_name_tool", "-change", "/usr/local/Cellar/gfortran/4.8.1/gfortran/lib/#{lib}", "@rpath/#{lib}", file
           end
         end
       end
