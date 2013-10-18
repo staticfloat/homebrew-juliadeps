@@ -21,11 +21,12 @@ class Nettle < Formula
   def post_install
     # Rewrite nettle's dependency on libgmp to just be @rpath
     # that way we pick up Julia's libgmp dylib!
-    binaries = Dir.glob("#{bin}/*").map{ |f| Pathname.new(f) }
-    for file in [lib+'libhogweed.dylib', *binaries]
-      file.ensure_writable do
-        quiet_system "install_name_tool", "-change", '/usr/local/lib/libgmp.10.dylib', '@rpath/libgmp.10.dylib', file
-        quiet_system "otool", "-L", file
+    if (Tab.for_formula self).poured_from_bottle
+      binaries = Dir.glob("#{bin}/*").map{ |f| Pathname.new(f) }
+      for file in [lib+'libhogweed.dylib', *binaries]
+        file.ensure_writable do
+          quiet_system "install_name_tool", "-change", '/usr/local/lib/libgmp.10.dylib', '@rpath/libgmp.10.dylib', file
+        end
       end
     end
   end

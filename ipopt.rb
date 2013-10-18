@@ -31,4 +31,15 @@ class Ipopt < Formula
     system "make install"
 
   end
+
+  def post_install
+    # pick up Julia's libgfortran!
+    if (Tab.for_formula self).poured_from_bottle
+      for file in [lib+'libcoinmumps.dylib', lib+'libipopt.dylib']
+        file.ensure_writeable do
+          quiet_system "install_name_tool", "-change", '/usr/local/lib/libgmp.10.dylib', '@rpath/libgmp.10.dylib', file
+        end
+      end
+    end
+  end
 end
