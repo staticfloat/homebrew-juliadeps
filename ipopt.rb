@@ -37,7 +37,9 @@ class Ipopt < Formula
     if (Tab.for_formula self).poured_from_bottle
       for file in [lib+'libcoinmumps.dylib', lib+'libipopt.dylib']
         file.ensure_writeable do
-          quiet_system "install_name_tool", "-change", '/usr/local/lib/libgmp.10.dylib', '@rpath/libgmp.10.dylib', file
+          for lib in ["libgfortran.3.dylib", "libgcc_s.1.dylib", "libquadmath.0.dylib"]
+            quiet_system "install_name_tool", "-change", '/usr/local/Cellar/gfortran/4.8.1/gfortran/lib/#{lib}', '@rpath/#{lib}', file
+          end
         end
       end
     end
