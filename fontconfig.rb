@@ -5,11 +5,6 @@ class Fontconfig < Formula
   url 'http://fontconfig.org/release/fontconfig-2.10.93.tar.bz2'
   sha1 '78a87be2a59b0c803bfd69cdafc85cbc31381d3a'
 
-  option :universal
-
-  depends_on 'staticfloat/juliadeps/freetype'
-  depends_on 'staticfloat/juliadeps/pkg-config' => :build
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
@@ -17,6 +12,11 @@ class Fontconfig < Formula
     sha1 '0533263518203ef109984640ec761346708d8b44' => :lion
     sha1 '0533263518203ef109984640ec761346708d8b44' => :snow_leopard
   end
+
+  option :universal
+
+  depends_on 'staticfloat/juliadeps/freetype'
+  depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
   # Patch adapted from Macports patch for 2.9.0 defines sizeof based on __LP64__
   # Fixes universal builds but seems groovy enough to apply in all cases.

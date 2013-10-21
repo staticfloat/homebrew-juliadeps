@@ -8,8 +8,6 @@ class Nettle < Formula
   url 'http://www.lysator.liu.se/~nisse/archive/nettle-2.6.tar.gz'
   sha1 '401f982a0b365e04c8c38c4da42afdd7d2d51d80'
 
-  #depends_on 'staticfloat/juliadeps/gmp'
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any

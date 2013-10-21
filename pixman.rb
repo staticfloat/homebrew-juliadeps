@@ -5,10 +5,6 @@ class Pixman < Formula
   url 'http://cairographics.org/releases/pixman-0.30.2.tar.gz'
   sha256 'bd988920ccd742310ddf5b363c7b278f11d69a3405a09d542162c84b46bff6e9'
 
-  depends_on 'staticfloat/juliadeps/pkg-config' => :build
-
-  option :universal
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
@@ -17,6 +13,10 @@ class Pixman < Formula
     sha1 '232696346b7651e32deba394a113e5a6883e8189' => :lion
     sha1 '232696346b7651e32deba394a113e5a6883e8189' => :snow_leopard
   end
+
+  depends_on 'staticfloat/juliadeps/pkg-config' => :build
+
+  option :universal
 
   fails_with :llvm do
     build 2336

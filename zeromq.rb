@@ -7,10 +7,6 @@ class Zeromq < Formula
 
   head 'https://github.com/zeromq/libzmq.git'
 
-  option :universal
-
-  depends_on 'staticfloat/juliadeps/pkg-config' => :build
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
@@ -18,6 +14,10 @@ class Zeromq < Formula
     sha1 '1f59dcf247070032d3e9991ee3a37e629651c221' => :lion
     sha1 '1f59dcf247070032d3e9991ee3a37e629651c221' => :snow_leopard
   end
+
+  option :universal
+
+  depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
   if build.head?
     depends_on :automake

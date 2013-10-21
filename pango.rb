@@ -5,13 +5,6 @@ class Pango < Formula
   url 'http://ftp.gnome.org/pub/GNOME/sources/pango/1.34/pango-1.34.1.tar.xz'
   sha256 '1aea30df34a8ae4fcce71afd22aa5b57224b52916d46e3ea81ff9f1eb130e64c'
 
-  option 'without-x', 'Build without X11 support'
-
-  depends_on 'staticfloat/juliadeps/pkg-config' => :build
-  depends_on 'staticfloat/juliadeps/xz' => :build
-  depends_on 'staticfloat/juliadeps/glib'
-  depends_on 'staticfloat/juliadeps/harfbuzz'
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
@@ -19,6 +12,13 @@ class Pango < Formula
     sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :lion
     sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :snow_leopard
   end
+
+  option 'without-x', 'Build without X11 support'
+
+  depends_on 'staticfloat/juliadeps/pkg-config' => :build
+  depends_on 'staticfloat/juliadeps/xz' => :build
+  depends_on 'staticfloat/juliadeps/glib'
+  depends_on 'staticfloat/juliadeps/harfbuzz'
 
   unless build.include? 'without-x'
     depends_on :x11

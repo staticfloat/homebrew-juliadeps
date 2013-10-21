@@ -6,8 +6,6 @@ class Libtasn1 < Formula
   mirror 'http://ftp.gnu.org/gnu/libtasn1/libtasn1-3.3.tar.gz'
   sha1 '594a2b65742e45b0abf140ea504fc06de2ca3b1e'
 
-  option :universal
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
@@ -16,6 +14,9 @@ class Libtasn1 < Formula
     sha1 'bc115d0d85dbd9847f7e1675f442f705112dd937' => :lion
     sha1 'bc115d0d85dbd9847f7e1675f442f705112dd937' => :snow_leopard
   end
+
+  option :universal
+
 
   def install
     ENV.universal_binary if build.universal?

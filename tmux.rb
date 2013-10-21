@@ -7,20 +7,20 @@ class Tmux < Formula
 
   head 'git://git.code.sf.net/p/tmux/tmux-code'
 
-  depends_on 'staticfloat/juliadeps/pkg-config' => :build
-  depends_on 'staticfloat/juliadeps/libevent'
-
-  if build.head?
-    depends_on :automake
-    depends_on :libtool
-  end
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 'ecd1ac463bae6435758d39b6fb61e457ba281cdc' => :mountain_lion
     sha1 'ecd1ac463bae6435758d39b6fb61e457ba281cdc' => :lion
     sha1 'ecd1ac463bae6435758d39b6fb61e457ba281cdc' => :snow_leopard
+  end
+
+  depends_on 'staticfloat/juliadeps/pkg-config' => :build
+  depends_on 'staticfloat/juliadeps/libevent'
+
+  if build.head?
+    depends_on :automake
+    depends_on :libtool
   end
 
   def patches

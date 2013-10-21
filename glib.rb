@@ -5,14 +5,6 @@ class Glib < Formula
   url 'http://ftp.gnome.org/pub/gnome/sources/glib/2.36/glib-2.36.4.tar.xz'
   sha256 'f654d2542329012d8475736a165dfbf82fadf3ee940c2e0e6ddd4b2fde5cad7e'
 
-  option :universal
-  option 'test', 'Build a debug build and run tests. NOTE: Not all tests succeed yet'
-
-  depends_on 'staticfloat/juliadeps/pkg-config' => :build
-  depends_on 'staticfloat/juliadeps/xz' => :build
-  depends_on 'staticfloat/juliadeps/gettext'
-  depends_on 'staticfloat/juliadeps/libffi'
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
@@ -20,6 +12,14 @@ class Glib < Formula
     sha1 'b9704c5274ed39b69b1616cfdd75c8e3474b3988' => :lion
     sha1 'b9704c5274ed39b69b1616cfdd75c8e3474b3988' => :snow_leopard
   end
+
+  option :universal
+  option 'test', 'Build a debug build and run tests. NOTE: Not all tests succeed yet'
+
+  depends_on 'staticfloat/juliadeps/pkg-config' => :build
+  depends_on 'staticfloat/juliadeps/xz' => :build
+  depends_on 'staticfloat/juliadeps/gettext'
+  depends_on 'staticfloat/juliadeps/libffi'
 
   fails_with :llvm do
     build 2334

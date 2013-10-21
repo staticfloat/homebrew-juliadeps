@@ -5,8 +5,6 @@ class Coinmp < Formula
   url 'http://www.coin-or.org/download/source/CoinMP/CoinMP-1.7.0.tgz'
   sha1 '27f58adc404a329f20a96a5218bc8ed332639ada'
 
-  depends_on :fortran
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
@@ -14,6 +12,8 @@ class Coinmp < Formula
     sha1 'a0a721aed6ea13539ea6568ba613dd33b2b46222' => :lion
     sha1 'a0a721aed6ea13539ea6568ba613dd33b2b46222' => :snow_leopard
   end
+
+  depends_on :fortran
 
   #conflicts_with 'coinutils', :because => 'CoinMP includes CoinUtils.'
 

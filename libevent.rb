@@ -7,17 +7,17 @@ class Libevent < Formula
 
   head 'git://levent.git.sourceforge.net/gitroot/levent/levent'
 
-  if build.head?
-    depends_on :automake
-    depends_on :libtool
-  end
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 '71772465735881a8b2669d3bfe8af5912fe0a930' => :mountain_lion
     sha1 '71772465735881a8b2669d3bfe8af5912fe0a930' => :lion
     sha1 '71772465735881a8b2669d3bfe8af5912fe0a930' => :snow_leopard
+  end
+
+  if build.head?
+    depends_on :automake
+    depends_on :libtool
   end
 
   depends_on "doxygen" => :build if build.include? 'enable-manpages'

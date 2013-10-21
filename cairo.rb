@@ -9,6 +9,14 @@ class Cairo < Formula
   mirror 'https://downloads.sourceforge.net/project/machomebrew/mirror/cairo-1.12.14.tar.xz'
   sha256 '96d0d1e3f9b74d2ca3469ff187c5e5f25649b1ad35cf06f4f3a83847dff4ac13'
 
+  bottle do
+    root_url 'http://archive.org/download/julialang/bottles'
+    cellar :any
+    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :mountain_lion
+    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :lion
+    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :snow_leopard
+  end
+
   option :universal
   option 'without-x', 'Build without X11 support'
 
@@ -22,14 +30,6 @@ class Cairo < Formula
   depends_on :x11 if build.with? 'x'
 
   env :std if build.universal?
-
-  bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
-    cellar :any
-    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :mountain_lion
-    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :lion
-    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :snow_leopard
-  end
 
   def install
     ENV.universal_binary if build.universal?
