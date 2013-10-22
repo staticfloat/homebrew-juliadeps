@@ -1,6 +1,6 @@
 require 'formula'
 
-class Libgfortran < Formula
+class Gfortran < Formula
   homepage 'http://gcc.gnu.org/wiki/GFortran'
   url 'http://ftpmirror.gnu.org/gcc/gcc-4.8.1/gcc-4.8.1.tar.bz2'
   mirror 'http://ftp.gnu.org/gnu/gcc/gcc-4.8.1/gcc-4.8.1.tar.bz2'
@@ -25,6 +25,6 @@ class Libgfortran < Formula
   end
 
   def install
-    opoo "This formula is bottle-only!  If you actually want to install gfortran, use the gfortran formula included by brew!"
+    opoo "This formula is bottle-only!  If you actually want to install gfortran, use the gfortran formula provided by brew!"
   end
 end

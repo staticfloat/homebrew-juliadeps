@@ -13,7 +13,7 @@ class Ipopt < Formula
     sha1 '2fdddf9c6753e12cac04ebc8531bf6847cc29bd4' => :snow_leopard
   end
 
-  depends_on 'staticfloat/juliadeps/libgfortran'
+  depends_on 'staticfloat/juliadeps/gfortran'
 
   def patches
     # Patch to properly list shared library dependencies: 
