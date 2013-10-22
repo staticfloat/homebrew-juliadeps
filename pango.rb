@@ -13,18 +13,10 @@ class Pango < Formula
     sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :snow_leopard
   end
 
-  option 'without-x', 'Build without X11 support'
-
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/xz' => :build
   depends_on 'staticfloat/juliadeps/glib'
   depends_on 'staticfloat/juliadeps/harfbuzz'
-
-  unless build.include? 'without-x'
-    depends_on :x11
-    # Needs fontconfig 2.10.91, which is newer than what XQuartz provides
-    depends_on 'staticfloat/juliadeps/fontconfig'
-  end
 
   # The Cairo library shipped with Lion contains a flaw that causes Graphviz
   # to segfault. See the following ticket for information:
