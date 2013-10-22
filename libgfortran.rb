@@ -9,9 +9,9 @@ class Libgfortran < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '9577f77038188a4f4245dded282670e868994cef' => :mountain_lion
-    sha1 '9577f77038188a4f4245dded282670e868994cef' => :lion
-    sha1 '9577f77038188a4f4245dded282670e868994cef' => :snow_leopard
+    sha1 'fe137c44e2b3a6da1b5eaefe8c1e20d5c29642ce' => :mountain_lion
+    sha1 'fe137c44e2b3a6da1b5eaefe8c1e20d5c29642ce' => :lion
+    sha1 'fe137c44e2b3a6da1b5eaefe8c1e20d5c29642ce' => :snow_leopard
   end
 
   def post_install
