@@ -16,18 +16,7 @@ class Nettle < Formula
     sha1 'd2018089ade5d43ab362d7ebabba87fb916b7e6f' => :snow_leopard
   end
 
-  def post_install
-    # Rewrite nettle's dependency on libgmp to just be @rpath
-    # that way we pick up Julia's libgmp dylib!
-    if (Tab.for_formula self).poured_from_bottle
-      binaries = Dir.glob("#{bin}/*").map{ |f| Pathname.new(f) }
-      for file in [lib+'libhogweed.dylib', *binaries]
-        file.ensure_writable do
-          quiet_system "install_name_tool", "-change", '/usr/local/lib/libgmp.10.dylib', '@rpath/libgmp.10.dylib', file
-        end
-      end
-    end
-  end
+  depends_on 'staticfloat/juliadeps/gmp'
 
   def install
     system "./configure", "--disable-dependency-tracking",

@@ -5,8 +5,6 @@ class Ipopt < Formula
   url 'http://www.coin-or.org/download/source/Ipopt/Ipopt-3.11.4.tgz'
   sha1 '909a7073e3e83989d1a8c5aceba2d1a96dc262d2'
 
-  depends_on :fortran
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
@@ -14,6 +12,8 @@ class Ipopt < Formula
     sha1 '2fdddf9c6753e12cac04ebc8531bf6847cc29bd4' => :lion
     sha1 '2fdddf9c6753e12cac04ebc8531bf6847cc29bd4' => :snow_leopard
   end
+
+  depends_on 'staticfloat/juliadeps/libgfortran'
 
   def patches
     # Patch to properly list shared library dependencies: 

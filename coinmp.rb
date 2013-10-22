@@ -13,7 +13,7 @@ class Coinmp < Formula
     sha1 'a0a721aed6ea13539ea6568ba613dd33b2b46222' => :snow_leopard
   end
 
-  depends_on :fortran
+  depends_on 'staticfloat/juliadeps/libgfortran'
 
   #conflicts_with 'coinutils', :because => 'CoinMP includes CoinUtils.'
 
