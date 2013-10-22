@@ -2,9 +2,9 @@ require 'formula'
 
 class Gmp < Formula
   homepage 'http://gmplib.org/'
-  url 'ftp://ftp.gmplib.org/pub/gmp-5.1.2/gmp-5.1.2.tar.bz2'
-  mirror 'http://ftp.gnu.org/gnu/gmp/gmp-5.1.2.tar.bz2'
-  sha1 '2cb498322b9be4713829d94dee944259c017d615'
+  url 'ftp://ftp.gmplib.org/pub/gmp/gmp-5.1.3.tar.bz2'
+  mirror 'http://ftp.gnu.org/gnu/gmp/gmp-5.1.3.tar.bz2'
+  sha1 'b35928e2927b272711fdfbf71b7cfd5f86a6b165'
 
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
