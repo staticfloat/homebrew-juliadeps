@@ -10,9 +10,9 @@ class Libtasn1 < Formula
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     revision 1
-    sha1 'bc115d0d85dbd9847f7e1675f442f705112dd937' => :mountain_lion
-    sha1 'bc115d0d85dbd9847f7e1675f442f705112dd937' => :lion
-    sha1 'bc115d0d85dbd9847f7e1675f442f705112dd937' => :snow_leopard
+    sha1 '670173999a9b69d9a2ab6ab27c9c1d57bfebc19d' => :mountain_lion
+    sha1 '670173999a9b69d9a2ab6ab27c9c1d57bfebc19d' => :lion
+    sha1 '670173999a9b69d9a2ab6ab27c9c1d57bfebc19d' => :snow_leopard
   end
 
   option :universal
