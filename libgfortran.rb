@@ -16,11 +16,11 @@ class Libgfortran < Formula
 
   def post_install
     # This is here to symlink the libs to alternate locations where they could be installed
-    mkdir prefix+'gfortran/lib'
-    for lib in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
-      quiet_system 'ln', '-fs', prefix+"gfortran/lib/lib#{lib}.dylib", lib+"lib#{lib}.dylib"
-      quiet_system 'ln', '-fs', prefix+"gfortran/lib/lib#{lib[0..-3]}.dylib", lib+"lib#{lib}.dylib"
-      quiet_system 'ln', '-fs', lib+"lib#{lib[0..-3]}.dylib", lib+"lib#{lib}.dylib"
+    mkdir_p prefix+'gfortran/lib'
+    for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
+      quiet_system 'ln', '-fs', lib+"lib#{f}.dylib", prefix+"gfortran/lib/lib#{f}.dylib"
+      quiet_system 'ln', '-fs', lib+"lib#{f}.dylib", prefix+"gfortran/lib/lib#{f[0..-3]}.dylib"
+      quiet_system 'ln', '-fs', lib+"lib#{f}.dylib", lib+"lib#{f[0..-3]}.dylib"
     end
   end
 
