@@ -9,10 +9,9 @@ class Glpk < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 2
-    sha1 'aa923cb3f5d87f045b28aaaad57b63cadf034a95' => :mountain_lion
-    sha1 'aa923cb3f5d87f045b28aaaad57b63cadf034a95' => :lion
-    sha1 'aa923cb3f5d87f045b28aaaad57b63cadf034a95' => :snow_leopard
+    sha1 'c1cf5b3ceb8c9275df469aeefeeb09631f1affff' => :mountain_lion
+    sha1 'c1cf5b3ceb8c9275df469aeefeeb09631f1affff' => :lion
+    sha1 'c1cf5b3ceb8c9275df469aeefeeb09631f1affff' => :snow_leopard
   end
 
   def install
