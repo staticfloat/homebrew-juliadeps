@@ -18,7 +18,6 @@ class Cairo < Formula
   end
 
   option :universal
-  option 'without-x', 'Build without X11 support'
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/xz'=> :build
@@ -27,7 +26,6 @@ class Cairo < Formula
   depends_on 'staticfloat/juliadeps/libpng'
   depends_on 'staticfloat/juliadeps/pixman'
   depends_on 'staticfloat/juliadeps/glib'
-  depends_on :x11 if build.with? 'x'
 
   env :std if build.universal?
 
