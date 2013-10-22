@@ -9,19 +9,9 @@ class Gfortran < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '8fb85ff64b1450bcfb9447fbbb94c4096eb0751b' => :mountain_lion
-    sha1 '8fb85ff64b1450bcfb9447fbbb94c4096eb0751b' => :lion
-    sha1 '8fb85ff64b1450bcfb9447fbbb94c4096eb0751b' => :snow_leopard
-  end
-
-  def post_install
-    # This is here to symlink the libs to alternate locations where they could be installed
-    mkdir_p prefix+'gfortran/lib'
-    for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
-      quiet_system 'ln', '-fs', lib+"lib#{f}.dylib", prefix+"gfortran/lib/lib#{f}.dylib"
-      quiet_system 'ln', '-fs', lib+"lib#{f}.dylib", prefix+"gfortran/lib/lib#{f[0..-3]}.dylib"
-      quiet_system 'ln', '-fs', lib+"lib#{f}.dylib", lib+"lib#{f[0..-3]}.dylib"
-    end
+    sha1 '00529776b977d2a6497c62056915fde264e279a1' => :mountain_lion
+    sha1 '00529776b977d2a6497c62056915fde264e279a1' => :lion
+    sha1 '00529776b977d2a6497c62056915fde264e279a1' => :snow_leopard
   end
 
   def install
