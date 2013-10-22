@@ -8,7 +8,7 @@ class Ipopt < Formula
   depends_on :fortran
 
   bottle do
-    root_url 'http://s3.us.archive.org/julialang/bottles'
+    root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     sha1 '2fdddf9c6753e12cac04ebc8531bf6847cc29bd4' => :mountain_lion
     sha1 '2fdddf9c6753e12cac04ebc8531bf6847cc29bd4' => :lion
