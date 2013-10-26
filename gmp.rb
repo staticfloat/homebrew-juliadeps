@@ -10,6 +10,7 @@ class Gmp < Formula
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     revision 2
+    sha1 'a55c253064287d96f9d8d6b064f1e415e3dd02ed' => :mavericks
     sha1 'a55c253064287d96f9d8d6b064f1e415e3dd02ed' => :mountain_lion
     sha1 'a55c253064287d96f9d8d6b064f1e415e3dd02ed' => :lion
     sha1 'a55c253064287d96f9d8d6b064f1e415e3dd02ed' => :snow_leopard

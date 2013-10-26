@@ -9,6 +9,7 @@ class Freetype < Formula
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     revision 1
+    sha1 '5423027b4121ae83bd51240244caca700154e2ec' => :mavericks
     sha1 '5423027b4121ae83bd51240244caca700154e2ec' => :mountain_lion
     sha1 '5423027b4121ae83bd51240244caca700154e2ec' => :lion
     sha1 '5423027b4121ae83bd51240244caca700154e2ec' => :snow_leopard

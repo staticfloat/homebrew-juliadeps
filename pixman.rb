@@ -9,6 +9,7 @@ class Pixman < Formula
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     revision 1
+    sha1 '232696346b7651e32deba394a113e5a6883e8189' => :mavericks
     sha1 '232696346b7651e32deba394a113e5a6883e8189' => :mountain_lion
     sha1 '232696346b7651e32deba394a113e5a6883e8189' => :lion
     sha1 '232696346b7651e32deba394a113e5a6883e8189' => :snow_leopard

@@ -8,6 +8,7 @@ class Pango < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :mavericks
     sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :mountain_lion
     sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :lion
     sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :snow_leopard

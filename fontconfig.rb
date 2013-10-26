@@ -8,6 +8,7 @@ class Fontconfig < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 '0533263518203ef109984640ec761346708d8b44' => :mavericks
     sha1 '0533263518203ef109984640ec761346708d8b44' => :mountain_lion
     sha1 '0533263518203ef109984640ec761346708d8b44' => :lion
     sha1 '0533263518203ef109984640ec761346708d8b44' => :snow_leopard

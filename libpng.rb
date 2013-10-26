@@ -9,6 +9,7 @@ class Libpng < Formula
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     revision 1
+    sha1 '69bb26ca333d745b8223827a6c4758d2732873f6' => :mavericks
     sha1 '69bb26ca333d745b8223827a6c4758d2732873f6' => :mountain_lion
     sha1 '69bb26ca333d745b8223827a6c4758d2732873f6' => :lion
     sha1 '69bb26ca333d745b8223827a6c4758d2732873f6' => :snow_leopard

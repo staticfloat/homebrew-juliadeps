@@ -8,6 +8,7 @@ class Ipopt < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 '2fdddf9c6753e12cac04ebc8531bf6847cc29bd4' => :mavericks
     sha1 '2fdddf9c6753e12cac04ebc8531bf6847cc29bd4' => :mountain_lion
     sha1 '2fdddf9c6753e12cac04ebc8531bf6847cc29bd4' => :lion
     sha1 '2fdddf9c6753e12cac04ebc8531bf6847cc29bd4' => :snow_leopard

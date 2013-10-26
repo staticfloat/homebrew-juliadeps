@@ -8,6 +8,7 @@ class Gnutls < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 'aa0caae7f8af3c88d2faa013255c34ec5a64c45c' => :mavericks
     sha1 'aa0caae7f8af3c88d2faa013255c34ec5a64c45c' => :mountain_lion
     sha1 'aa0caae7f8af3c88d2faa013255c34ec5a64c45c' => :lion
     sha1 'aa0caae7f8af3c88d2faa013255c34ec5a64c45c' => :snow_leopard

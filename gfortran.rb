@@ -9,6 +9,7 @@ class Gfortran < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 '00529776b977d2a6497c62056915fde264e279a1' => :mavericks
     sha1 '00529776b977d2a6497c62056915fde264e279a1' => :mountain_lion
     sha1 '00529776b977d2a6497c62056915fde264e279a1' => :lion
     sha1 '00529776b977d2a6497c62056915fde264e279a1' => :snow_leopard

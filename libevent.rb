@@ -10,6 +10,7 @@ class Libevent < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 '71772465735881a8b2669d3bfe8af5912fe0a930' => :mavericks
     sha1 '71772465735881a8b2669d3bfe8af5912fe0a930' => :mountain_lion
     sha1 '71772465735881a8b2669d3bfe8af5912fe0a930' => :lion
     sha1 '71772465735881a8b2669d3bfe8af5912fe0a930' => :snow_leopard

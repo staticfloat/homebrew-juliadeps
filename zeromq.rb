@@ -10,6 +10,7 @@ class Zeromq < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 '1f59dcf247070032d3e9991ee3a37e629651c221' => :mavericks
     sha1 '1f59dcf247070032d3e9991ee3a37e629651c221' => :mountain_lion
     sha1 '1f59dcf247070032d3e9991ee3a37e629651c221' => :lion
     sha1 '1f59dcf247070032d3e9991ee3a37e629651c221' => :snow_leopard

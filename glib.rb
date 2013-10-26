@@ -8,6 +8,7 @@ class Glib < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 'b9704c5274ed39b69b1616cfdd75c8e3474b3988' => :mavericks
     sha1 'b9704c5274ed39b69b1616cfdd75c8e3474b3988' => :mountain_lion
     sha1 'b9704c5274ed39b69b1616cfdd75c8e3474b3988' => :lion
     sha1 'b9704c5274ed39b69b1616cfdd75c8e3474b3988' => :snow_leopard

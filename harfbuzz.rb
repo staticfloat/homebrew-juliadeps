@@ -12,6 +12,7 @@ class Harfbuzz < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 'fe15631d4d5b0e723d8218f73f3609586305c437' => :mavericks
     sha1 'fe15631d4d5b0e723d8218f73f3609586305c437' => :mountain_lion
     sha1 'fe15631d4d5b0e723d8218f73f3609586305c437' => :lion
     sha1 'fe15631d4d5b0e723d8218f73f3609586305c437' => :snow_leopard

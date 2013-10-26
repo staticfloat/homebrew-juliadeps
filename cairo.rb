@@ -12,6 +12,7 @@ class Cairo < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :mavericks
     sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :mountain_lion
     sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :lion
     sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :snow_leopard

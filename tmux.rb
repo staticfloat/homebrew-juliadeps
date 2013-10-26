@@ -10,6 +10,7 @@ class Tmux < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 'ecd1ac463bae6435758d39b6fb61e457ba281cdc' => :mavericks
     sha1 'ecd1ac463bae6435758d39b6fb61e457ba281cdc' => :mountain_lion
     sha1 'ecd1ac463bae6435758d39b6fb61e457ba281cdc' => :lion
     sha1 'ecd1ac463bae6435758d39b6fb61e457ba281cdc' => :snow_leopard

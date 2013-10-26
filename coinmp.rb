@@ -8,6 +8,7 @@ class Coinmp < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
+    sha1 'a0a721aed6ea13539ea6568ba613dd33b2b46222' => :mavericks
     sha1 'a0a721aed6ea13539ea6568ba613dd33b2b46222' => :mountain_lion
     sha1 'a0a721aed6ea13539ea6568ba613dd33b2b46222' => :lion
     sha1 'a0a721aed6ea13539ea6568ba613dd33b2b46222' => :snow_leopard
