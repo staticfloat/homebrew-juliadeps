@@ -27,8 +27,9 @@ class Coinmp < Formula
   end
 
   def install
+    # build without lapack until OpenBLAS issue 306 is resolved
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+                          "--prefix=#{prefix}", "--without-lapack"
     system "make"
     ENV.deparallelize  # make install fails in parallel.
     system "make install"
