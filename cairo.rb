@@ -5,18 +5,9 @@ require 'formula'
 
 class Cairo < Formula
   homepage 'http://cairographics.org/'
-  url 'http://cairographics.org/releases/cairo-1.12.14.tar.xz'
-  mirror 'https://downloads.sourceforge.net/project/machomebrew/mirror/cairo-1.12.14.tar.xz'
-  sha256 '96d0d1e3f9b74d2ca3469ff187c5e5f25649b1ad35cf06f4f3a83847dff4ac13'
-
-  bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
-    cellar :any
-    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :mavericks
-    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :mountain_lion
-    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :lion
-    sha1 'f930ec561bdd30c9c9e6aadf993f6492e16eedc8' => :snow_leopard
-  end
+  url 'http://cairographics.org/releases/cairo-1.12.16.tar.xz'
+  mirror 'https://downloads.sourceforge.net/project/machomebrew/mirror/cairo-1.12.16.tar.xz'
+  sha256 '2505959eb3f1de3e1841023b61585bfd35684b9733c7b6a3643f4f4cbde6d846'
 
   option :universal
 
@@ -38,7 +29,9 @@ class Cairo < Formula
       --prefix=#{prefix}
     ]
 
-    if build.without? 'x'
+    # We always built without x
+    #if build.without? 'x'
+    if true
       args << '--enable-xlib=no' << '--enable-xlib-xrender=no'
     else
       args << '--with-x'
