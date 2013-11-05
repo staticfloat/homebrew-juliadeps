@@ -9,11 +9,11 @@ class PkgConfig < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 1
-    sha1 '633440ecda8902b62c495fa6fc0e5e014a9b607b' => :mavericks
-    sha1 '633440ecda8902b62c495fa6fc0e5e014a9b607b' => :mountain_lion
-    sha1 '633440ecda8902b62c495fa6fc0e5e014a9b607b' => :lion
-    sha1 '633440ecda8902b62c495fa6fc0e5e014a9b607b' => :snow_leopard
+    revision 2
+    sha1 'dda09e770127fae808c268cbeb44696728a7c1ac' => :mountain_lion
+    sha1 'dda09e770127fae808c268cbeb44696728a7c1ac' => :lion
+    sha1 'dda09e770127fae808c268cbeb44696728a7c1ac' => :snow_leopard
+    sha1 'dda09e770127fae808c268cbeb44696728a7c1ac' => :mavericks
   end
 
   def install
