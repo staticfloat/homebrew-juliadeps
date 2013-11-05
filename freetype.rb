@@ -6,6 +6,7 @@ class Freetype < Formula
   sha1 '2d539b375688466a8e7dcc4260ab21003faab08c'
 
   option :universal
+  depends_on 'staticfloat/juliadeps/libpng'
 
   def install
     ENV.universal_binary if build.universal?
