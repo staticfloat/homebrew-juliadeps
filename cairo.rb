@@ -11,6 +11,15 @@ class Cairo < Formula
 
   option :universal
 
+  bottle do
+    root_url 'http://archive.org/download/julialang/bottles'
+    cellar :any
+    sha1 '92d086ae5c895cd29de96e0dccd1c27ff4669f32' => :mountain_lion
+    sha1 '92d086ae5c895cd29de96e0dccd1c27ff4669f32' => :lion
+    sha1 '92d086ae5c895cd29de96e0dccd1c27ff4669f32' => :snow_leopard
+    sha1 '92d086ae5c895cd29de96e0dccd1c27ff4669f32' => :mavericks
+  end
+
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/xz'=> :build
   # harfbuzz requires cairo-ft to build
