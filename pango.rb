@@ -2,28 +2,24 @@ require 'formula'
 
 class Pango < Formula
   homepage 'http://www.pango.org/'
-  url 'http://ftp.gnome.org/pub/GNOME/sources/pango/1.34/pango-1.34.1.tar.xz'
-  sha256 '1aea30df34a8ae4fcce71afd22aa5b57224b52916d46e3ea81ff9f1eb130e64c'
-
-  bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
-    cellar :any
-    sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :mavericks
-    sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :mountain_lion
-    sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :lion
-    sha1 '9f6fe108b836d2c02f0bb2da9ab0d520599582dd' => :snow_leopard
-  end
+  url 'http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.0.tar.xz'
+  sha256 'bb41d1b26ee7450e5430a7d2765f38c51ebe72db9fce616a9ee52611b55906a0'
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/xz' => :build
   depends_on 'staticfloat/juliadeps/glib'
   depends_on 'staticfloat/juliadeps/harfbuzz'
-
-  # The Cairo library shipped with Lion contains a flaw that causes Graphviz
-  # to segfault. See the following ticket for information:
-  #   https://trac.macports.org/ticket/30370
-  # We depend on our cairo on all platforms for consistency
   depends_on 'staticfloat/juliadeps/cairo'
+  depends_on 'staticfloat/juliadeps/fontconfig'
+
+  bottle do
+    root_url 'http://archive.org/download/julialang/bottles'
+    cellar :any
+    sha1 'd1527f4a12be69d92b242a93bbf00233b86f8c0a' => :mountain_lion
+    sha1 'd1527f4a12be69d92b242a93bbf00233b86f8c0a' => :lion
+    sha1 'd1527f4a12be69d92b242a93bbf00233b86f8c0a' => :snow_leopard
+    sha1 'd1527f4a12be69d92b242a93bbf00233b86f8c0a' => :mavericks
+  end
 
   fails_with :llvm do
     build 2326
@@ -56,7 +52,9 @@ class Pango < Formula
       --disable-introspection
     ]
 
-    if build.include? 'without-x'
+    # We always build without x
+    #if build.include? 'without-x'
+    if true
       args << '--without-xft'
     else
       args << '--with-xft'
