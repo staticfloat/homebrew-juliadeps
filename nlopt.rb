@@ -9,10 +9,10 @@ class Nlopt < Formula
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
     revision 1
-    sha1 '127ffddbb846f95daaec7ba32e608f3a93c27cb8' => :mountain_lion
-    sha1 '127ffddbb846f95daaec7ba32e608f3a93c27cb8' => :lion
-    sha1 '127ffddbb846f95daaec7ba32e608f3a93c27cb8' => :snow_leopard
-    sha1 '127ffddbb846f95daaec7ba32e608f3a93c27cb8' => :mavericks
+    sha1 '08a94653c64cccd146b95ad5d3f0a14b36a0642e' => :mountain_lion
+    sha1 '08a94653c64cccd146b95ad5d3f0a14b36a0642e' => :lion
+    sha1 '08a94653c64cccd146b95ad5d3f0a14b36a0642e' => :snow_leopard
+    sha1 '08a94653c64cccd146b95ad5d3f0a14b36a0642e' => :mavericks
   end
 
   def install
