@@ -8,10 +8,11 @@ class Nlopt < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '5f75420e696732ae777f5e83c200138e575002aa' => :mountain_lion
-    sha1 '5f75420e696732ae777f5e83c200138e575002aa' => :lion
-    sha1 '5f75420e696732ae777f5e83c200138e575002aa' => :snow_leopard
-    sha1 '5f75420e696732ae777f5e83c200138e575002aa' => :mavericks
+    revision 1
+    sha1 '127ffddbb846f95daaec7ba32e608f3a93c27cb8' => :mountain_lion
+    sha1 '127ffddbb846f95daaec7ba32e608f3a93c27cb8' => :lion
+    sha1 '127ffddbb846f95daaec7ba32e608f3a93c27cb8' => :snow_leopard
+    sha1 '127ffddbb846f95daaec7ba32e608f3a93c27cb8' => :mavericks
   end
 
   def install
