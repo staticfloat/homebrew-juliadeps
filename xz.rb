@@ -11,10 +11,11 @@ class Xz < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '9d9a6e6c7b8fb6050bb4698957d570f2e3089c7a' => :mavericks
-    sha1 '9d9a6e6c7b8fb6050bb4698957d570f2e3089c7a' => :mountain_lion
-    sha1 '9d9a6e6c7b8fb6050bb4698957d570f2e3089c7a' => :lion
-    sha1 '9d9a6e6c7b8fb6050bb4698957d570f2e3089c7a' => :snow_leopard
+    revision 1
+    sha1 '593bdae1890b7e225cfe0f3340fa48e6ff09b055' => :mountain_lion
+    sha1 '593bdae1890b7e225cfe0f3340fa48e6ff09b055' => :lion
+    sha1 '593bdae1890b7e225cfe0f3340fa48e6ff09b055' => :snow_leopard
+    sha1 '593bdae1890b7e225cfe0f3340fa48e6ff09b055' => :mavericks
   end
 
   option :universal
@@ -26,3 +27,4 @@ class Xz < Formula
     system "make install"
   end
 end
+
