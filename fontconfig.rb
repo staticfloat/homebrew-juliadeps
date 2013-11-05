@@ -10,11 +10,6 @@ class Fontconfig < Formula
   depends_on 'staticfloat/juliadeps/freetype'
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
-  # Patch adapted from Macports patch for 2.9.0 defines sizeof based on __LP64__
-  # Fixes universal builds but seems groovy enough to apply in all cases.
-  # https://trac.macports.org/browser/trunk/dports/graphics/fontconfig/files/patch-check-arch-at-runtime.diff
-  def patches; DATA; end
-
   def install
     ENV.universal_binary if build.universal?
     system "./configure", "--disable-dependency-tracking",
