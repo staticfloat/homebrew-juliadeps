@@ -12,7 +12,7 @@ class Nlopt < Formula
     sha1 '08a94653c64cccd146b95ad5d3f0a14b36a0642e' => :mountain_lion
     sha1 '08a94653c64cccd146b95ad5d3f0a14b36a0642e' => :lion
     sha1 '08a94653c64cccd146b95ad5d3f0a14b36a0642e' => :snow_leopard
-    sha1 '08a94653c64cccd146b95ad5d3f0a14b36a0642e' => :mavericks
+    sha1 '5abcbc704aa7fca3d8bc507382f03e08b1b33e4a' => :mavericks
   end
 
   def install
