@@ -8,11 +8,11 @@ class Pixman < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 1
-    sha1 '232696346b7651e32deba394a113e5a6883e8189' => :mavericks
-    sha1 '232696346b7651e32deba394a113e5a6883e8189' => :mountain_lion
-    sha1 '232696346b7651e32deba394a113e5a6883e8189' => :lion
-    sha1 '232696346b7651e32deba394a113e5a6883e8189' => :snow_leopard
+    revision 2
+    sha1 'b7d1a7c9f68e29daff09c826867391b0d917ce7e' => :mountain_lion
+    sha1 'b7d1a7c9f68e29daff09c826867391b0d917ce7e' => :lion
+    sha1 'b7d1a7c9f68e29daff09c826867391b0d917ce7e' => :snow_leopard
+    sha1 'b7d1a7c9f68e29daff09c826867391b0d917ce7e' => :mavericks
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build

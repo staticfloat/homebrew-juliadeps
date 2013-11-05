@@ -8,6 +8,15 @@ class Glib < Formula
   option :universal
   option 'test', 'Build a debug build and run tests. NOTE: Not all tests succeed yet'
 
+  bottle do
+    root_url 'http://archive.org/download/julialang/bottles'
+    cellar :any
+    sha1 '6a3bba06851fab14c4d403f4dcf202f98f86189b' => :mountain_lion
+    sha1 '6a3bba06851fab14c4d403f4dcf202f98f86189b' => :lion
+    sha1 '6a3bba06851fab14c4d403f4dcf202f98f86189b' => :snow_leopard
+    sha1 '6a3bba06851fab14c4d403f4dcf202f98f86189b' => :mavericks
+  end
+
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/xz' => :build
   depends_on 'staticfloat/juliadeps/gettext'

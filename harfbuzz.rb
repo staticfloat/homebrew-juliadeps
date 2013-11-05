@@ -13,10 +13,10 @@ class Harfbuzz < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 'fe15631d4d5b0e723d8218f73f3609586305c437' => :mavericks
-    sha1 'fe15631d4d5b0e723d8218f73f3609586305c437' => :mountain_lion
-    sha1 'fe15631d4d5b0e723d8218f73f3609586305c437' => :lion
-    sha1 'fe15631d4d5b0e723d8218f73f3609586305c437' => :snow_leopard
+    sha1 '1615fa7802630109aad060a35fba065ea841b136' => :mountain_lion
+    sha1 '1615fa7802630109aad060a35fba065ea841b136' => :lion
+    sha1 '1615fa7802630109aad060a35fba065ea841b136' => :snow_leopard
+    sha1 '1615fa7802630109aad060a35fba065ea841b136' => :mavericks
   end
 
   # Needs newer fontconfig than XQuartz provides for pango

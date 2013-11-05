@@ -12,6 +12,15 @@ class Pango < Formula
   depends_on 'staticfloat/juliadeps/cairo'
   depends_on 'staticfloat/juliadeps/fontconfig'
 
+  bottle do
+    root_url 'http://archive.org/download/julialang/bottles'
+    cellar :any
+    sha1 'd1527f4a12be69d92b242a93bbf00233b86f8c0a' => :mountain_lion
+    sha1 'd1527f4a12be69d92b242a93bbf00233b86f8c0a' => :lion
+    sha1 'd1527f4a12be69d92b242a93bbf00233b86f8c0a' => :snow_leopard
+    sha1 'd1527f4a12be69d92b242a93bbf00233b86f8c0a' => :mavericks
+  end
+
   fails_with :llvm do
     build 2326
     cause "Undefined symbols when linking"
