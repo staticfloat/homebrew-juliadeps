@@ -27,7 +27,7 @@ class Pango < Formula
   end
 
   def post_install
-    if (Tab.for_keg '.').poured_from_bottle
+    if (Tab.for_keg Pathname.new('.')).poured_from_bottle
       # Fixup pango module paths
       inreplace prefix+'etc/pango/pango.modules', %r[.*/(lib/pango/[\d\.]+/modules/.*)], prefix+'\1'
 
