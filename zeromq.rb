@@ -12,6 +12,14 @@ class Zeromq < Formula
     depends_on :libtool
   end
 
+  bottle do
+    root_url 'http://archive.org/download/julialang/bottles'
+    cellar :any
+    sha1 '5d8a5de5d98aba9f2b7c177858057e51ea42ae62' => :mountain_lion
+    sha1 '5d8a5de5d98aba9f2b7c177858057e51ea42ae62' => :lion
+    sha1 '5d8a5de5d98aba9f2b7c177858057e51ea42ae62' => :snow_leopard
+    sha1 '5d8a5de5d98aba9f2b7c177858057e51ea42ae62' => :mavericks
+  end
 
   option :universal
   option 'with-pgm', 'Build with PGM extension'
