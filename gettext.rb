@@ -2,15 +2,14 @@ require 'formula'
 
 class Gettext < Formula
   homepage 'http://www.gnu.org/software/gettext/'
-  url 'http://ftpmirror.gnu.org/gettext/gettext-0.18.3.1.tar.gz'
-  mirror 'http://ftp.gnu.org/gnu/gettext/gettext-0.18.3.1.tar.gz'
-  sha256 '0d8f9a33531b77776b3dc473e7940019ca19bfca5b4c06db6e96065eeb07245d'
+  url 'http://ftpmirror.gnu.org/gettext/gettext-0.18.3.2.tar.gz'
+  mirror 'http://ftp.gnu.org/gnu/gettext/gettext-0.18.3.2.tar.gz'
+  sha256 'd1a4e452d60eb407ab0305976529a45c18124bd518d976971ac6dc7aa8b4c5d7'
 
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 2
-    sha1 'dfdb7537b47383774789a4f80c8cfea7e2dfb25c' => :snow_leopard_or_later
+    sha1 'c6e1c8821adb479de951d46849e99a1a0798845e' => :snow_leopard_or_later
   end
 
   option :universal

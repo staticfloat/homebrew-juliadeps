@@ -2,26 +2,32 @@ require 'formula'
 
 class Fontconfig < Formula
   homepage 'http://fontconfig.org/'
-  url 'http://fontconfig.org/release/fontconfig-2.10.95.tar.bz2'
-  sha1 'f9f4a25b730a9c56f951db6fec639ddeeb92a9d4'
+  url 'http://fontconfig.org/release/fontconfig-2.11.0.tar.bz2'
+  sha1 '969818b0326ac08241b11cbeaa4f203699f9b550'
 
   option :universal
 
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 1
-    sha1 'e647d640fc9d6745106bc6c42bed66ccf53fe573' => :snow_leopard_or_later
+    sha1 '24d0a633157ade64e102a3f43fd576c304b24f88' => :snow_leopard_or_later
   end
 
-  depends_on 'freetype'
+  depends_on :freetype
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
   def install
     ENV.universal_binary if build.universal?
     system "./configure", "--disable-dependency-tracking",
-                          "--with-add-fonts=/Library/Fonts,~/Library/Fonts",
-                          "--prefix=#{prefix}"
+                          "--disable-silent-rules",
+                          "--with-add-fonts=/System/Library/Fonts,/Library/Fonts,~/Library/Fonts",
+                          "--prefix=#{prefix}",
+                          "--localstatedir=#{var}",
+                          "--sysconfdir=#{etc}"
     system "make install"
+  end
+
+  def post_install
+    system "#{bin}/fc-cache", "-frv"
   end
 end
