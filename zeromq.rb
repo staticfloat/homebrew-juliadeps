@@ -8,7 +8,8 @@ class Zeromq < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '0f7adbef8efc7ef91cbf96a21de86124d8e283c4' => :snow_leopard_or_later
+    revision 1
+    sha1 '2bf17449984211b0467e0b9ec7db5ff00676b828' => :snow_leopard_or_later
   end
 
   option :universal
