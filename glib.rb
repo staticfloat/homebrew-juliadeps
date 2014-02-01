@@ -2,8 +2,8 @@ require 'formula'
 
 class Glib < Formula
   homepage 'http://developer.gnome.org/glib/'
-  url 'http://ftp.gnome.org/pub/gnome/sources/glib/2.38/glib-2.38.1.tar.xz'
-  sha256 '01906c62ac666d2ab3183cc07261b2536fab7b211c6129ab66b119c2af56d159'
+  url 'http://ftp.gnome.org/pub/gnome/sources/glib/2.38/glib-2.38.2.tar.xz'
+  sha256 '056a9854c0966a0945e16146b3345b7a82562a5ba4d5516fd10398732aea5734'
 
   option :universal
   option 'test', 'Build a debug build and run tests. NOTE: Not all tests succeed yet'
@@ -11,8 +11,7 @@ class Glib < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 1
-    sha1 '1139640a87c31f8a30374eebfcd6de35c0a24b54' => :snow_leopard_or_later
+    sha1 'f72ea3b73f27f669c7c836317dd93a08ba33355c' => :snow_leopard_or_later
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
@@ -58,7 +57,6 @@ class Glib < Formula
       --disable-dependency-tracking
       --disable-silent-rules
       --disable-dtrace
-      --disable-modular-tests
       --disable-libelf
       --prefix=#{prefix}
       --localstatedir=#{var}
