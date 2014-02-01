@@ -9,10 +9,8 @@ class Libffi < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 'b2c72825f0d070391177aa425f52d22b31c590e1' => :mavericks
-    sha1 'b2c72825f0d070391177aa425f52d22b31c590e1' => :mountain_lion
-    sha1 'b2c72825f0d070391177aa425f52d22b31c590e1' => :lion
-    sha1 'b2c72825f0d070391177aa425f52d22b31c590e1' => :snow_leopard
+    revision 1
+    sha1 'ad47295dd3bae2571c7b69bf07c7f610846d68a2' => :snow_leopard_or_later
   end
 
   def install

@@ -11,10 +11,8 @@ class Glib < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '6a3bba06851fab14c4d403f4dcf202f98f86189b' => :mountain_lion
-    sha1 '6a3bba06851fab14c4d403f4dcf202f98f86189b' => :lion
-    sha1 '6a3bba06851fab14c4d403f4dcf202f98f86189b' => :snow_leopard
-    sha1 '6a3bba06851fab14c4d403f4dcf202f98f86189b' => :mavericks
+    revision 1
+    sha1 '1139640a87c31f8a30374eebfcd6de35c0a24b54' => :snow_leopard_or_later
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build

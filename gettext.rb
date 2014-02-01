@@ -9,11 +9,8 @@ class Gettext < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 1
-    sha1 'f8a5318e40edacf30e7985d5097ec415a0a997a1' => :mavericks
-    sha1 'f8a5318e40edacf30e7985d5097ec415a0a997a1' => :mountain_lion
-    sha1 'f8a5318e40edacf30e7985d5097ec415a0a997a1' => :lion
-    sha1 'f8a5318e40edacf30e7985d5097ec415a0a997a1' => :snow_leopard
+    revision 2
+    sha1 'dfdb7537b47383774789a4f80c8cfea7e2dfb25c' => :snow_leopard_or_later
   end
 
   option :universal
