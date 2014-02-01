@@ -2,20 +2,16 @@ require 'formula'
 
 class Pixman < Formula
   homepage 'http://cairographics.org/'
-  url 'http://cairographics.org/releases/pixman-0.30.2.tar.gz'
-  sha256 'bd988920ccd742310ddf5b363c7b278f11d69a3405a09d542162c84b46bff6e9'
+  url 'http://cairographics.org/releases/pixman-0.32.4.tar.gz'
+  sha256 '80c7ed420e8a3ae749800241e6347c3d55681296cab71384be7969cd9e657e84'
+
+  depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 2
-    sha1 'b7d1a7c9f68e29daff09c826867391b0d917ce7e' => :mountain_lion
-    sha1 'b7d1a7c9f68e29daff09c826867391b0d917ce7e' => :lion
-    sha1 'b7d1a7c9f68e29daff09c826867391b0d917ce7e' => :snow_leopard
-    sha1 'b7d1a7c9f68e29daff09c826867391b0d917ce7e' => :mavericks
+    sha1 '7e46457ffdd0c6012c9067f8e6a161e796431ac3' => :snow_leopard_or_later
   end
-
-  depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
   option :universal
 
@@ -37,9 +33,6 @@ class Pixman < Formula
               --prefix=#{prefix}]
 
     args << "--disable-mmx" if ENV.compiler == :clang
-
-    # Don't use TLS, use pthreads instead
-    args << "ac_cv_tls=none"
 
     system "./configure", *args
     system "make install"
