@@ -2,8 +2,8 @@ require 'formula'
 
 class Pango < Formula
   homepage 'http://www.pango.org/'
-  url 'http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.0.tar.xz'
-  sha256 'bb41d1b26ee7450e5430a7d2765f38c51ebe72db9fce616a9ee52611b55906a0'
+  url 'http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.1.tar.xz'
+  sha256 '42e4b51cdc99e6878a9ea2a5ef2b31b79c1033f8518726df738a3c54c90e59f8'
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'xz' => :build
@@ -15,9 +15,9 @@ class Pango < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 1
-    sha1 'efec667c92d31657a503407bbff6f09ceb55fc5e' => :snow_leopard_or_later
+    sha1 '05993b7b9dd83e653fef9d56d3dc602850fdac8b' => :snow_leopard_or_later
   end
+
 
   fails_with :llvm do
     build 2326
