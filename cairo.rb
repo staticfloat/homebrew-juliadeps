@@ -21,10 +21,10 @@ class Cairo < Formula
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
-  depends_on 'staticfloat/juliadeps/xz'=> :build
+  depends_on 'xz'=> :build
   # harfbuzz requires cairo-ft to build
-  depends_on 'staticfloat/juliadeps/freetype'
-  depends_on 'staticfloat/juliadeps/libpng'
+  depends_on 'freetype'
+  depends_on :libpng
   depends_on 'staticfloat/juliadeps/pixman'
   depends_on 'staticfloat/juliadeps/glib'
 

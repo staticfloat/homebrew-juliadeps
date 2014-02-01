@@ -6,7 +6,7 @@ class Pango < Formula
   sha256 'bb41d1b26ee7450e5430a7d2765f38c51ebe72db9fce616a9ee52611b55906a0'
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
-  depends_on 'staticfloat/juliadeps/xz' => :build
+  depends_on 'xz' => :build
   depends_on 'staticfloat/juliadeps/glib'
   depends_on 'staticfloat/juliadeps/harfbuzz'
   depends_on 'staticfloat/juliadeps/cairo'

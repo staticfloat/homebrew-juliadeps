@@ -18,7 +18,7 @@ class Glib < Formula
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
-  depends_on 'staticfloat/juliadeps/xz' => :build
+  depends_on 'xz' => :build
   depends_on 'staticfloat/juliadeps/gettext'
   depends_on 'staticfloat/juliadeps/libffi'
 

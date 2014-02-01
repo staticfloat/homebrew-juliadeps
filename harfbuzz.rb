@@ -8,7 +8,7 @@ class Harfbuzz < Formula
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/glib'
   depends_on 'staticfloat/juliadeps/cairo'
-  depends_on 'staticfloat/juliadeps/freetype'
+  depends_on 'freetype'
 
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'

@@ -1,8 +1,5 @@
 require 'formula'
 
-## NOTE: this nettle formula has been specially patched to use the gmp provided
-## by Julia.  This means that you won't be able to use it with non-julia executables!
-
 class Nettle < Formula
   homepage 'http://www.lysator.liu.se/~nisse/nettle/'
   url 'http://www.lysator.liu.se/~nisse/archive/nettle-2.6.tar.gz'
@@ -17,7 +14,7 @@ class Nettle < Formula
     sha1 'd2018089ade5d43ab362d7ebabba87fb916b7e6f' => :snow_leopard
   end
 
-  depends_on 'staticfloat/juliadeps/gmp'
+  depends_on 'gmp'
 
   def install
     system "./configure", "--disable-dependency-tracking",

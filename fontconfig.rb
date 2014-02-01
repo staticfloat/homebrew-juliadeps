@@ -16,7 +16,7 @@ class Fontconfig < Formula
     sha1 '5a12aa1eeecb2aa8584515a0680eea432d9f85e0' => :mavericks
   end
 
-  depends_on 'staticfloat/juliadeps/freetype'
+  depends_on 'freetype'
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
   def install

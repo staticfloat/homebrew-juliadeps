@@ -14,7 +14,7 @@ class Gnutls < Formula
     sha1 'aa0caae7f8af3c88d2faa013255c34ec5a64c45c' => :snow_leopard
   end
 
-  depends_on 'staticfloat/juliadeps/xz' => :build
+  depends_on 'xz' => :build
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/libtasn1'
   depends_on 'staticfloat/juliadeps/nettle'

@@ -27,13 +27,11 @@ class Imagemagick < Formula
   option 'with-perl', 'enable build/install of PerlMagick'
   option 'without-magick-plus-plus', 'disable build/install of Magick++'
 
-  #depends_on :libtool => :run
-
-  depends_on 'pkg-config' => :build
+  depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
   depends_on 'jpeg' => :recommended
   depends_on :libpng => :recommended
-  depends_on :freetype => :recommended
+  depends_on 'staticfloat/juliadeps/freetype' => :recommended
 
   depends_on :x11 => :optional
   depends_on :fontconfig => :optional
