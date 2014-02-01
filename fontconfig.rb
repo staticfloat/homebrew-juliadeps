@@ -10,10 +10,8 @@ class Fontconfig < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '5a12aa1eeecb2aa8584515a0680eea432d9f85e0' => :mountain_lion
-    sha1 '5a12aa1eeecb2aa8584515a0680eea432d9f85e0' => :lion
-    sha1 '5a12aa1eeecb2aa8584515a0680eea432d9f85e0' => :snow_leopard
-    sha1 '5a12aa1eeecb2aa8584515a0680eea432d9f85e0' => :mavericks
+    revision 1
+    sha1 'e647d640fc9d6745106bc6c42bed66ccf53fe573' => :snow_leopard_or_later
   end
 
   depends_on 'freetype'
