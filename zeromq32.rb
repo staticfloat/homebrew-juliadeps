@@ -1,24 +1,14 @@
 require 'formula'
 
-class Zeromq < Formula
+class Zeromq32 < Formula
   homepage 'http://www.zeromq.org/'
   url 'http://download.zeromq.org/zeromq-3.2.4.tar.gz'
   sha1 '08303259f08edd1faeac2e256f5be3899377135e'
 
-  head do
-    url 'https://github.com/zeromq/libzmq.git'
-
-    depends_on :automake
-    depends_on :libtool
-  end
-
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '5d8a5de5d98aba9f2b7c177858057e51ea42ae62' => :mountain_lion
-    sha1 '5d8a5de5d98aba9f2b7c177858057e51ea42ae62' => :lion
-    sha1 '5d8a5de5d98aba9f2b7c177858057e51ea42ae62' => :snow_leopard
-    sha1 '5d8a5de5d98aba9f2b7c177858057e51ea42ae62' => :mavericks
+    sha1 '0f7adbef8efc7ef91cbf96a21de86124d8e283c4' => :snow_leopard_or_later
   end
 
   option :universal
