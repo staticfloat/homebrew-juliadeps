@@ -8,11 +8,8 @@ class Coinmp < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 2
-    sha1 '6c2bc7ea740b5a289fd6eef37ed4ee681cdb928f' => :mountain_lion
-    sha1 '6c2bc7ea740b5a289fd6eef37ed4ee681cdb928f' => :lion
-    sha1 '6c2bc7ea740b5a289fd6eef37ed4ee681cdb928f' => :snow_leopard
-    sha1 '6c2bc7ea740b5a289fd6eef37ed4ee681cdb928f' => :mavericks
+    revision 3
+    sha1 '566df86ca2a8287e381f9cec8f6a4887b4042586' => :snow_leopard_or_later
   end
 
   depends_on 'staticfloat/juliadeps/gfortran'
