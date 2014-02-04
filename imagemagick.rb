@@ -28,6 +28,7 @@ class Imagemagick < Formula
   option 'without-magick-plus-plus', 'disable build/install of Magick++'
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
+  depends_on :libtool
 
   depends_on 'jpeg' => :recommended
   depends_on :libpng => :recommended
@@ -47,12 +48,6 @@ class Imagemagick < Formula
   depends_on 'webp' => :optional
 
   opoo '--with-ghostscript is not recommended' if build.with? 'ghostscript'
-
-  def pour_bottle?
-    # If libtool is keg-only it currently breaks the bottle.
-    # This is a temporary workaround until we have a better fix.
-    not Formula.factory('libtool').keg_only?
-  end
 
   skip_clean :la
 
