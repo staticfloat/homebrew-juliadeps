@@ -14,11 +14,8 @@ class Imagemagick < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    revision 1
-    sha1 '58022e696acc51c3bf87250d61287abe2cb399f4' => :mountain_lion
-    sha1 '58022e696acc51c3bf87250d61287abe2cb399f4' => :lion
-    sha1 '58022e696acc51c3bf87250d61287abe2cb399f4' => :snow_leopard
-    sha1 '58022e696acc51c3bf87250d61287abe2cb399f4' => :mavericks
+    revision 2
+    sha1 '7ec0b9cb822d4f05b1fb6e895ab148bfba5b3b44' => :snow_leopard_or_later
   end
 
   option 'with-quantum-depth-8', 'Compile with a quantum depth of 8 bit'
