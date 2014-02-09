@@ -13,7 +13,7 @@ class Fontconfig < Formula
     sha1 '24d0a633157ade64e102a3f43fd576c304b24f88' => :snow_leopard_or_later
   end
 
-  depends_on 'freetype'
+  depends_on 'staticfloat/juliadeps/freetype'
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
   def install
