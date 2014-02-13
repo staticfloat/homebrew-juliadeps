@@ -14,7 +14,7 @@ class Nettle < Formula
     sha1 'd2018089ade5d43ab362d7ebabba87fb916b7e6f' => :snow_leopard
   end
 
-  depends_on 'gmp'
+  depends_on 'staticfloat/juliadeps/gmp'
 
   def install
     system "./configure", "--disable-dependency-tracking",
