@@ -8,10 +8,8 @@ class Nettle < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 'd2018089ade5d43ab362d7ebabba87fb916b7e6f' => :mavericks
-    sha1 'd2018089ade5d43ab362d7ebabba87fb916b7e6f' => :mountain_lion
-    sha1 'd2018089ade5d43ab362d7ebabba87fb916b7e6f' => :lion
-    sha1 'd2018089ade5d43ab362d7ebabba87fb916b7e6f' => :snow_leopard
+    revision 1
+    sha1 '1e1b9a8293bc9be61ab882c38a66e25853da8313' => :snow_leopard_or_later
   end
 
   depends_on 'staticfloat/juliadeps/gmp'
