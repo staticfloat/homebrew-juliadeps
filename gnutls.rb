@@ -2,16 +2,14 @@ require 'formula'
 
 class Gnutls < Formula
   homepage 'http://gnutls.org'
-  url 'ftp://ftp.gnutls.org/gcrypt/gnutls/v3.1/gnutls-3.1.10.tar.xz'
-  sha1 '1097644b0e58754217c4f9edbdf68e9f7aa7e08d'
+  url 'ftp://ftp.gnutls.org/gcrypt/gnutls/v3.1/gnutls-3.1.18.tar.xz'
+  mirror 'http://mirrors.dotsrc.org/gcrypt/gnutls/v3.1/gnutls-3.1.18.tar.xz'
+  sha1 '360cdb86c1bb6494c27901b5d4c8815b37d5bd4c'
 
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 'aa0caae7f8af3c88d2faa013255c34ec5a64c45c' => :mavericks
-    sha1 'aa0caae7f8af3c88d2faa013255c34ec5a64c45c' => :mountain_lion
-    sha1 'aa0caae7f8af3c88d2faa013255c34ec5a64c45c' => :lion
-    sha1 'aa0caae7f8af3c88d2faa013255c34ec5a64c45c' => :snow_leopard
+    sha1 '77af580f4e28b267813877198f5e8616dec4612c' => :snow_leopard_or_later
   end
 
   depends_on 'xz' => :build
