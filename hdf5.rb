@@ -8,10 +8,8 @@ class Hdf5 < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '54eb40ec09e5e631c58ce3155107fc9a7bbaff42' => :mountain_lion
-    sha1 '54eb40ec09e5e631c58ce3155107fc9a7bbaff42' => :lion
-    sha1 '54eb40ec09e5e631c58ce3155107fc9a7bbaff42' => :snow_leopard
-    sha1 '54eb40ec09e5e631c58ce3155107fc9a7bbaff42' => :mavericks
+    revision 1
+    sha1 'ee7ad86c3fc6a2dcf7393394afa70bd975192f5e' => :snow_leopard_or_later
   end
 
   # TODO - warn that these options conflict

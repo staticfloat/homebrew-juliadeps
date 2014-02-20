@@ -8,10 +8,8 @@ class Szip < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 'aba8816400fd8dcb5dcc276a82d29b65a001cfb2' => :mountain_lion
-    sha1 'aba8816400fd8dcb5dcc276a82d29b65a001cfb2' => :lion
-    sha1 'aba8816400fd8dcb5dcc276a82d29b65a001cfb2' => :snow_leopard
-    sha1 'aba8816400fd8dcb5dcc276a82d29b65a001cfb2' => :mavericks
+    revision 1
+    sha1 'eab8780611bf9b446e045ee94b9205d074d710dc' => :snow_leopard_or_later
   end
 
   option :universal
