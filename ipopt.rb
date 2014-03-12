@@ -11,6 +11,7 @@ class Ipopt < Formula
     sha1 '06b77455a570abafc1c88825afcd6f0af23586ef' => :mountain_lion
     sha1 '06b77455a570abafc1c88825afcd6f0af23586ef' => :lion
     sha1 '06b77455a570abafc1c88825afcd6f0af23586ef' => :snow_leopard
+    sha1 '06b77455a570abafc1c88825afcd6f0af23586ef' => :mavericks
   end
 
   depends_on 'staticfloat/juliadeps/gfortran'
