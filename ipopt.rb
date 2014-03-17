@@ -8,9 +8,8 @@ class Ipopt < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '06b77455a570abafc1c88825afcd6f0af23586ef' => :mountain_lion
-    sha1 '06b77455a570abafc1c88825afcd6f0af23586ef' => :lion
-    sha1 '06b77455a570abafc1c88825afcd6f0af23586ef' => :snow_leopard
+    revision 1
+    sha1 '3a544a272bb113c7b59c50fb4aba0ae4254c7042' => :snow_leopard_or_later
   end
 
   depends_on 'staticfloat/juliadeps/gfortran'
