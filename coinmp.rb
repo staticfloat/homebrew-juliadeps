@@ -2,8 +2,8 @@ require 'formula'
 
 class Coinmp < Formula
   homepage 'http://www.coin-or.org/projects/CoinMP.xml'
-  url 'http://www.coin-or.org/download/source/CoinMP/CoinMP-1.7.0.tgz'
-  sha1 '27f58adc404a329f20a96a5218bc8ed332639ada'
+  url 'http://www.coin-or.org/download/source/CoinMP/CoinMP-1.7.6.tgz'
+  sha1 'f52c74abcbf55c72cd89f709db658ea33ed45154'
 
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
@@ -16,18 +16,16 @@ class Coinmp < Formula
 
   #conflicts_with 'coinutils', :because => 'CoinMP includes CoinUtils.'
 
-  def patches
-    { :p1 => ["https://raw.github.com/mlubin/CoinMP.jl/9fe259e1677a6917cba2f70d78010d2505a3908b/deps/CoinMP-makefile.patch",
-      "https://raw.github.com/mlubin/CoinMP.jl/9fe259e1677a6917cba2f70d78010d2505a3908b/deps/CoinMP-strcmp.patch",
-      "https://raw.github.com/mlubin/CoinMP.jl/9fe259e1677a6917cba2f70d78010d2505a3908b/deps/CoinMP-loglevel.patch"],
-      :p0 => "https://raw.github.com/mlubin/CoinMP.jl/9fe259e1677a6917cba2f70d78010d2505a3908b/deps/Clp-interface.patch"
-    }
-  end
+  #patch :p1 do
+  #  url "https://raw.githubusercontent.com/JuliaOpt/Cbc.jl/a5cd0c528c7f2e8895b9d6955bf3d96dd884157d/deps/CoinMP-emptyproblem.patch"
+  #  sha1 "f55e6d24bba7fe39fe0cf5d6b85cffb4a1f7c4ea"
+  #end
 
   def install
     # build without lapack until OpenBLAS issue 306 is resolved
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}", "--without-lapack"
+                          "--prefix=#{prefix}", "--without-lapack", 
+                          "--enable-dependency-linking"
     system "make"
     ENV.deparallelize  # make install fails in parallel.
     system "make install"
