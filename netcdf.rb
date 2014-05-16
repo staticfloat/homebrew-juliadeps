@@ -8,10 +8,8 @@ class Netcdf < Formula
   bottle do
     root_url 'http://archive.org/download/julialang/bottles'
     cellar :any
-    sha1 '181e87ee0ad8da72ab088c2f5deba33be06d43e0' => :mountain_lion
-    sha1 '181e87ee0ad8da72ab088c2f5deba33be06d43e0' => :lion
-    sha1 '181e87ee0ad8da72ab088c2f5deba33be06d43e0' => :snow_leopard
-    sha1 '181e87ee0ad8da72ab088c2f5deba33be06d43e0' => :mavericks
+    revision 1
+    sha1 'e553d46d44b46aa138175391f07a3990b89f2d04' => :snow_leopard_or_later
   end
 
   depends_on :fortran if build.include? 'enable-fortran'
