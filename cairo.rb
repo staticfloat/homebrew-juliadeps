@@ -37,20 +37,13 @@ class Cairo < Formula
     ]
 
     # We always built without x
-    #if build.without? 'x'
-    if true
-      args << '--enable-xlib=no' << '--enable-xlib-xrender=no'
-    else
-      args << '--with-x'
-    end
+    args << '--enable-xlib=no' << '--enable-xlib-xrender=no'
 
     if build.with? 'glib'
       args << '--enable-gobject=yes'
     else
       args << '--enable-gobject=no'
     end
-
-    args << '--enable-xcb=no' if MacOS.version <= :leopard
 
     system "./configure", *args
     system "make install"
