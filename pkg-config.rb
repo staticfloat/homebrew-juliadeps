@@ -7,13 +7,12 @@ class PkgConfig < Formula
   sha256 '6b6eb31c6ec4421174578652c7e141fdaae2dabad1021f420d8713206ac1f845'
 
   bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
+    root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 2
-    sha1 'dda09e770127fae808c268cbeb44696728a7c1ac' => :mountain_lion
-    sha1 'dda09e770127fae808c268cbeb44696728a7c1ac' => :lion
-    sha1 'dda09e770127fae808c268cbeb44696728a7c1ac' => :snow_leopard
-    sha1 'dda09e770127fae808c268cbeb44696728a7c1ac' => :mavericks
+    revision 3
+    sha1 'd757fa60a51d564b156b7c260d6cd1f844b946e5' => :lion
+    sha1 '835f6bb0c48b48a376e67075f827d689380817f3' => :mavericks
+    sha1 '51a2582baa544780bd0e7cb14ec3d59c260eb4f0' => :mountain_lion
   end
 
   def install
