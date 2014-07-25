@@ -2,15 +2,8 @@ require 'formula'
 
 class Netcdf < Formula
   homepage 'http://www.unidata.ucar.edu/software/netcdf'
-  url 'http://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-4.2.1.1.tar.gz'
-  sha1 '76631cb4e6b767c224338415cf6e5f5ff9bd1238'
-
-  bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
-    cellar :any
-    revision 1
-    sha1 'e553d46d44b46aa138175391f07a3990b89f2d04' => :snow_leopard_or_later
-  end
+  url 'http://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-4.3.2.tar.gz'
+  sha1 '6e1bacab02e5220954fe0328d710ebb71c071d19'
 
   depends_on :fortran if build.include? 'enable-fortran'
   depends_on 'staticfloat/juliadeps/hdf5'
