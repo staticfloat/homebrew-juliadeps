@@ -6,6 +6,15 @@ class Glib < Formula
   sha256 "0d27f195966ecb1995dcce0754129fd66ebe820c7cd29200d264b02af1aa28b5"
   revision 1
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    revision 1
+    sha1 '837ec030f3d9ebccde6b27eaec8ad0a4f201e791' => :lion
+    sha1 '387125d9e73696f3e6d11d8ae21bbcdc6dc9034b' => :mavericks
+    sha1 '39d24536fe8a4cde1dd637167e7c18e792cab1d4' => :mountain_lion
+  end
+
   option :universal
   option 'test', 'Build a debug build and run tests. NOTE: Not all tests succeed yet'
   option 'with-static', 'Build glib with a static archive.'
