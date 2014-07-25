@@ -5,18 +5,11 @@ class Imagemagick < Formula
 
   # upstream's stable tarballs tend to disappear, so we provide our own mirror
   # Tarball and checksum from: http://www.imagemagick.org/download
-  url 'http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.7-7.tar.bz2'
-  sha256 '4d8b0889d78cca2f1501b5f66f61c5efcd2f585a03002f2a7b407c11808e5e28'
+  url 'http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.9-1.tar.xz'
+  sha256 '88e9f72cff22b91738494abe8b87f53c5b0c6932c4b08f944bf79846f035e642'
 
   head 'https://www.imagemagick.org/subversion/ImageMagick/trunk',
     :using => UnsafeSubversionDownloadStrategy
-
-  bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
-    cellar :any
-    revision 2
-    sha1 '7ec0b9cb822d4f05b1fb6e895ab148bfba5b3b44' => :snow_leopard_or_later
-  end
 
   option 'with-quantum-depth-8', 'Compile with a quantum depth of 8 bit'
   option 'with-quantum-depth-16', 'Compile with a quantum depth of 16 bit'
@@ -28,8 +21,8 @@ class Imagemagick < Formula
   depends_on 'staticfloat/juliadeps/libtool'
 
   depends_on 'jpeg' => :recommended
-  depends_on 'staticfloat/juliadeps/libpng' => :recommended
-  depends_on 'staticfloat/juliadeps/freetype' => :recommended
+  depends_on 'libpng' => :recommended
+  depends_on 'freetype' => :recommended
 
   depends_on :x11 => :optional
   depends_on :fontconfig => :optional
