@@ -20,10 +20,9 @@ class Cairo < Formula
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'xz'=> :build
-  # harfbuzz requires cairo-ft to build
-  depends_on 'staticfloat/juliadeps/freetype'
-  depends_on 'staticfloat/juliadeps/libpng'
-  depends_on 'staticfloat/juliadeps/pixman'
+  depends_on 'freetype'
+  depends_on 'libpng'
+  depends_on 'pixman'
   depends_on 'staticfloat/juliadeps/glib'
 
   env :std if build.universal?
@@ -37,20 +36,14 @@ class Cairo < Formula
     ]
 
     # We always built without x
-    #if build.without? 'x'
-    if true
-      args << '--enable-xlib=no' << '--enable-xlib-xrender=no'
-    else
-      args << '--with-x'
-    end
+    args << '--enable-xlib=no' << '--enable-xlib-xrender=no'
+    args << '--enable-quartz-image=yes'
 
     if build.with? 'glib'
       args << '--enable-gobject=yes'
     else
       args << '--enable-gobject=no'
     end
-
-    args << '--enable-xcb=no' if MacOS.version <= :leopard
 
     system "./configure", *args
     system "make install"

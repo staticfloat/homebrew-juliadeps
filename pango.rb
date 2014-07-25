@@ -2,8 +2,8 @@ require 'formula'
 
 class Pango < Formula
   homepage 'http://www.pango.org/'
-  url 'http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.1.tar.xz'
-  sha256 '42e4b51cdc99e6878a9ea2a5ef2b31b79c1033f8518726df738a3c54c90e59f8'
+  url 'http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.5.tar.xz'
+  sha256 'be0e94b2e5c7459f0b6db21efab6253556c8f443837200b8736d697071276ac8'
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'xz' => :build
