@@ -8,15 +8,9 @@ class Pango < Formula
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'xz' => :build
   depends_on 'staticfloat/juliadeps/glib'
-  depends_on 'staticfloat/juliadeps/harfbuzz'
+  depends_on 'harfbuzz'
   depends_on 'staticfloat/juliadeps/cairo'
   depends_on 'staticfloat/juliadeps/fontconfig'
-
-  bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
-    cellar :any
-    sha1 '05993b7b9dd83e653fef9d56d3dc602850fdac8b' => :snow_leopard_or_later
-  end
 
 
   fails_with :llvm do
