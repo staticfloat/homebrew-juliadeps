@@ -4,7 +4,7 @@ class Libgfortran < Formula
   homepage 'http://gcc.gnu.org/wiki/GFortran'
   url 'https://github.com/staticfloat/homebrew-libgfortran-formula/archive/master.tar.gz'
   sha1 '09328c065c42051fab341e660837704a3b1f5d4a'
-  version '1.0'
+  version '4.9.1'
 
   def post_install
     # This is here to symlink the libs to alternate locations where they could be installed
