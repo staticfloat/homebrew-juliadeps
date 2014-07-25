@@ -12,10 +12,10 @@ class Libtool < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 3
-    sha1 'f042b224c0430c76606b62d5e1ced05e7f24a2f2' => :lion
-    sha1 '9cfaa8a9cca96d02f47fbeb5844f0f768415b06c' => :mavericks
-    sha1 '85bdb5c5bd5f361f9fb7fea33b6dbc98449edb64' => :mountain_lion
+    revision 4
+    sha1 '80a19de303ca7e8e813493913e9c5bdb28d0eff8' => :lion
+    sha1 'b6888694df66ff77a205ca973b5eb6597a4628bf' => :mavericks
+    sha1 'ae7bcea665a68f9636347337b04397d7696c34f9' => :mountain_lion
   end
 
   if MacOS::Xcode.provides_autotools? or File.file? "/usr/bin/glibtoolize"
