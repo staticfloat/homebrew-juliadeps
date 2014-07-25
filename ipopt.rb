@@ -2,17 +2,11 @@ require 'formula'
 
 class Ipopt < Formula
   homepage 'https://projects.coin-or.org/Ipopt'
-  url 'http://www.coin-or.org/download/source/Ipopt/Ipopt-3.11.7.tgz'
-  sha1 '4547db1acbd65aad9edbed115a7812fbfd6d2d3a'
+  url 'http://www.coin-or.org/download/source/Ipopt/Ipopt-3.11.8.tgz'
+  sha1 '530d718fb5a0c994c305deb3bcfdacc16cc0e2ef'
 
-  bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
-    cellar :any
-    revision 1
-    sha1 '3a544a272bb113c7b59c50fb4aba0ae4254c7042' => :snow_leopard_or_later
-  end
-
-  depends_on 'staticfloat/juliadeps/gfortran'
+  
+  depends_on 'staticfloat/juliadeps/libgfortran'
 
   def install
     system "cd ThirdParty/Blas; ./get.Blas"
