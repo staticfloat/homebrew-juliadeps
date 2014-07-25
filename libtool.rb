@@ -12,11 +12,12 @@ class Libtool < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    revision 3
     sha1 'f042b224c0430c76606b62d5e1ced05e7f24a2f2' => :lion
     sha1 '9cfaa8a9cca96d02f47fbeb5844f0f768415b06c' => :mavericks
     sha1 '85bdb5c5bd5f361f9fb7fea33b6dbc98449edb64' => :mountain_lion
   end
-  
+
   if MacOS::Xcode.provides_autotools? or File.file? "/usr/bin/glibtoolize"
     keg_only "Xcode 4.2 and below provide glibtool."
   end
