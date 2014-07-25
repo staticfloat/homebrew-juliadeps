@@ -12,10 +12,12 @@ class Cairo < Formula
   option :universal
 
   bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
+    root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
     revision 1
-    sha1 '1d65e4ea9a390cee8a00194c57d232bde1aac37c' => :snow_leopard_or_later
+    sha1 'dabddb8f07a6524a42f6cb55cb0b864936edc7e4' => :lion
+    sha1 '8cbe7fec4389a6367f55166dc3b243da819a4318' => :mavericks
+    sha1 'e4bbbc50a5bf390678ab8f4eb7ccd788a758fb7c' => :mountain_lion
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
