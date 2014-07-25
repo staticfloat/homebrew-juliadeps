@@ -2,17 +2,8 @@ require 'formula'
 
 class Hdf5 < Formula
   homepage 'http://www.hdfgroup.org/HDF5'
-  url 'http://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.11/src/hdf5-1.8.11.tar.bz2'
-  sha1 '87ded0894b104cf23a4b965f4ac0a567f8612e5e'
-
-  bottle do
-    root_url 'https://juliabottles.s3.amazonaws.com'
-    cellar :any
-    revision 1
-    sha1 '60951dbcca0907fe586cedecdbbb67efd61e40c9' => :lion
-    sha1 'b7b1ffd598575de0eac4e6526bb95c160c89fbf8' => :mavericks
-    sha1 'f04476864d8d1fe219533d84ac9347bbbe2aa0e6' => :mountain_lion
-  end
+  url 'http://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.13/src/hdf5-1.8.13.tar.bz2'
+  sha1 '712955025f03db808f000d8f4976b8df0c0d37b5'
 
   # TODO - warn that these options conflict
   option :universal
