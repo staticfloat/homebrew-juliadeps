@@ -5,6 +5,14 @@ class Hdf5 < Formula
   url 'http://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.13/src/hdf5-1.8.13.tar.bz2'
   sha1 '712955025f03db808f000d8f4976b8df0c0d37b5'
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha1 '9d5484e35913af5415c00ac01d641afdd86b6a25' => :lion
+    sha1 'eaa5395ac74a962bd7e01762c435e7de12e5737e' => :mavericks
+    sha1 'd37805e92f876579bc10d9a83633cf14878d0866' => :mountain_lion
+  end
+
   # TODO - warn that these options conflict
   option :universal
   option 'enable-fortran', 'Compile Fortran bindings'
