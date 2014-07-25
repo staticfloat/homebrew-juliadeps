@@ -6,19 +6,15 @@ class Coinmp < Formula
   sha1 'f52c74abcbf55c72cd89f709db658ea33ed45154'
 
   bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
+    root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '0fd33cacb9b152a396151b54013fd47bf52904c4' => :snow_leopard_or_later
+    sha1 '747c85fb7f7f109e062a7db03bd42e1dfffa1d39' => :lion
+    sha1 '159c080692ae45a7871082325f2999cbd90113d8' => :mavericks
+    sha1 'f4532f3df79790ad0a5b4d54287418a0a5c2105c' => :mountain_lion
   end
 
-  depends_on 'staticfloat/juliadeps/gfortran'
+  depends_on 'staticfloat/juliadeps/libgfortran'
 
-  #conflicts_with 'coinutils', :because => 'CoinMP includes CoinUtils.'
-
-  #patch :p1 do
-  #  url "https://raw.githubusercontent.com/JuliaOpt/Cbc.jl/a5cd0c528c7f2e8895b9d6955bf3d96dd884157d/deps/CoinMP-emptyproblem.patch"
-  #  sha1 "f55e6d24bba7fe39fe0cf5d6b85cffb4a1f7c4ea"
-  #end
 
   def install
     # build without lapack until OpenBLAS issue 306 is resolved
