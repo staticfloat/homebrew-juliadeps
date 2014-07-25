@@ -6,10 +6,12 @@ class Szip < Formula
   sha1 'd241c9acc26426a831765d660b683b853b83c131'
 
   bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
+    root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
     revision 1
-    sha1 'eab8780611bf9b446e045ee94b9205d074d710dc' => :snow_leopard_or_later
+    sha1 '34af56a0a4fa1b52d9f0cabb3ed9ad49e39c7e9b' => :lion
+    sha1 '45f68c96496c4b17121ec8ddd1e537de7d7d85b6' => :mavericks
+    sha1 'e5371d215c05f7c279b7614801f9a8c2eea5a2c1' => :mountain_lion
   end
 
   option :universal
