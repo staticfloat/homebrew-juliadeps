@@ -6,10 +6,12 @@ class Hdf5 < Formula
   sha1 '87ded0894b104cf23a4b965f4ac0a567f8612e5e'
 
   bottle do
-    root_url 'http://archive.org/download/julialang/bottles'
+    root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
     revision 1
-    sha1 'ee7ad86c3fc6a2dcf7393394afa70bd975192f5e' => :snow_leopard_or_later
+    sha1 '60951dbcca0907fe586cedecdbbb67efd61e40c9' => :lion
+    sha1 'b7b1ffd598575de0eac4e6526bb95c160c89fbf8' => :mavericks
+    sha1 'f04476864d8d1fe219533d84ac9347bbbe2aa0e6' => :mountain_lion
   end
 
   # TODO - warn that these options conflict
@@ -20,9 +22,9 @@ class Hdf5 < Formula
   option 'enable-parallel', 'Compile parallel bindings'
   option 'enable-fortran2003', 'Compile Fortran 2003 bindings. Requires enable-fortran.'
 
-  depends_on :fortran if build.include? 'enable-fortran' or build.include? 'enable-fortran2003'
+  #depends_on :fortran if build.include? 'enable-fortran' or build.include? 'enable-fortran2003'
   depends_on 'staticfloat/juliadeps/szip'
-  depends_on :mpi => [:cc, :cxx, :f90] if build.include? "enable-parallel"
+  #depends_on :mpi => [:cc, :cxx, :f90] if build.include? "enable-parallel"
 
   def install
     ENV.universal_binary if build.universal?
