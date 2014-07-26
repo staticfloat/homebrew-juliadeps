@@ -12,6 +12,13 @@ class Pango < Formula
   depends_on 'staticfloat/juliadeps/cairo'
   depends_on 'staticfloat/juliadeps/fontconfig'
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha1 '8be1137de5b16f8948d15ce8c5f49d61a8389984' => :lion
+    sha1 '0e8e057d67e7b1ddec359fd11d3e0798f71394ac' => :mavericks
+    sha1 'd0663dda3db3e3552ed5738509de7e06aa7e54f6' => :mountain_lion
+  end
 
   fails_with :llvm do
     build 2326
@@ -45,12 +52,7 @@ class Pango < Formula
     ]
 
     # We always build without x
-    #if build.include? 'without-x'
-    if true
-      args << '--without-xft'
-    else
-      args << '--with-xft'
-    end
+    args << '--without-xft'
 
     system "./configure", *args
     system "make"
