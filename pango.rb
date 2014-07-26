@@ -8,7 +8,7 @@ class Pango < Formula
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'xz' => :build
   depends_on 'staticfloat/juliadeps/glib'
-  depends_on 'harfbuzz'
+  depends_on 'staticfloat/juliadeps/harfbuzz'
   depends_on 'staticfloat/juliadeps/cairo'
   depends_on 'staticfloat/juliadeps/fontconfig'
 
