@@ -11,9 +11,9 @@ class Libgfortran < Formula
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
     revision 3
-    sha1 '862b518fa1bb4bc92cb729b92383a50db19dedaf' => :lion
-    sha1 '1d324e7208a65759f2343fbc4727fa6ef6564785' => :mavericks
-    sha1 'e87769333954055e35b53c41771b8aed9eca849f' => :mountain_lion
+    sha1 '82e9e90b5e39746513e4d7d061b6036b4aabee13' => :mavericks
+    sha1 'cad0815ee3825359db88e1136340b7f834ad5a1a' => :lion
+    sha1 '531c655fde6f273b77e4e8b6e0c2cf6ef05673c5' => :mountain_lion
   end
 
   def post_install
