@@ -21,7 +21,10 @@ class Libgfortran < Formula
           dest = "#{lib}/#{dest.tap{|s| s.slice!("#{Formula['gcc'].lib}/")}}"
           mkdir_p File.dirname(dest)
           system 'cp', path, dest
-          system 'ln', '-s', dest, "#{lib}/#{File.basename(path)[0..-9]}.dylib"
+
+          if dest =~ /#{lib}\/gcc\/[^\/]+\/[\d.]+\/lib[^\/]+\.dylib/
+            system 'ln', '-s', dest, "#{lib}/#{File.basename(path)[0..-9]}.dylib"
+          end
         end
       end
     end
