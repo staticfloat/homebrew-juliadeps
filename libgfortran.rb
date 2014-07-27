@@ -24,6 +24,12 @@ class Libgfortran < Formula
         system 'ln', '-fs', path, "#{lib}/#{File.basename(path)[0..-9]}.dylib"
       end
     end
+
+    # Symlink this whole keg over into "gcc" as well, if it doesn't already exist
+    gcc_keg = "#{HOMEBREW_CELLAR}/gcc"
+    if !File.directory? gcc_keg
+      system 'ln', '-fs', "#{HOMEBREW_CELLAR}/libgfortran", gcc_keg
+    end
   end
 
   def install
