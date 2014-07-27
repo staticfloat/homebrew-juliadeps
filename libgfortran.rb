@@ -11,10 +11,10 @@ class Libgfortran < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 1
-    sha1 '4cb42189f6599af1536b900a6903b7383dffa146' => :lion
-    sha1 '80670a57d293dab0086408bb26a4480f99423ffe' => :mavericks
-    sha1 'ae384727435ee149a008bbf4b446f40094767752' => :mountain_lion
+    revision 2
+    sha1 '862b518fa1bb4bc92cb729b92383a50db19dedaf' => :lion
+    sha1 '1d324e7208a65759f2343fbc4727fa6ef6564785' => :mavericks
+    sha1 'e87769333954055e35b53c41771b8aed9eca849f' => :mountain_lion
   end
 
   def post_install
