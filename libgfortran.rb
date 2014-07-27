@@ -1,4 +1,5 @@
 require 'formula'
+require 'find'
 
 class Libgfortran < Formula
   homepage 'http://gcc.gnu.org/wiki/GFortran'
@@ -32,7 +33,11 @@ class Libgfortran < Formula
       odie "Must install gcc formula first!"
     end
     for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
-      quiet_system 'cp', "#{Formula['gcc'].prefix}/gfortran/lib/lib#{f}.dylib", lib
+      Find.file('#{HOMEBREW_PREFIX}/lib/gcc') do |path|
+        if path =~ /.*#{f}\.dylib/
+          quiet_system 'cp', path, lib
+        end
+      end
     end
   end
 end
