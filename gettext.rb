@@ -5,7 +5,6 @@ class Gettext < Formula
   url "http://ftpmirror.gnu.org/gettext/gettext-0.19.2.tar.xz"
   mirror "https://ftp.gnu.org/gnu/gettext/gettext-0.19.2.tar.xz"
   sha256 "b34e1baaf37e56b4f5d7104353a437a735b2e094a70588e7c5ae671eaa0819c3"
-  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'

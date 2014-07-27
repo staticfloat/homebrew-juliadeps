@@ -5,7 +5,6 @@ class Libgfortran < Formula
   url 'https://github.com/staticfloat/homebrew-libgfortran-formula/archive/master.tar.gz'
   sha1 '09328c065c42051fab341e660837704a3b1f5d4a'
   version '4.9.1'
-  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
