@@ -6,12 +6,11 @@ class Libgfortran < Formula
   url 'https://github.com/staticfloat/homebrew-libgfortran-formula/archive/master.tar.gz'
   sha1 '09328c065c42051fab341e660837704a3b1f5d4a'
   version '4.9.1'
-  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 2
+    revision 3
     sha1 '862b518fa1bb4bc92cb729b92383a50db19dedaf' => :lion
     sha1 '1d324e7208a65759f2343fbc4727fa6ef6564785' => :mavericks
     sha1 'e87769333954055e35b53c41771b8aed9eca849f' => :mountain_lion
