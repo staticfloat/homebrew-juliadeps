@@ -33,7 +33,7 @@ class Libgfortran < Formula
       odie "Must install gcc formula first!"
     end
     for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
-      Find.file('#{HOMEBREW_PREFIX}/lib/gcc') do |path|
+      Find.find('#{HOMEBREW_PREFIX}/lib/gcc') do |path|
         if path =~ /.*#{f}\.dylib/
           quiet_system 'cp', path, lib
         end
