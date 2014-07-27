@@ -17,6 +17,14 @@ class Portaudio < Formula
 
   head 'https://subversion.assembla.com/svn/portaudio/portaudio/trunk/', :using => :svn
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha1 '7525cd47924d4adb45be600c936d2abc77c2fa46' => :lion
+    sha1 '316130397237ff3fb01cd866f0e6e151d63e0f5d' => :mavericks
+    sha1 'bdeb69787a9983f61b8239cba74face75a1dec37' => :mountain_lion
+  end
+
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
 
   option :universal
