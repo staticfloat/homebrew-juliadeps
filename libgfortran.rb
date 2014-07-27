@@ -6,6 +6,7 @@ class Libgfortran < Formula
   url 'https://github.com/staticfloat/homebrew-libgfortran-formula/archive/master.tar.gz'
   sha1 '09328c065c42051fab341e660837704a3b1f5d4a'
   version '4.9.1'
+  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
@@ -19,11 +20,10 @@ class Libgfortran < Formula
     # This is here to symlink the libs to alternate locations where they could be installed
     # we still need to do this, since otherwise mach_o_files doesn't find us, and we don't
     # get our install names fixed!
-    mkdir_p prefix+'gfortran/lib'
+    mkdir_p lib
     for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
       quiet_system 'ln', '-fs', prefix+"gfortran/lib/lib#{f}.dylib", lib+"lib#{f}.dylib"
-      quiet_system 'ln', '-fs', prefix+"gfortran/lib/lib#{f[0..-3]}.dylib", lib+"lib#{f}.dylib"
-      quiet_system 'ln', '-fs', lib+"lib#{f[0..-3]}.dylib", lib+"lib#{f}.dylib"
+      quiet_system 'ln', '-fs', prefix+"gfortran/lib/lib#{f}.dylib", lib+"lib#{f[0..-3]}.dylib"
     end
   end
 
