@@ -17,13 +17,11 @@ class Libgfortran < Formula
   end
 
   def post_install
-    # This is here to symlink the libs to alternate locations where they could be installed
-    # we still need to do this, since otherwise mach_o_files doesn't find us, and we don't
-    # get our install names fixed!
-    mkdir_p lib
-    for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
-      quiet_system 'ln', '-fs', prefix+"gfortran/lib/lib#{f}.dylib", lib+"lib#{f}.dylib"
-      quiet_system 'ln', '-fs', prefix+"gfortran/lib/lib#{f}.dylib", lib+"lib#{f[0..-3]}.dylib"
+    # Symlink the libs into /lib as well, for easy access
+    Find.find("#{lib}") do |path|
+      if path =~ /#{lib}\/gcc\/[^\/]+\/[\d.]+\/lib[^\/]+\.dylib/
+        system 'ln', '-s', path, "#{lib}/#{File.basename(path)[0..-9]}.dylib"
+      end
     end
   end
 
@@ -32,10 +30,14 @@ class Libgfortran < Formula
     if not Formula['gcc'].installed?
       odie "Must install gcc formula first!"
     end
-    for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
-      Find.find('#{HOMEBREW_PREFIX}/lib/gcc') do |path|
+    mkdir_p lib
+    Find.find("#{Formula['gcc'].lib}/gcc") do |path|
+      for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
         if path =~ /.*#{f}\.dylib/
-          quiet_system 'cp', path, lib
+          dest = "#{path}"
+          dest = "#{lib}/#{dest.tap{|s| s.slice!("#{Formula['gcc'].lib}/")}}"
+          mkdir_p File.dirname(dest)
+          system 'cp', path, dest
         end
       end
     end
