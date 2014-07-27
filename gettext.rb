@@ -5,6 +5,7 @@ class Gettext < Formula
   url "http://ftpmirror.gnu.org/gettext/gettext-0.19.2.tar.xz"
   mirror "https://ftp.gnu.org/gnu/gettext/gettext-0.19.2.tar.xz"
   sha256 "b34e1baaf37e56b4f5d7104353a437a735b2e094a70588e7c5ae671eaa0819c3"
+  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
@@ -14,8 +15,6 @@ class Gettext < Formula
     sha1 'db224b65da43c3323da7da5fce307b7c8c2e034f' => :mavericks
     sha1 'f5d1f5724e2e9926af99e86af79b18de7d009128' => :mountain_lion
   end
-
-  keg_only "OS X provides the BSD gettext library and some software gets confused if both are in the library path."
 
   option :universal
 
