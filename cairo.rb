@@ -14,10 +14,10 @@ class Cairo < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 2
-    sha1 '9cc399dec6482c32dd7a5a76ffc554fb42463526' => :lion
-    sha1 '933279e51c31ee7fb56bb956d1398e26ecb60e76' => :mavericks
-    sha1 'ffa1877b856e7813d2bad722fcaf893b205ba220' => :mountain_lion
+    revision 3
+    sha1 'd867df01712b78ae91840532612194a30a001d89' => :lion
+    sha1 '0dc8ecf57195f229c17e8e624927fb309ef3f191' => :mavericks
+    sha1 '0df479387adeee321e4ab6f7b557c11c7b0e4d50' => :mountain_lion
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
