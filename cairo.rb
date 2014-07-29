@@ -40,12 +40,7 @@ class Cairo < Formula
     # We always built without x
     args << '--enable-xlib=no' << '--enable-xlib-xrender=no'
     args << '--enable-quartz-image=yes'
-
-    if build.with? 'glib'
-      args << '--enable-gobject=yes'
-    else
-      args << '--enable-gobject=no'
-    end
+    args << '--enable-gobject=yes'
 
     system "./configure", *args
     system "make install"
