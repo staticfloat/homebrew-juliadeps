@@ -5,6 +5,14 @@ class Gtkx3 < Formula
   url 'http://ftp.gnome.org/pub/gnome/sources/gtk+/3.12/gtk+-3.12.2.tar.xz'
   sha256 '61d74eea74231b1ea4b53084a9d6fc9917ab0e1d71b69d92cbf60a4b4fb385d0'
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha1 '57cd2669d5014e02088933730095bdc57c50e102' => :lion
+    sha1 '6e48aa8641f4b1fa8663fe3fa3c41a4f387965fa' => :mavericks
+    sha1 '55e40b86d75c0deb764787babad42ca775968df3' => :mountain_lion
+  end
+
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'xz' => :build
   depends_on 'staticfloat/juliadeps/glib'
