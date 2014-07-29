@@ -29,7 +29,6 @@ class Gtkx3 < Formula
                           "--prefix=#{prefix}",
                           "--disable-glibtest",
                           "--enable-introspection=yes",
-                          "--enable-x11-backend",
                           "--disable-schemas-compile"
     system "make install"
     # Prevent a conflict between this and Gtk+2
