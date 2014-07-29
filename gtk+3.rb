@@ -44,6 +44,7 @@ class Gtkx3 < Formula
     mv bin/'gtk-update-icon-cache', bin/'gtk3-update-icon-cache'
   end
 
+  # Note that you need to define XDG_DATA_DIRS="#{HOMEBREW_PREFIX}/share" to use the schemas properly
   def post_install
     system "#{HOMEBREW_PREFIX}/bin/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"
   end
