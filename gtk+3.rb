@@ -8,9 +8,10 @@ class Gtkx3 < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '57cd2669d5014e02088933730095bdc57c50e102' => :lion
-    sha1 '6e48aa8641f4b1fa8663fe3fa3c41a4f387965fa' => :mavericks
-    sha1 '55e40b86d75c0deb764787babad42ca775968df3' => :mountain_lion
+    revision 1
+    sha1 'fab0dd67b0a806d19313f8f961619b24b34778b3' => :lion
+    sha1 '56ae36345ef4d9d75ae23b649a3437e470f5b819' => :mavericks
+    sha1 '7f61ba10fa2189305111e6b57d781d726d391aa0' => :mountain_lion
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
