@@ -5,6 +5,14 @@ class GdkPixbuf < Formula
   url 'http://ftp.gnome.org/pub/GNOME/sources/gdk-pixbuf/2.30/gdk-pixbuf-2.30.8.tar.xz'
   sha256 '4853830616113db4435837992c0aebd94cbb993c44dc55063cee7f72a7bef8be'
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha1 'dbbc08dc018dee1ab1fcaae3a4de0d7aea10c778' => :lion
+    sha1 '656d94564aaaf0548d663f19cd8e60d20468b157' => :mavericks
+    sha1 '7a274e0b1672688879585529ba82a2135888dc80' => :mountain_lion
+  end
+
   option :universal
 
   depends_on "staticfloat/juliadeps/pkg-config" => :build

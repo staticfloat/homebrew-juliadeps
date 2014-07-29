@@ -6,9 +6,12 @@ class GobjectIntrospection < Formula
   sha256 '96ea75e9679083e7fe39a105e810e2ead2d708abf189a5ba420bfccfffa24e98'
 
   bottle do
-    sha1 "dbd65331012abd0570bfb8b115870a4ece51aad7" => :mavericks
-    sha1 "e553b3f537e998ef50ca42f1224aa981558ee29d" => :mountain_lion
-    sha1 "bb2353a61e8a05d4ef3e2a9f113d8ff348106e79" => :lion
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    revision 1
+    sha1 'fd510e783ec1dc5f6e6be61b573b2090eea5d2f1' => :lion
+    sha1 '141755831b49c7e420e27cae25f473a39f954a4c' => :mavericks
+    sha1 'bfbaae3518258e5add6deb27b0617317c4aa67e2' => :mountain_lion
   end
 
   option :universal
