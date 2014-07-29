@@ -21,7 +21,7 @@ class GobjectIntrospection < Formula
   depends_on 'staticfloat/juliadeps/glib'
   depends_on 'libffi'
   # To avoid: ImportError: dlopen(./.libs/_giscanner.so, 2): Symbol not found: _PyList_Check
-  depends_on :python
+  depends_on :python => :build
   depends_on 'staticfloat/juliadeps/cairo' => :build if build.with? 'tests'
 
   # Allow tests to execute on OS X (.so => .dylib)
