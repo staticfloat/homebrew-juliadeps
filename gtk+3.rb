@@ -32,8 +32,7 @@ class Gtkx3 < Formula
                   /gtk-update-icon-cache --(force|ignore-theme-index)/,
                   "#{buildpath}/gtk/\\0"
 
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
+    system "./configure", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--disable-glibtest",
                           "--enable-quartz-backend",
