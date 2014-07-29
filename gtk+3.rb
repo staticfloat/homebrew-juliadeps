@@ -28,6 +28,8 @@ class Gtkx3 < Formula
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--disable-glibtest",
+                          "--enable-quartz-backend",
+                          "--disable-x11-backend",
                           "--enable-introspection=yes",
                           "--disable-schemas-compile"
     system "make install"
