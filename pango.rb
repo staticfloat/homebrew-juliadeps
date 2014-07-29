@@ -11,6 +11,7 @@ class Pango < Formula
   depends_on 'staticfloat/juliadeps/harfbuzz'
   depends_on 'staticfloat/juliadeps/cairo'
   depends_on 'staticfloat/juliadeps/fontconfig'
+  depends_on 'staticfloat/juliadeps/gobject-introspection'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
