@@ -48,7 +48,7 @@ class Pango < Formula
       --prefix=#{prefix}
       --enable-man
       --with-html-dir=#{share}/doc
-      --disable-introspection
+      --enable-introspection
     ]
 
     # We always build without x
