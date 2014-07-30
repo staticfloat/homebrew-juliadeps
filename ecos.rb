@@ -7,9 +7,6 @@ class Ecos < Formula
   sha1 "a43e64a72d803c45d2e8f69ed2f0fbfcc368692f"
   version "1.0.4.1"
 
-  # depends_on "cmake" => :build
-  depends_on :x11 # if your formula requires any X11/XQuartz components
-
   def install
     system "make", "shared"
     system "make", "test"
