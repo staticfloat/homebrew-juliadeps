@@ -27,6 +27,7 @@ class Imagemagick < Formula
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/libtool'
+  depends_on 'fftw'
 
   depends_on 'jpeg' => :recommended
   depends_on 'libpng' => :recommended
