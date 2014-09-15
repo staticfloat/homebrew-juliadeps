@@ -7,6 +7,14 @@ class Cbc < Formula
 
   depends_on 'staticfloat/juliadeps/libgfortran'
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha1 '0d628178e187a908084d075887563a5bd330e764' => :lion
+    sha1 '9a354ee0af885cdb769629876499ec17c8c4ca5d' => :mavericks
+    sha1 'cf7db49d60cc22889fc325a7f00997a53615da0b' => :mountain_lion
+  end
+
   def install
     # build without lapack until Julia issue 4923 is resolved
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
