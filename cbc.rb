@@ -11,7 +11,8 @@ class Cbc < Formula
     # build without lapack until Julia issue 4923 is resolved
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}", "--without-lapack", 
-                          "--enable-dependency-linking"
+                          "--enable-dependency-linking",
+                          "--enable-cbc-parallel"
     system "make"
     ENV.deparallelize  # make install fails in parallel.
     system "make install"
