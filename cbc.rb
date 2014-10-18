@@ -5,8 +5,6 @@ class Cbc < Formula
   url 'http://www.coin-or.org/download/source/Cbc/Cbc-2.8.12.tgz'
   sha1 '7739f1841da5b8db0ee08bc21bd1ba05bd9d8432'
 
-  depends_on 'staticfloat/juliadeps/libgfortran'
-
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
