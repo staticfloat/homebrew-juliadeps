@@ -13,8 +13,7 @@ class Coinmp < Formula
     sha1 'f4532f3df79790ad0a5b4d54287418a0a5c2105c' => :mountain_lion
   end
 
-  depends_on 'staticfloat/juliadeps/libgfortran'
-
+  depends_on :fortran => :build
 
   def install
     # build without lapack until OpenBLAS issue 306 is resolved
@@ -24,6 +23,5 @@ class Coinmp < Formula
     system "make"
     ENV.deparallelize  # make install fails in parallel.
     system "make install"
-
   end
 end

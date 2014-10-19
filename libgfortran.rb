@@ -7,43 +7,47 @@ class Libgfortran < Formula
   sha1 '09328c065c42051fab341e660837704a3b1f5d4a'
   version '4.9.1'
 
+  depends_on 'gcc' => :build
+
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 4
-    sha1 'cd07fc8d0fc35d0bfcfa804afa73114d97d38a96' => :lion
-    sha1 '81dc72448d93b0591919c50c13d0fe02c8d11f91' => :mavericks
-    sha1 '52bfd1333e778e2db86528505f887bcc42bbfcfb' => :mountain_lion
-  end
-
-  def post_install
-    # Symlink the libs into /lib as well, for easy access
-    Find.find("#{lib}") do |path|
-      if path =~ /#{lib}\/gcc\/[^\/]+\/[\d.]+\/lib[^\/]+\.dylib/
-        system 'ln', '-fs', path, "#{lib}/#{File.basename(path)[0..-9]}.dylib"
-      end
-    end
-
-    # Symlink this whole keg over into "gcc" as well, if it doesn't already exist
-    gcc_keg = "#{HOMEBREW_CELLAR}/gcc"
-    if !File.directory? gcc_keg
-      system 'ln', '-fs', "#{HOMEBREW_CELLAR}/libgfortran", gcc_keg
-    end
+    revision 5
+    sha1 'ed1be16a9d8cbf8206888947702eb6a043378dda' => :lion
+    sha1 'b81f74c97681bd77b0de355e354825f28df4cda8' => :mavericks
+    sha1 'c3e62bb3f4d3d369a83d10848d84bec586639923' => :mountain_lion
   end
 
   def install
     # To generate a libgfortran installation, steal libraries from gcc!
-    if not Formula['gcc'].installed?
-      odie "Must install gcc formula first!"
-    end
     mkdir_p lib
     Find.find("#{Formula['gcc'].lib}/gcc") do |path|
       for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
-        if path =~ /.*#{f}\.dylib/
-          dest = "#{path}"
-          dest = "#{lib}/#{dest.tap{|s| s.slice!("#{Formula['gcc'].lib}/")}}"
-          mkdir_p File.dirname(dest)
-          system 'cp', path, dest
+        if path =~ /#{lib}\/gcc\/[^\/]+\/[\d.]+\/lib[^\/]+\.dylib/
+          system 'cp', path, lib
+        end
+      end
+    end
+  end
+end
+
+# Here, we're going to find all dylibs and install_name_tool them for libgfortran instead of gcc
+def fixup_libgfortran(prefix)
+  keg = Keg.for(prefix)
+  libgfortran = Formula.factory("libgfortran")
+
+  # For each dylib/executable within this keg
+  keg.mach_o_files.each do |file|
+    file.ensure_writable do
+      # Search its dependent dylibs
+      keg.each_install_name_for(file) do |bad_name|
+        # If we find a quadmath, gcc, or gfortran,
+        for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
+          if bad_name =~ /.*#{f}\.dylib/
+            # Rename the dependency!
+            good_name = libgfortran.opt_lib + Pathname.new(bad_name).basename
+            keg.change_install_name(bad_name, good_name, file)
+          end
         end
       end
     end
