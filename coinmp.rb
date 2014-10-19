@@ -8,9 +8,10 @@ class Coinmp < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '747c85fb7f7f109e062a7db03bd42e1dfffa1d39' => :lion
-    sha1 '159c080692ae45a7871082325f2999cbd90113d8' => :mavericks
-    sha1 'f4532f3df79790ad0a5b4d54287418a0a5c2105c' => :mountain_lion
+    revision 1
+    sha1 'dc81d8e2a5dc590cabc3de9e44a1810c1ab44113' => :lion
+    sha1 '149c36ceb8f3561360e0d6b93c942044936aedf6' => :mavericks
+    sha1 '5a3be6054fdda1edab5343d59da4458d09ba65d8' => :mountain_lion
   end
 
   depends_on :fortran => :build
