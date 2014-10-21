@@ -23,7 +23,7 @@ class Libgfortran < Formula
     mkdir_p lib
     Find.find("#{Formula['gcc'].lib}/gcc") do |path|
       for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
-        if path =~ /#{lib}\/gcc\/[^\/]+\/[\d.]+\/lib[^\/]+\.dylib/
+        if /.*\/4.9.1\/lib#{f}.dylib/.match( path )
           system 'cp', path, lib
         end
       end
