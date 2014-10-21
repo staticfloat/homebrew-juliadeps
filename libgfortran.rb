@@ -28,6 +28,8 @@ class Libgfortran < Formula
         end
       end
     end
+
+    fixup_libgfortran(prefix)
   end
 end
 
