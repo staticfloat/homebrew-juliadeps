@@ -20,7 +20,7 @@ class Ipopt < Formula
     fixup_libgfortran prefix
   end
 
-  depends_on :fortran => :build
+  #depends_on :fortran => :build
   depends_on 'staticfloat/juliadeps/libgfortran'
 
   def install
