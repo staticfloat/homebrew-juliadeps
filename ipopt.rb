@@ -6,12 +6,21 @@ class Ipopt < Formula
   url 'http://www.coin-or.org/download/source/Ipopt/Ipopt-3.11.8.tgz'
   sha1 '530d718fb5a0c994c305deb3bcfdacc16cc0e2ef'
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    revision 1
+    sha1 '547107046b3816642a647e5ffc2d0543f5e4aa48' => :mavericks
+    sha1 'daff2040acbca78ecbc6c8003f3e40d7077a139f' => :mountain_lion
+  end
+
   # Need this snippet in every formula that has a runtime dependency on libgfortran
   def post_install
     fixup_libgfortran prefix
   end
 
-  depends_on :fortran => :build
+  # Need to enable this when building the bottle, disable it when installing from bottles
+  #depends_on :fortran => :build
   depends_on 'staticfloat/juliadeps/libgfortran'
 
   def install
