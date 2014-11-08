@@ -7,6 +7,13 @@ class Libgfortran < Formula
   sha1 '09328c065c42051fab341e660837704a3b1f5d4a'
   version '4.9.2'
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha1 '3ce6625daa3170c28718417c4efd4d23479626a9' => :mavericks
+    sha1 '51e68275e0b311b636b8ed86d7f3c4c0572f5558' => :mountain_lion
+  end
+
   depends_on 'gcc' => :build
 
   def install
