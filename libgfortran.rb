@@ -5,25 +5,16 @@ class Libgfortran < Formula
   homepage 'http://gcc.gnu.org/wiki/GFortran'
   url 'https://github.com/staticfloat/homebrew-libgfortran-formula/archive/master.tar.gz'
   sha1 '09328c065c42051fab341e660837704a3b1f5d4a'
-  version '4.9.1'
+  version '4.9.2'
 
   depends_on 'gcc' => :build
-
-  bottle do
-    root_url 'https://juliabottles.s3.amazonaws.com'
-    cellar :any
-    revision 8
-    sha1 '83fb086bb40fc6d102b94d1c8a4ea1af2bc0ecd6' => :lion
-    sha1 '82ec1addebad215e4a20393da666d426087e24aa' => :mavericks
-    sha1 '196cb0da8ab3825bf124ebcb0415502a7871e146' => :mountain_lion
-  end
 
   def install
     # To generate a libgfortran installation, steal libraries from gcc!
     mkdir_p lib
     Find.find("#{Formula['gcc'].lib}/gcc") do |path|
       for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
-        if /.*\/4.9.1\/lib#{f}.dylib/.match( path )
+        if /.*\/#{version}\/lib#{f}.dylib/.match( path )
           system 'cp', path, lib
         end
       end
