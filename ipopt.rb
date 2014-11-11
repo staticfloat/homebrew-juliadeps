@@ -20,7 +20,7 @@ class Ipopt < Formula
   end
 
   # Need to enable this when building the bottle, disable it when installing from bottles
-  #depends_on :fortran => :build
+  depends_on :fortran if ARGV.build_bottle?
   depends_on 'staticfloat/juliadeps/libgfortran'
 
   def install
