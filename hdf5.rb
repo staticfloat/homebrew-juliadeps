@@ -11,6 +11,7 @@ class Hdf5 < Formula
     sha1 '9d5484e35913af5415c00ac01d641afdd86b6a25' => :lion
     sha1 'eaa5395ac74a962bd7e01762c435e7de12e5737e' => :mavericks
     sha1 'd37805e92f876579bc10d9a83633cf14878d0866' => :mountain_lion
+    sha1 "49b234653e40cc1a32515380e31ff28ef38690d8" => :yosemite
   end
 
   # TODO - warn that these options conflict

@@ -12,6 +12,7 @@ class Ipopt < Formula
     revision 1
     sha1 '547107046b3816642a647e5ffc2d0543f5e4aa48' => :mavericks
     sha1 'daff2040acbca78ecbc6c8003f3e40d7077a139f' => :mountain_lion
+    sha1 "e5b5558929b964b54667853b2f8ad62a4b98148b" => :yosemite
   end
 
   # Need this snippet in every formula that has a runtime dependency on libgfortran

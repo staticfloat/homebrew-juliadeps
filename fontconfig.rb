@@ -11,6 +11,7 @@ class Fontconfig < Formula
     sha1 '8350de16baf1ae81f315935ea2037206fbd09aed' => :lion
     sha1 '19898a3e5251c1d2c60643ef5f26ba7752784afa' => :mavericks
     sha1 'f24b070d413a0286933774c3c9ce585c68250b32' => :mountain_lion
+    sha1 "db3b142705fcdab542caf1f460446b45747a7d2c" => :yosemite
   end
 
   option :universal

@@ -14,6 +14,7 @@ class Imagemagick < Formula
     sha1 'd99c830c120aa36b9eed8b0d8e6ba7f370945d07' => :lion
     sha1 'adbb2c480a0e8de622e180c5c9c192c49df5332d' => :mavericks
     sha1 '31d35fd95f1a24f86e7982bb9f87a2044a966cd1' => :mountain_lion
+    sha1 "07f5e6af904495df64d8b54e838e8e115538a37a" => :yosemite
   end
 
   head 'https://www.imagemagick.org/subversion/ImageMagick/trunk',
