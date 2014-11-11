@@ -6,6 +6,7 @@ class Harfbuzz < Formula
   sha256 "d313c5bf04b8acd01e8f16979d6d2e5fe65184eb28816b70ea0f374be11314c7"
 
   bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
     sha1 "a97e9fdfaa2dd88f567f82933f9b27384d822f47" => :mavericks
     sha1 "3a186489dcb3b81d347f635ebf77499c8db60756" => :mountain_lion
