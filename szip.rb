@@ -12,6 +12,7 @@ class Szip < Formula
     sha1 '34af56a0a4fa1b52d9f0cabb3ed9ad49e39c7e9b' => :lion
     sha1 '45f68c96496c4b17121ec8ddd1e537de7d7d85b6' => :mavericks
     sha1 'e5371d215c05f7c279b7614801f9a8c2eea5a2c1' => :mountain_lion
+    sha1 "284660a3cbab79726e2271053e6fec472fc5d857" => :yosemite
   end
 
   option :universal

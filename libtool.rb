@@ -16,6 +16,7 @@ class Libtool < Formula
     sha1 '80a19de303ca7e8e813493913e9c5bdb28d0eff8' => :lion
     sha1 'b6888694df66ff77a205ca973b5eb6597a4628bf' => :mavericks
     sha1 'ae7bcea665a68f9636347337b04397d7696c34f9' => :mountain_lion
+    sha1 "01d11a793cd4430863efa9f4454b7e665ad260a1" => :yosemite
   end
 
   if MacOS::Xcode.provides_autotools? or File.file? "/usr/bin/glibtoolize"

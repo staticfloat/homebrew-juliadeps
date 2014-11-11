@@ -14,6 +14,7 @@ class Icu4c < Formula
     sha1 'fb7c4555a0ec63f12e213c36c9fa4291d8c7f9be' => :lion
     sha1 '53f8352c6f246844b967a8a8408335f5eb9f9baf' => :mavericks
     sha1 'ca9f14db47473b2963ac63eaca4349c50f89b42b' => :mountain_lion
+    sha1 "39495b5923c8ac06595003f414d5b27efdf818b6" => :yosemite
   end
 
   keg_only "Conflicts; see: https://github.com/Homebrew/homebrew/issues/issue/167"

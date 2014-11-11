@@ -13,6 +13,7 @@ class Glib < Formula
     sha1 '837ec030f3d9ebccde6b27eaec8ad0a4f201e791' => :lion
     sha1 '387125d9e73696f3e6d11d8ae21bbcdc6dc9034b' => :mavericks
     sha1 '39d24536fe8a4cde1dd637167e7c18e792cab1d4' => :mountain_lion
+    sha1 "91d51573612575aef8b26ffb294407ac4b5841ad" => :yosemite
   end
 
   option :universal
