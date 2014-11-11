@@ -13,6 +13,7 @@ class Ecos < Formula
     sha1 '3851a33870c7bec6660e2ded37ff3086ae97e70a' => :lion
     sha1 'edaefb6684cd4fd68e895230c8f2886b349b8ac4' => :mavericks
     sha1 '621902182c2a158cfcfa729e2ff8c02c84f8cf07' => :mountain_lion
+    sha1 "7c3235450e11da3c706ea7340bbf9e43eb00f690" => :yosemite
   end
 
   def install

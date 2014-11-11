@@ -12,6 +12,7 @@ class Glpk454 < Formula
     sha1 '866ad909f2081a2d4bb4949426e2016e7a282550' => :lion
     sha1 '20ed969847046a4d7bbda59c2e02756d1c33975d' => :mavericks
     sha1 'd1148650ad7c8c3067c2ddf9625039324bb3db02' => :mountain_lion
+    sha1 "6ba3c57cd86a2829844630dbeb9f7d2c008221b9" => :yosemite
   end
 
   def install

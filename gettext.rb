@@ -13,6 +13,7 @@ class Gettext < Formula
     sha1 'e25501a54b72d3354233e051e05906621606a57c' => :lion
     sha1 'db224b65da43c3323da7da5fce307b7c8c2e034f' => :mavericks
     sha1 'f5d1f5724e2e9926af99e86af79b18de7d009128' => :mountain_lion
+    sha1 "66611d3b16e0ad46b9021378ab505fcc29a575fa" => :yosemite
   end
 
   option :universal

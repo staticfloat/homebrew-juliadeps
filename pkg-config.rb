@@ -13,6 +13,7 @@ class PkgConfig < Formula
     sha1 'd757fa60a51d564b156b7c260d6cd1f844b946e5' => :lion
     sha1 '835f6bb0c48b48a376e67075f827d689380817f3' => :mavericks
     sha1 '51a2582baa544780bd0e7cb14ec3d59c260eb4f0' => :mountain_lion
+    sha1 "d523a6de3f6c789ceb2aa96eae40f50439c12bb9" => :yosemite
   end
 
   def install

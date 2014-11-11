@@ -12,6 +12,7 @@ class Libgfortran < Formula
     cellar :any
     sha1 '3ce6625daa3170c28718417c4efd4d23479626a9' => :mavericks
     sha1 '51e68275e0b311b636b8ed86d7f3c4c0572f5558' => :mountain_lion
+    sha1 "1614bd76272067ae3af66ed13ef8915a55ef75b6" => :yosemite
   end
 
   depends_on 'gcc' => :build
