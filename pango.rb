@@ -20,6 +20,7 @@ class Pango < Formula
     sha1 '196f8f3079d1e8cc824c610e07dcd1b400b45b3a' => :lion
     sha1 '507fea3b9bf90ccfa895f245867e0817d250d925' => :mavericks
     sha1 '3cb8b0ce02baf79ce2c8ff6fc2cfd91408a754ff' => :mountain_lion
+    sha1 "f57058a2d16f33cd6cb2ad029a0a18b8f636138a" => :yosemite
   end
 
   fails_with :llvm do
