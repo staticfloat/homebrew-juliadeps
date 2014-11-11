@@ -11,6 +11,7 @@ class Atk < Formula
     sha1 'ddd9b90148eb8155d06c4d112e0e56d0fbeaefcf' => :lion
     sha1 '67ae684950cb745daaeee5e24d4b5dd0df2208cd' => :mavericks
     sha1 'b45b6f59a529db6b8c35253c96aa0e86a708b8e6' => :mountain_lion
+    sha1 "1498a223a23f61dc30677c4db8c1f5d50c8174a2" => :yosemite
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build

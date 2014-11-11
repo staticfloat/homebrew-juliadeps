@@ -10,6 +10,7 @@ class Harfbuzz < Formula
     sha1 "a97e9fdfaa2dd88f567f82933f9b27384d822f47" => :mavericks
     sha1 "3a186489dcb3b81d347f635ebf77499c8db60756" => :mountain_lion
     sha1 "a6b29966264f6272836bdaccbf1b8097f23823e9" => :lion
+    sha1 "c2b73e7366dbe38a08a0303f3ccccda5b693541d" => :yosemite
   end
 
   depends_on "staticfloat/juliadeps/pkg-config" => :build
