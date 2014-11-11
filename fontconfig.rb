@@ -32,5 +32,6 @@ class Fontconfig < Formula
 
   def post_install
     system "#{bin}/fc-cache", "-frv"
+    return true
   end
 end

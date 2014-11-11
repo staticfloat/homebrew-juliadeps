@@ -12,6 +12,7 @@ class Gtkx3 < Formula
     sha1 'fab0dd67b0a806d19313f8f961619b24b34778b3' => :lion
     sha1 '56ae36345ef4d9d75ae23b649a3437e470f5b819' => :mavericks
     sha1 '7f61ba10fa2189305111e6b57d781d726d391aa0' => :mountain_lion
+    sha1 "3fc81ccef5bf0dcd7421a2585e3cf64171c72582" => :yosemite
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
