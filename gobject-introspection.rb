@@ -12,6 +12,7 @@ class GobjectIntrospection < Formula
     sha1 'fd510e783ec1dc5f6e6be61b573b2090eea5d2f1' => :lion
     sha1 '141755831b49c7e420e27cae25f473a39f954a4c' => :mavericks
     sha1 'bfbaae3518258e5add6deb27b0617317c4aa67e2' => :mountain_lion
+    sha1 "de70d9af6fb8a8b545c0d809ab329fa09b665a00" => :yosemite
   end
 
   option :universal

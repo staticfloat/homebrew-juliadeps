@@ -18,6 +18,7 @@ class Cairo < Formula
     sha1 'd867df01712b78ae91840532612194a30a001d89' => :lion
     sha1 '0dc8ecf57195f229c17e8e624927fb309ef3f191' => :mavericks
     sha1 '0df479387adeee321e4ab6f7b557c11c7b0e4d50' => :mountain_lion
+    sha1 "b84bd4b06eb89aaa530af8197ca21781d28b42f6" => :yosemite
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
