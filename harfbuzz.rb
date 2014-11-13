@@ -8,9 +8,8 @@ class Harfbuzz < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 "a97e9fdfaa2dd88f567f82933f9b27384d822f47" => :mavericks
-    sha1 "3a186489dcb3b81d347f635ebf77499c8db60756" => :mountain_lion
-    sha1 "a6b29966264f6272836bdaccbf1b8097f23823e9" => :lion
+    sha1 "3d136380b810141a5d35fda62bdd35b8771f9314" => :mavericks
+    sha1 "98b689c1e66ff032a7467c74b458ecdcd57ce2df" => :mountain_lion
     sha1 "c2b73e7366dbe38a08a0303f3ccccda5b693541d" => :yosemite
   end
 
