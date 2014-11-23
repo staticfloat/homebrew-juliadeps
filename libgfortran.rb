@@ -6,13 +6,11 @@ class Libgfortran < Formula
   url 'https://github.com/staticfloat/homebrew-libgfortran-formula/archive/master.tar.gz'
   sha1 '09328c065c42051fab341e660837704a3b1f5d4a'
   version '4.9.2'
+  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '3ce6625daa3170c28718417c4efd4d23479626a9' => :mavericks
-    sha1 '51e68275e0b311b636b8ed86d7f3c4c0572f5558' => :mountain_lion
-    sha1 "1614bd76272067ae3af66ed13ef8915a55ef75b6" => :yosemite
   end
 
   depends_on 'gcc' => :build
@@ -20,12 +18,9 @@ class Libgfortran < Formula
   def install
     # To generate a libgfortran installation, steal libraries from gcc!
     mkdir_p lib
-    Find.find("#{Formula['gcc'].lib}/gcc") do |path|
-      for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
-        if /.*\/#{version}\/lib#{f}.dylib/.match( path )
-          system 'cp', path, lib
-        end
-      end
+    gcc = Formula['gcc']
+    for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
+      system 'cp', "#{gcc.lib}/gcc/#{gcc.version_suffix}/lib#{f}.dylib", lib
     end
 
     fixup_libgfortran(prefix)
@@ -39,6 +34,7 @@ def fixup_libgfortran(prefix)
 
   # For each dylib/executable within this keg
   keg.mach_o_files.each do |file|
+    # Make sure it's writable
     file.ensure_writable do
       # Search its dependent dylibs
       keg.each_install_name_for(file) do |bad_name|
