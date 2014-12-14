@@ -5,14 +5,14 @@ class Ipopt < Formula
   homepage 'https://projects.coin-or.org/Ipopt'
   url 'http://www.coin-or.org/download/source/Ipopt/Ipopt-3.11.8.tgz'
   sha1 '530d718fb5a0c994c305deb3bcfdacc16cc0e2ef'
+  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 1
-    sha1 '547107046b3816642a647e5ffc2d0543f5e4aa48' => :mavericks
-    sha1 'daff2040acbca78ecbc6c8003f3e40d7077a139f' => :mountain_lion
-    sha1 "e5b5558929b964b54667853b2f8ad62a4b98148b" => :yosemite
+    sha1 "3b36f111eb54582ed1af4f84c45e5b9998309b80" => :mountain_lion
+    sha1 "08a38e99c509b8aae5f8daba9a76eb1b28ede2b1" => :mavericks
+    sha1 "368560e856b40094ce63bac04a274f65bc1aa990" => :yosemite
   end
 
   # Need this snippet in every formula that has a runtime dependency on libgfortran

@@ -7,14 +7,14 @@ class Imagemagick < Formula
   # Tarball and checksum from: http://www.imagemagick.org/download
   url 'http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.9-1.tar.xz'
   sha256 '88e9f72cff22b91738494abe8b87f53c5b0c6932c4b08f944bf79846f035e642'
+  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 'd99c830c120aa36b9eed8b0d8e6ba7f370945d07' => :lion
-    sha1 'adbb2c480a0e8de622e180c5c9c192c49df5332d' => :mavericks
-    sha1 '31d35fd95f1a24f86e7982bb9f87a2044a966cd1' => :mountain_lion
-    sha1 "07f5e6af904495df64d8b54e838e8e115538a37a" => :yosemite
+    sha1 "1146e5bc7d4f585e4c3c40c88f022e068dcb8a3a" => :yosemite
+    sha1 "b691b16e44b28a720829d91f52444639e8f86eee" => :mountain_lion
+    sha1 "6ea37685eb15240ceb3f3e1658aa097c81639ac2" => :mavericks
   end
 
   head 'https://www.imagemagick.org/subversion/ImageMagick/trunk',
@@ -28,7 +28,7 @@ class Imagemagick < Formula
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/libtool'
-  depends_on 'staticfloat/juliadeps/xz'
+  depends_on 'xz'
   depends_on 'fftw'
 
   depends_on 'jpeg' => :recommended
@@ -37,7 +37,7 @@ class Imagemagick < Formula
 
   depends_on :x11 => :optional
   depends_on :fontconfig => :optional
-  depends_on 'libtiff' => :optional
+  depends_on 'libtiff'
   depends_on 'little-cms' => :optional
   depends_on 'little-cms2' => :optional
   depends_on 'jasper' => :optional
