@@ -9,6 +9,9 @@ class Scs < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha1 "848bfec0c26d490a9370a1973dbb54d3c80f7f9c" => :mavericks
+    sha1 "1295181604899a20929444589d23ed9a95dde2f9" => :yosemite
+    sha1 "e39cab1d12dd03d32b4c6fd881eded8bc17397ed" => :mountain_lion
   end
 
   def install
