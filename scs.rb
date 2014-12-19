@@ -2,9 +2,9 @@ require "formula"
 
 class Scs < Formula
   homepage "https://github.com/cvxgrp/scs"
-  url "https://github.com/cvxgrp/scs/archive/1.0.2.tar.gz"
+  url "https://github.com/cvxgrp/scs/archive/v1.0.7.tar.gz"
   head "https://github.com/cvxgrp/scs.git"
-  sha1 "c4667c0cfe3a8235375ea065a71fbbb5da3063b9"
+  sha1 "fac3869989770f60d451fe4bd3c14afb7f73ae9f"
 
   def install
     default_cflags="-g -Wall -pedantic -O3 -funroll-loops -Wstrict-prototypes -I. -Iinclude"
