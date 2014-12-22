@@ -2,8 +2,8 @@ require 'formula'
 
 class Pango < Formula
   homepage 'http://www.pango.org/'
-  url 'http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.5.tar.xz'
-  sha256 'be0e94b2e5c7459f0b6db21efab6253556c8f443837200b8736d697071276ac8'
+  url "http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.8.tar.xz"
+  sha256 "18dbb51b8ae12bae0ab7a958e7cf3317c9acfc8a1e1103ec2f147164a0fc2d07"
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'xz' => :build
@@ -16,12 +16,9 @@ class Pango < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 1
-    sha1 '196f8f3079d1e8cc824c610e07dcd1b400b45b3a' => :lion
-    sha1 '507fea3b9bf90ccfa895f245867e0817d250d925' => :mavericks
-    sha1 '3cb8b0ce02baf79ce2c8ff6fc2cfd91408a754ff' => :mountain_lion
-    sha1 "f57058a2d16f33cd6cb2ad029a0a18b8f636138a" => :yosemite
   end
+
+  option :universal
 
   fails_with :llvm do
     build 2326
@@ -48,6 +45,7 @@ class Pango < Formula
   def install
     args = %W[
       --disable-dependency-tracking
+      --disable-silent-rules
       --prefix=#{prefix}
       --enable-man
       --with-html-dir=#{share}/doc
@@ -62,7 +60,7 @@ class Pango < Formula
     system "make install"
   end
 
-  def test
+  test do
     system "#{bin}/pango-querymodules", "--version"
   end
 end
