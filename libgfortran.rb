@@ -31,6 +31,7 @@ class Libgfortran < Formula
 end
 
 # Here, we're going to find all dylibs and install_name_tool them for libgfortran instead of gcc
+# We're also going to modify paths found in .pc files
 def fixup_libgfortran(prefix)
   keg = Keg.for(prefix)
   libgfortran = Formula.factory("libgfortran")
@@ -49,6 +50,17 @@ def fixup_libgfortran(prefix)
             keg.change_install_name(bad_name, good_name, file)
           end
         end
+      end
+    end
+  end
+
+  gcc = Formula.factory("gcc")
+  # For each .pc file within this keg
+  keg.pkgconfig_files.each do |file|
+    # Make sure it's writable
+    file.ensure_writable do
+      inreplace file do |s|
+        s.gsub! /-L#{gcc.lib}\/[^ ]*/, "-L#{libgfortran.opt_lib}"
       end
     end
   end
