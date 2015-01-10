@@ -1,6 +1,9 @@
 require 'formula'
 require 'find'
 
+# Ironically, we have to require ourselves to use fixup_libgfortran within ourselves
+require "#{File.dirname(__FILE__)}/libgfortran"
+
 class Libgfortran < Formula
   homepage 'http://gcc.gnu.org/wiki/GFortran'
   url 'https://github.com/staticfloat/homebrew-libgfortran-formula/archive/master.tar.gz'
@@ -11,9 +14,10 @@ class Libgfortran < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 "93eddc53b04ed10192bd32dc08d466ef1bb1be75" => :mountain_lion
-    sha1 "30e3fac84d89790100cb6041c9521da23da32ae8" => :mavericks
-    sha1 "09413c9b31a1a03b0f85cb9f3c9ea23e23e227b4" => :yosemite
+    revision 1
+    sha1 "02c8cc446567bd7b82050085017ad427f178b7e3" => :mountain_lion
+    sha1 "2100e6fc878ffa8fedc50d54ef087d9844f9c633" => :mavericks
+    sha1 "282f581b0661ccb445b524629ff4de71c6fe0f54" => :yosemite
   end
 
   depends_on 'gcc' => :build
@@ -25,6 +29,11 @@ class Libgfortran < Formula
     for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
       system 'cp', "#{gcc.lib}/gcc/#{gcc.version_suffix}/lib#{f}.dylib", lib
     end
+
+    # Create symlinks to non-versioned library versions
+    ln_s "libgfortran.3.dylib", "#{lib}/libgfortran.dylib"
+    ln_s "libgcc_s.1.dylib", "#{lib}/libgcc_s.dylib"
+    ln_s "libquadmath.0.dylib", "#{lib}/libquadmath.dylib"
 
     fixup_libgfortran(prefix)
   end
