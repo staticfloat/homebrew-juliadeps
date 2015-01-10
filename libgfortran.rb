@@ -1,6 +1,9 @@
 require 'formula'
 require 'find'
 
+# Ironically, we have to require ourselves to use fixup_libgfortran within ourselves
+require "#{File.dirname(__FILE__)}/libgfortran"
+
 class Libgfortran < Formula
   homepage 'http://gcc.gnu.org/wiki/GFortran'
   url 'https://github.com/staticfloat/homebrew-libgfortran-formula/archive/master.tar.gz'
@@ -25,6 +28,11 @@ class Libgfortran < Formula
     for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
       system 'cp', "#{gcc.lib}/gcc/#{gcc.version_suffix}/lib#{f}.dylib", lib
     end
+
+    # Create symlinks to non-versioned library versions
+    ln_s "#{lib}/libgfortran.3.dylib", "#{lib}/libgfortran.dylib"
+    ln_s "#{lib}/libgcc_s.1.dylib", "#{lib}/libgcc_s.dylib"
+    ln_s "#{lib}/libquadmath.0.dylib", "#{lib}/libquadmath.dylib"
 
     fixup_libgfortran(prefix)
   end
