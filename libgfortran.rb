@@ -30,9 +30,9 @@ class Libgfortran < Formula
     end
 
     # Create symlinks to non-versioned library versions
-    ln_s "#{lib}/libgfortran.3.dylib", "#{lib}/libgfortran.dylib"
-    ln_s "#{lib}/libgcc_s.1.dylib", "#{lib}/libgcc_s.dylib"
-    ln_s "#{lib}/libquadmath.0.dylib", "#{lib}/libquadmath.dylib"
+    ln_s "libgfortran.3.dylib", "#{lib}/libgfortran.dylib"
+    ln_s "libgcc_s.1.dylib", "#{lib}/libgcc_s.dylib"
+    ln_s "libquadmath.0.dylib", "#{lib}/libquadmath.dylib"
 
     fixup_libgfortran(prefix)
   end
