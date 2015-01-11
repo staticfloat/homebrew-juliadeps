@@ -9,6 +9,9 @@ class Gettext < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha1 "7508312673e0ee49444d14b55e4d3feaa72af7a4" => :mavericks
+    sha1 "d2c78ec3eb8f83054f5e02652c44a03e3c1c4a5c" => :mountain_lion
+    sha1 "a14136e5c8126567a4628e9ee1a4920e8ec276f9" => :yosemite
   end
 
   option :universal
