@@ -8,6 +8,9 @@ class GobjectIntrospection < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha1 "3470e40a0ac31c6ef7c42945bb96c50dd0bcfc08" => :yosemite
+    sha1 "0980baaeeecaf674c9e302fb2043853a41920b0a" => :mavericks
+    sha1 "6512aa024dacd92fa02595b8c9b0c92e9c7f90bd" => :mountain_lion
   end
 
   option :universal
