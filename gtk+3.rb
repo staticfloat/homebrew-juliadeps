@@ -4,13 +4,14 @@ class Gtkx3 < Formula
   homepage 'http://gtk.org/'
   url "http://ftp.gnome.org/pub/gnome/sources/gtk+/3.14/gtk+-3.14.6.tar.xz"
   sha256 "cfc424e6e10ffeb34a33762aeb77905c3ed938f0b4006ddb7e880aad234ef119"
+  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 "2bbeb6ec73d4340474fffbed642480e4f6803866" => :yosemite
-    sha1 "fdf82f77cfb2a5839b721801f29773dc7134f5c2" => :mavericks
-    sha1 "b00abf9b51fec6d86a66c2284d67c5bead9a44c5" => :mountain_lion
+    sha1 "af96d59d04494cbe4fdb3ce5fb15e6cf974fb485" => :yosemite
+    sha1 "47189a853fbeac6eb686efb9d060cce0020c49f4" => :mavericks
+    sha1 "6c542f5d3b84314c6a607daccd4279e43e559182" => :mountain_lion
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
@@ -36,6 +37,7 @@ class Gtkx3 < Formula
       --disable-schemas-compile
       --enable-quartz-backend
       --enable-quartz-relocation
+      --disable-x11-backend
     ]
 
     system "./configure", *args
