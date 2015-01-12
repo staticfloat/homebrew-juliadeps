@@ -10,6 +10,9 @@ class Icu4c < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha1 "24caf08505c6d27692086ad497d10f55583b6027" => :yosemite
+    sha1 "7df4b2ebc22d145da0169367e4b137a00fff8703" => :mavericks
+    sha1 "31e1ed46fa9b565ad2fcd758586a1ce91abbff8f" => :mountain_lion
   end
 
   keg_only :provided_by_osx, "OS X provides libicucore.dylib (but nothing else)."
