@@ -2,22 +2,17 @@ require 'formula'
 
 class Icu4c < Formula
   homepage 'http://site.icu-project.org/'
-  url 'http://download.icu-project.org/files/icu4c/52.1/icu4c-52_1-src.tgz'
-  version '52.1'
-  sha1 '6de440b71668f1a65a9344cdaf7a437291416781'
-  head 'http://source.icu-project.org/repos/icu/icu/trunk/', :using => :svn
+  head "http://source.icu-project.org/repos/icu/icu/trunk/", :using => :svn
+  url "http://download.icu-project.org/files/icu4c/54.1/icu4c-54_1-src.tgz"
+  version "54.1"
+  sha1 "8c752490bbf31cea26e20246430cee67d48abe34"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 2
-    sha1 'fb7c4555a0ec63f12e213c36c9fa4291d8c7f9be' => :lion
-    sha1 '53f8352c6f246844b967a8a8408335f5eb9f9baf' => :mavericks
-    sha1 'ca9f14db47473b2963ac63eaca4349c50f89b42b' => :mountain_lion
-    sha1 "39495b5923c8ac06595003f414d5b27efdf818b6" => :yosemite
   end
 
-  keg_only "Conflicts; see: https://github.com/Homebrew/homebrew/issues/issue/167"
+  keg_only :provided_by_osx, "OS X provides libicucore.dylib (but nothing else)."
 
   option :universal
   option :cxx11
@@ -30,8 +25,12 @@ class Icu4c < Formula
     args << "--with-library-bits=64" if MacOS.prefer_64_bit?
     cd "source" do
       system "./configure", *args
-      system "make", "VERBOSE=1"
-      system "make", "VERBOSE=1", "install"
+      system "make"
+      system "make", "install"
     end
+  end
+
+  test do
+    system "#{bin}/gendict", "--uchars", "/usr/share/dict/words", "dict"
   end
 end
