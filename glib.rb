@@ -9,6 +9,9 @@ class Glib < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha1 "69bcdbccfdec59abd1b434fe062873cc6d780897" => :mountain_lion
+    sha1 "39dee4d2668a8f98aed6867eb4c7888dbdd7ce28" => :mavericks
+    sha1 "24bfe415c99cf62c8c99c93efcdd320dc3f2474d" => :yosemite
   end
 
   option :universal
