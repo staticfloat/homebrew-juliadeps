@@ -2,18 +2,16 @@ require 'formula'
 
 class Glib < Formula
   homepage "http://developer.gnome.org/glib/"
-  url "http://ftp.gnome.org/pub/gnome/sources/glib/2.40/glib-2.40.0.tar.xz"
-  sha256 "0d27f195966ecb1995dcce0754129fd66ebe820c7cd29200d264b02af1aa28b5"
+  url "http://ftp.gnome.org/pub/gnome/sources/glib/2.42/glib-2.42.1.tar.xz"
+  sha256 "8f3f0865280e45b8ce840e176ef83bcfd511148918cc8d39df2ee89b67dcf89a"
   revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 1
-    sha1 '837ec030f3d9ebccde6b27eaec8ad0a4f201e791' => :lion
-    sha1 '387125d9e73696f3e6d11d8ae21bbcdc6dc9034b' => :mavericks
-    sha1 '39d24536fe8a4cde1dd637167e7c18e792cab1d4' => :mountain_lion
-    sha1 "91d51573612575aef8b26ffb294407ac4b5841ad" => :yosemite
+    sha1 "69bcdbccfdec59abd1b434fe062873cc6d780897" => :mountain_lion
+    sha1 "39dee4d2668a8f98aed6867eb4c7888dbdd7ce28" => :mavericks
+    sha1 "24bfe415c99cf62c8c99c93efcdd320dc3f2474d" => :yosemite
   end
 
   option :universal
@@ -33,27 +31,27 @@ class Glib < Formula
     url 'https://trac.macports.org/export/111532/trunk/dports/devel/glib2/files/config.h.ed'
     version '111532'
     sha1 '0926f19d62769dfd3ff91a80ade5eff2c668ec54'
-  end if build.universal?
+  end
 
   # https://bugzilla.gnome.org/show_bug.cgi?id=673135 Resolved as wontfix,
   # but needed to fix an assumption about the location of the d-bus machine
   # id file.
   patch do
-    url "https://gist.githubusercontent.com/jacknagel/af332f42fae80c570a77/raw/a738786e0f7ea46c4a93a36a3d9d569017cca7f2/glib-hardcoded-paths.diff"
-    sha1 "ce54abdbb4386902a33dbad7cb6c8f1b0cbdab0d"
+    url "https://gist.githubusercontent.com/jacknagel/af332f42fae80c570a77/raw/7b5fd0d2e6554e9b770729fddacaa2d648327644/glib-hardcoded-paths.diff"
+    sha1 "78bbc0c7349d7bfd6ab1bfeabfff27a5dfb1825a"
   end
 
   # Fixes compilation with FSF GCC. Doesn't fix it on every platform, due
   # to unrelated issues in GCC, but improves the situation.
   # Patch submitted upstream: https://bugzilla.gnome.org/show_bug.cgi?id=672777
   patch do
-    url "https://gist.githubusercontent.com/jacknagel/9835034/raw/b0388e86f74286f4271f9b0dca8219fdecafd5e3/gio.patch"
-    sha1 "32158fffbfb305296f7665ede6185a47d6f6b389"
+    url "https://gist.githubusercontent.com/jacknagel/9835034/raw/371fd57f7d3823c67dbd5bc738df7ef5ffc7545f/gio.patch"
+    sha1 "b947912a4f59630c13e53056c8b18bde824860f4"
   end
 
   patch do
-    url "https://gist.githubusercontent.com/jacknagel/9726139/raw/9d5635480d96d6b5c717d2c0d5d24de38b68ffbd/universal.patch"
-    sha1 "7f38cab550571b39989275362995ade214b44490"
+    url "https://gist.githubusercontent.com/jacknagel/9726139/raw/bc60b41fa23ae72f56128e16c9aa5d2d26c75c11/universal.patch"
+    sha1 "ab9b8ba9d7c3fd493a0e24638a95e26f3fe613ac"
   end if build.universal?
 
   def install

@@ -2,17 +2,15 @@ require 'formula'
 
 class GobjectIntrospection < Formula
   homepage 'http://live.gnome.org/GObjectIntrospection'
-  url 'http://ftp.gnome.org/pub/GNOME/sources/gobject-introspection/1.40/gobject-introspection-1.40.0.tar.xz'
-  sha256 '96ea75e9679083e7fe39a105e810e2ead2d708abf189a5ba420bfccfffa24e98'
+  url "http://ftp.gnome.org/pub/GNOME/sources/gobject-introspection/1.42/gobject-introspection-1.42.0.tar.xz"
+  sha256 "3ba2edfad4f71d4f0de16960b5d5f2511335fa646b2c49bbb93ce5942b3f95f7"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 1
-    sha1 'fd510e783ec1dc5f6e6be61b573b2090eea5d2f1' => :lion
-    sha1 '141755831b49c7e420e27cae25f473a39f954a4c' => :mavericks
-    sha1 'bfbaae3518258e5add6deb27b0617317c4aa67e2' => :mountain_lion
-    sha1 "de70d9af6fb8a8b545c0d809ab329fa09b665a00" => :yosemite
+    sha1 "3470e40a0ac31c6ef7c42945bb96c50dd0bcfc08" => :yosemite
+    sha1 "0980baaeeecaf674c9e302fb2043853a41920b0a" => :mavericks
+    sha1 "6512aa024dacd92fa02595b8c9b0c92e9c7f90bd" => :mountain_lion
   end
 
   option :universal
@@ -34,9 +32,9 @@ class GobjectIntrospection < Formula
   def install
     ENV['GI_SCANNER_DISABLE_CACHE'] = 'true'
     ENV.universal_binary if build.universal?
-    inreplace 'giscanner/transformer.py', '/usr/share', HOMEBREW_PREFIX/'share'
-    inreplace 'configure' do |s|
-      s.change_make_var! 'GOBJECT_INTROSPECTION_LIBDIR', HOMEBREW_PREFIX/'lib'
+    inreplace "giscanner/transformer.py", "/usr/share", "#{HOMEBREW_PREFIX}/share"
+    inreplace "configure" do |s|
+      s.change_make_var! 'GOBJECT_INTROSPECTION_LIBDIR', "#{HOMEBREW_PREFIX}/lib"
     end
 
     args = %W[--disable-dependency-tracking --prefix=#{prefix}]
