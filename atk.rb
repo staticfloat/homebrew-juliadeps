@@ -8,6 +8,9 @@ class Atk < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha1 "4f443152b4d70f54915cc5fb40b25f5c96d481e7" => :mountain_lion
+    sha1 "c9131aa8b9ec4332d41b568a577374719f4e89a6" => :mavericks
+    sha1 "5057b7eb46f80a53b86d243a95e67920145eb659" => :yosemite
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
