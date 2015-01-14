@@ -4,14 +4,14 @@ class Graphviz < Formula
   homepage 'http://graphviz.org/'
   url 'http://graphviz.org/pub/graphviz/stable/SOURCES/graphviz-2.38.0.tar.gz'
   sha1 '053c771278909160916ca5464a0a98ebf034c6ef'
+  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '187fd7fd6daecd43b3a0a0c994ae7f1990f59326' => :lion
-    sha1 'a138b3dae5742825176130d574689b4391e6d66a' => :mavericks
-    sha1 '88b0d5fa80071680e2e595fa2492465870f31c45' => :mountain_lion
-    sha1 "de4419a73aa3605600f32ed176cc00792ce5d0a3" => :yosemite
+    sha1 "794aa82d238050ac242d8d7cc31609f104ba4e59" => :yosemite
+    sha1 "276272b654eb1a357ef063a9f70bc9c137584fac" => :mavericks
+    sha1 "6fddf51b6d5f659aa34cc07df0710d36b205b370" => :mountain_lion
   end
 
   # To find Ruby and Co.
@@ -20,6 +20,7 @@ class Graphviz < Formula
   option :universal
 
   depends_on "libpng"
+  depends_on "libtool"
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/pango'
