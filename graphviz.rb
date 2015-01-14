@@ -9,6 +9,9 @@ class Graphviz < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha1 "794aa82d238050ac242d8d7cc31609f104ba4e59" => :yosemite
+    sha1 "276272b654eb1a357ef063a9f70bc9c137584fac" => :mavericks
+    sha1 "6fddf51b6d5f659aa34cc07df0710d36b205b370" => :mountain_lion
   end
 
   # To find Ruby and Co.
