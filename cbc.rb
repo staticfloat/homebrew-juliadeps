@@ -2,24 +2,21 @@ require 'formula'
 
 class Cbc < Formula
   homepage 'http://www.coin-or.org/projects/Cbc.xml'
-  url 'http://www.coin-or.org/download/source/Cbc/Cbc-2.8.12.tgz'
-  sha1 '7739f1841da5b8db0ee08bc21bd1ba05bd9d8432'
+  url 'http://www.coin-or.org/download/source/Cbc/Cbc-2.9.2.tgz'
+  sha1 '60c0b9be005f3bfcf21d22167ff9539eaf337876'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 1
-    sha1 '17cdf5014258b08428667d6012984efc516ca930' => :lion
-    sha1 '9e998d8b6789faa90079e292f7b11e8501a235c5' => :mavericks
-    sha1 '0075d399760f53fe10847ea7c4c9c4f2e6b18f00' => :mountain_lion
-    sha1 "7aadbe851f313b7c7b20dcd5ff9906784b866dbb" => :yosemite
+    sha1 "bc732054768c20a2deb0245ebb7a4bd1dcef3e28" => :mountain_lion
+    sha1 "d7506008d1e3a5ed80cd767235f97c171866999b" => :yosemite
+    sha1 "b7ba397c0151f96057bcb6573346b6d295cd8099" => :mavericks
   end
 
   def install
     # build without lapack until Julia issue 4923 is resolved
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}", "--without-lapack", 
-                          "--enable-dependency-linking",
+                          "--prefix=#{prefix}", "--without-lapack",
                           "--enable-cbc-parallel"
     system "make"
     ENV.deparallelize  # make install fails in parallel.
