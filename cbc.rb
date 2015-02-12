@@ -9,7 +9,7 @@ class Cbc < Formula
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
     sha1 "bc732054768c20a2deb0245ebb7a4bd1dcef3e28" => :mountain_lion
-    sha1 "d7506008d1e3a5ed80cd767235f97c171866999b" => :yosemite
+    sha1 "c660693aa67122abf24b14b1284117b7178952c2" => :yosemite
     sha1 "b7ba397c0151f96057bcb6573346b6d295cd8099" => :mavericks
   end
 
