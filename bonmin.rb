@@ -9,6 +9,13 @@ class Bonmin < Formula
   depends_on 'staticfloat/juliadeps/cbc'
   depends_on 'staticfloat/juliadeps/ipopt'
 
+  bottle do
+    cellar :any
+    sha1 "77dee65e7feff6c97af92677ccb404e1175fd16a" => :yosemite
+    sha1 "d5a08710ede17f3d2ca57f82d77d3b4bbf6ffd29" => :mavericks
+    sha1 "4a3dd43a64be65a8bf128f14cce6c780e9dc6e36" => :mountain_lion
+  end
+
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make"
