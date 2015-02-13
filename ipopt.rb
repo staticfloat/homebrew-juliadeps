@@ -3,8 +3,8 @@ require "#{File.dirname(__FILE__)}/libgfortran"
 
 class Ipopt < Formula
   homepage 'https://projects.coin-or.org/Ipopt'
-  url 'http://www.coin-or.org/download/source/Ipopt/Ipopt-3.11.8.tgz'
-  sha1 '530d718fb5a0c994c305deb3bcfdacc16cc0e2ef'
+  url 'http://www.coin-or.org/download/source/Ipopt/Ipopt-3.12.1.tgz'
+  sha1 'cbb197f6a90e0e1d64e438a5159da5f33f06aa08'
   revision 1
 
   bottle do
@@ -30,9 +30,9 @@ class Ipopt < Formula
     system "cd ThirdParty/Blas; ./configure --prefix=#{prefix} --disable-shared --with-pic; make install"
     system "cd ThirdParty/Lapack; ./get.Lapack"
     system "cd ThirdParty/Lapack; ./configure --prefix=#{prefix} --disable-shared --with-pic; make install"
+    system "cd ThirdParty/ASL; ./get.ASL"
     system "cd ThirdParty/Mumps; ./get.Mumps"
     system "./configure", "--disable-dependency-tracking",
-                          "--enable-dependency-linking",
                           "--with-blas=#{prefix}/lib/libcoinblas.a",
                           "--with-lapack=#{prefix}/lib/libcoinlapack.a",
                           "--prefix=#{prefix}"
