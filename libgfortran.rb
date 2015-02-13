@@ -68,8 +68,11 @@ def fixup_libgfortran(prefix)
   keg.pkgconfig_files.each do |file|
     # Make sure it's writable
     file.ensure_writable do
-      inreplace file do |s|
-        s.gsub! /-L#{gcc.lib}\/[^ ]*/, "-L#{libgfortran.opt_lib}"
+      begin
+        inreplace file do |s|
+          s.gsub! /#{gcc.lib}\/[^ ]*/, "#{libgfortran.opt_lib}"
+        end
+      rescue
       end
     end
   end
