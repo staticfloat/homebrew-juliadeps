@@ -7,7 +7,7 @@ class Optimizationservices < Formula
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/couenne'
-  depends_on 'homebrew/science/cppad'
+  depends_on 'homebrew/science/cppad' => :build
 
   def install
     system "./configure", "--prefix=#{prefix}"
