@@ -11,6 +11,7 @@ class Couenne < Formula
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make"
+    system "make test"
     ENV.deparallelize  # make install fails in parallel.
     system "make install"
   end

@@ -7,11 +7,12 @@ class Optimizationservices < Formula
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/couenne'
-  depends_on 'staticfloat/juliadeps/cppad'
+  depends_on 'homebrew/science/cppad'
 
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make"
+    system "make -C test alltests"
     ENV.deparallelize  # make install fails in parallel.
     system "make install"
   end
