@@ -8,6 +8,14 @@ class Couenne < Formula
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/bonmin'
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha256 "d70ed6d0f461ff8909474d8d93aab94932862d0c46e717762c7899a4b9264aaf" => :yosemite
+    sha256 "4c381369a3e82fdbbb040873def8428db4c6ef22b4d5db4622d40da16f03ea8e" => :mavericks
+    sha256 "ac48f627ef6e57b9fa2479ffb1ecb2d64cdc9597abf7f6ef4f4f52a8f87178a9" => :mountain_lion
+  end
+
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make"
