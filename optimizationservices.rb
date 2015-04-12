@@ -9,6 +9,13 @@ class Optimizationservices < Formula
   depends_on 'staticfloat/juliadeps/couenne'
   depends_on 'homebrew/science/cppad' => :build
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha256 "3f886b86b9a70377595621838d658155806648df14fc2e3442ce8695793b866e" => :mavericks
+    sha256 "6b93fda9d6fb0770bac1031b52f16e823e27222d492071ef3a06a151f174acfb" => :yosemite
+  end
+
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make"
