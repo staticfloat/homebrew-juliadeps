@@ -12,9 +12,9 @@ class Bonmin < Formula
   bottle do
     cellar :any
     root_url 'https://juliabottles.s3.amazonaws.com'
-    sha1 "77dee65e7feff6c97af92677ccb404e1175fd16a" => :yosemite
-    sha1 "d5a08710ede17f3d2ca57f82d77d3b4bbf6ffd29" => :mavericks
-    sha1 "4a3dd43a64be65a8bf128f14cce6c780e9dc6e36" => :mountain_lion
+    revision 1
+    sha256 "d32e4898dde9618446a18878df406d48982095d2433c715eda76d41a8a549a38" => :mavericks
+    sha256 "7b01c27e2c45f4944dd6f3ce7492e29247c9443bb730a51ecb9a79b6c12a657b" => :yosemite
   end
 
   def install
