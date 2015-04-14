@@ -11,6 +11,8 @@ class Couenne < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "5b50a589ada479b95466e7c9144c22f4ae3aaf156592c335c0882b392284e5ee" => :yosemite
+    sha256 "6ec4d4ff3720a09478f760e0820037922d6d6e952d894eb465d51c821cc620fe" => :mavericks
   end
 
   def install
