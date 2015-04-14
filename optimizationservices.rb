@@ -12,6 +12,8 @@ class Optimizationservices < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "939e7d3a5d990cb5b14d840f414f7b1b76155474bd9e5b6079c311b6590e2f29" => :mavericks
+    sha256 "9349c42d184cb80bcb1566d2def3e325d2b6a7b85af8eeb8430cf60719e21654" => :yosemite
   end
 
   def install
