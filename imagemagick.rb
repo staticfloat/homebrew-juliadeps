@@ -33,7 +33,7 @@ class Imagemagick < Formula
 
   depends_on 'jpeg' => :recommended
   depends_on 'libpng' => :recommended
-  depends_on 'freetype' => :recommended
+  depends_on 'staticfloat/juliadeps/freetype' => :recommended
 
   depends_on :x11 => :optional
   depends_on :fontconfig => :optional

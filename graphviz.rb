@@ -27,7 +27,7 @@ class Graphviz < Formula
   depends_on 'swig' if build.with? "bindings"
   depends_on 'gts' => :optional
   depends_on "librsvg" => :optional
-  depends_on "freetype" => :optional
+  depends_on "staticfloat/juliadeps/freetype" => :optional
   depends_on :x11 if build.with? "x"
   depends_on :xcode => :build if build.with? "app"
 
