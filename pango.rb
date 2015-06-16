@@ -15,6 +15,7 @@ class Pango < Formula
   end
 
   bottle do
+    cellar :any
     revision 1
     sha1 "b30d81e5b4b90792e14aa02b273fcf93e9675fc7" => :yosemite
     sha1 "eb30e96c1d896cd8fc7e1053513b3e298645c9af" => :mavericks
