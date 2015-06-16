@@ -10,6 +10,12 @@ class Chemharp < Formula
     depends_on "homebrew/science/netcdf" => :optional
     depends_on "boost"
 
+    bottle do
+        cellar :any
+        sha256 "24c50f49152271d1798b3e6c4c0d69d2df8ebb8d35d8da1fd7504b15f85642de" => :mavericks
+        sha256 "31325c38e458b45aed245f628b0cf67a6bd55407643c39cf31c788b1c9a660c6" => :yosemite
+    end
+
     option "with-python", "Build python bindings"
     if build.with? "python-bindings"
         depends_on "boost-python"
