@@ -5,7 +5,11 @@ class Scs < Formula
   url "https://github.com/cvxgrp/scs/archive/v1.1.5.tar.gz"
   head "https://github.com/cvxgrp/scs.git"
   sha1 "0f9f51d663efd75b9d55d9f6524da75baa498aee"
-  revision 1
+
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+  end
 
   def install
     # Make 32-bit build
