@@ -4,7 +4,7 @@ class Scs < Formula
   homepage "https://github.com/cvxgrp/scs"
   url "https://github.com/cvxgrp/scs/archive/v1.1.5.tar.gz"
   head "https://github.com/cvxgrp/scs.git"
-  sha1 "da69bd7dda2842ea6ce1640589c45c155c8c9a75"
+  sha1 "fd6c7a1a5bd428f61f9e27e0e194bff8fd43d267"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
