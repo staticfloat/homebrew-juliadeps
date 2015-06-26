@@ -17,7 +17,7 @@ class Scs < Formula
 
   def install
     # Make 32-bit build
-    ENV['CFLAGS'] = "-DDLONG -DCOPYAMATRIX -DLAPACK_LIB_FOUND"
+    ENV['CFLAGS'] = "-DDLONG -DCOPYAMATRIX -DLAPACK_LIB_FOUND -DCTRLC"
     ENV['LDFLAGS'] = "-undefined suppress -flat_namespace"
     system "make out/libscsdir.dylib"
     lib.install "out/libscsdir.dylib"
