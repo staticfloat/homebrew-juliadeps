@@ -6,6 +6,7 @@ class Freetype < Formula
 
   bottle do
     cellar :any
+    root_url 'https://juliabottles.s3.amazonaws.com'
     sha1 "f3c9868e2f0cad854d1f24c5dcc98e304ce9c59e" => :yosemite
     sha1 "c2cab6b497af1b07ce940139bb7dec65c8a2117c" => :mavericks
     sha1 "341bb165aa5c67cecace843be154ef71723d6268" => :mountain_lion

@@ -6,6 +6,7 @@ class Fontconfig < Formula
   # The bottle tooling is too lenient and thinks fontconfig
   # is relocatable, but it has hardcoded paths in the executables.
   bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
     revision 3
     sha1 "aa8cd844a4740cb6458a4c4bd74746de6e75a02b" => :yosemite
