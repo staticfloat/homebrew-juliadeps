@@ -13,6 +13,9 @@ class Libgfortran < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "655df1ac79b0e63346ed97f333cc667ad6760d490f932412735e2bd516cc1563" => :mountain_lion
+    sha256 "4322096e295687709c992904248bace14d4b89d0774c7f97bb402b3d8a10ef60" => :mavericks
+    sha256 "0a54c14b84c33d4249df4ab2f139c81d6d5a85fd2e449ab1c97ee759382397c4" => :yosemite
   end
 
   depends_on 'gcc' => :build
