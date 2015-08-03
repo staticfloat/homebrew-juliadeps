@@ -1,14 +1,19 @@
 class Chemharp < Formula
     desc "Chemharp, an efficient IO library for chemistry file formats"
     homepage "http://chemharp.readthedocs.org/"
-    url "https://github.com/Luthaf/Chemharp/archive/0.2.1.tar.gz"
-    sha256 "965223a94a5f0c0c22f4af1ad75b349fb2cc8e7868af74be4df71e17eaf981f2"
+    url "https://github.com/Luthaf/Chemharp/archive/0.3.0.tar.gz"
+    sha256 "a4a4378be76170cd730d3bdfaab5c48e79e72c166fc690486d4127596979ce20"
 
     head "https://github.com/Luthaf/Chemharp.git"
 
     depends_on "cmake" => :build
     depends_on "homebrew/science/netcdf" => :optional
     depends_on "boost"
+
+    bottle do
+        root_url 'https://juliabottles.s3.amazonaws.com'
+        cellar :any
+    end
 
     option "with-python", "Build python bindings"
     if build.with? "python-bindings"
