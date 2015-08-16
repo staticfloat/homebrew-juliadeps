@@ -13,6 +13,8 @@ class Chemharp < Formula
     bottle do
         root_url 'https://juliabottles.s3.amazonaws.com'
         cellar :any
+        sha256 "e77bb7c95e961d80cc19f0f399542a3d4b740a8fce7bd12bb17c43ee0aba8794" => :mavericks
+        sha256 "5958b4189e8749a30860f7d0f378ee6e24ae1f539fa46c47664924f54fe1d818" => :yosemite
     end
 
     option "with-python", "Build python bindings"
