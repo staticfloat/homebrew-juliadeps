@@ -1,8 +1,8 @@
 class Chemharp < Formula
     desc "Chemharp, an efficient IO library for chemistry file formats"
     homepage "http://chemharp.readthedocs.org/"
-    url "https://github.com/Luthaf/Chemharp/archive/0.2.1.tar.gz"
-    sha256 "965223a94a5f0c0c22f4af1ad75b349fb2cc8e7868af74be4df71e17eaf981f2"
+    url "https://github.com/Luthaf/Chemharp/archive/0.3.0.tar.gz"
+    sha256 "a4a4378be76170cd730d3bdfaab5c48e79e72c166fc690486d4127596979ce20"
 
     head "https://github.com/Luthaf/Chemharp.git"
 
@@ -13,8 +13,8 @@ class Chemharp < Formula
     bottle do
         root_url 'https://juliabottles.s3.amazonaws.com'
         cellar :any
-        sha256 "24c50f49152271d1798b3e6c4c0d69d2df8ebb8d35d8da1fd7504b15f85642de" => :mavericks
-        sha256 "31325c38e458b45aed245f628b0cf67a6bd55407643c39cf31c788b1c9a660c6" => :yosemite
+        sha256 "e77bb7c95e961d80cc19f0f399542a3d4b740a8fce7bd12bb17c43ee0aba8794" => :mavericks
+        sha256 "5958b4189e8749a30860f7d0f378ee6e24ae1f539fa46c47664924f54fe1d818" => :yosemite
     end
 
     option "with-python", "Build python bindings"
