@@ -2,18 +2,16 @@ require "formula"
 
 class Ecos < Formula
   homepage "https://github.com/ifa-ethz/ecos"
-  url "https://github.com/ifa-ethz/ecos/archive/d206a556a83396756f3200964de162b4a7523c62.tar.gz"
+  url "https://github.com/embotech/ecos/archive/v2.0.2.tar.gz"
   head "https://github.com/ifa-ethz/ecos.git"
-  sha1 "a43e64a72d803c45d2e8f69ed2f0fbfcc368692f"
-  version "1.0.4.1"
+  sha256 "331ac641a4ded00bc9de00412a025f707355efc9fcb34ab6a051383fd0149998"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '3851a33870c7bec6660e2ded37ff3086ae97e70a' => :lion
-    sha1 'edaefb6684cd4fd68e895230c8f2886b349b8ac4' => :mavericks
-    sha1 '621902182c2a158cfcfa729e2ff8c02c84f8cf07' => :mountain_lion
-    sha1 "7c3235450e11da3c706ea7340bbf9e43eb00f690" => :yosemite
+    sha256 "cf0b92bd9f3327949fa3e4b20fc64bd7066ac2f9340b35eabd8e0ee7c169d44c" => :yosemite
+    sha256 "6a207648ce79469715680ce77ec9ae2d617ee15371519aab3e32b14ee1844385" => :mavericks
+    sha256 "45bc2c9c69a84488d9bc566c01d55e6f408e5c932b867ad564f0f1b2ffccb566" => :mountain_lion
   end
 
   def install
