@@ -4,7 +4,7 @@ class Ecos < Formula
   homepage "https://github.com/ifa-ethz/ecos"
   url "https://github.com/embotech/ecos/archive/v2.0.2.tar.gz"
   head "https://github.com/ifa-ethz/ecos.git"
-  sha1 "a43e64a72d803c45d2e8f69ed2f0fbfcc368692f"
+  sha256 "331ac641a4ded00bc9de00412a025f707355efc9fcb34ab6a051383fd0149998"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
