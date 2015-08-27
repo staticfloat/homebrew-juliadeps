@@ -2,18 +2,13 @@ require "formula"
 
 class Ecos < Formula
   homepage "https://github.com/ifa-ethz/ecos"
-  url "https://github.com/ifa-ethz/ecos/archive/d206a556a83396756f3200964de162b4a7523c62.tar.gz"
+  url "https://github.com/embotech/ecos/archive/v2.0.2.tar.gz"
   head "https://github.com/ifa-ethz/ecos.git"
   sha1 "a43e64a72d803c45d2e8f69ed2f0fbfcc368692f"
-  version "1.0.4.1"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '3851a33870c7bec6660e2ded37ff3086ae97e70a' => :lion
-    sha1 'edaefb6684cd4fd68e895230c8f2886b349b8ac4' => :mavericks
-    sha1 '621902182c2a158cfcfa729e2ff8c02c84f8cf07' => :mountain_lion
-    sha1 "7c3235450e11da3c706ea7340bbf9e43eb00f690" => :yosemite
   end
 
   def install
