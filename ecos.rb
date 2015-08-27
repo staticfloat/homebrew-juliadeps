@@ -9,6 +9,9 @@ class Ecos < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "cf0b92bd9f3327949fa3e4b20fc64bd7066ac2f9340b35eabd8e0ee7c169d44c" => :yosemite
+    sha256 "6a207648ce79469715680ce77ec9ae2d617ee15371519aab3e32b14ee1844385" => :mavericks
+    sha256 "45bc2c9c69a84488d9bc566c01d55e6f408e5c932b867ad564f0f1b2ffccb566" => :mountain_lion
   end
 
   def install
