@@ -10,6 +10,14 @@ class Mbedtls < Formula
 
   depends_on "cmake" => :build
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha256 "a38fe6af8d8492972105dc0fdb0bf45d20618e9b150ec92247be1deb7e323925" => :yosemite
+    sha256 "03deb9db28a9ea3c80f5d6f02498b6d3c4341d6dc2ab4206402047102f202fc1" => :mavericks
+    sha256 "6b59aa48594920bd4e087480ddbb597ab852291eb9aaa42534e17f4e70c9de48" => :mountain_lion
+  end
+
   def install
     # "Comment this macro to disable support for SSL 3.0"
     inreplace "include/mbedtls/config.h" do |s|
@@ -22,11 +30,6 @@ class Mbedtls < Formula
 
     # Why does PolarSSL ship with a "Hello World" executable. Let's remove that.
     rm_f "#{bin}/hello"
-    # Rename benchmark & selftest, which are awfully generic names.
-    # mv bin/"benchmark", bin/"mbedtls-benchmark"
-    # mv bin/"selftest", bin/"mbedtls-selftest"
-    # Demonstration files shouldn't be in the main bin
-    # libexec.install "#{bin}/mpi_demo"
   end
 
   test do
