@@ -21,8 +21,6 @@ class Cairo < Formula
   depends_on 'staticfloat/juliadeps/glib'
   depends_on 'xz'=> :build
 
-  env :std if build.universal?
-
   def install
     ENV.universal_binary if build.universal?
 
