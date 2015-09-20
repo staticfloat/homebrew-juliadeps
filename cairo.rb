@@ -30,11 +30,13 @@ class Cairo < Formula
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
-      --enable-xlib=no
-      --enable-xlib-xrender=no
-      --enable-quartz-image=yes
       --enable-gobject=yes
       --enable-svg=yes
+      --enable-tee=yes
+      --enable-quartz-image
+      --enable-xcb=no
+      --enable-xlib=no
+      --enable-xlib-xrender=no
     ]
 
     system "./configure", *args
