@@ -9,6 +9,9 @@ class Cairo < Formula
   bottle do
     root_url "https://juliabottles.s3.amazonaws.com"
     cellar :any
+    sha256 "a7dfb100d89da3219da13d8c8609ef8f1137fb5a0a24e46bf06748946ac4af1e" => :mountain_lion
+    sha256 "84e8622a94d0f3c3c2dfef9299e9e04526bc677c6a0acc6d1d4d48c723744d18" => :mavericks
+    sha256 "1fdd86a0ab7556a5580bd4ca4a5a6e9fe5b3d2fa62ab3169d5b90657fc581c56" => :yosemite
   end
 
   option :universal
