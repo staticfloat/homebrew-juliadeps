@@ -19,7 +19,6 @@ class Cairo < Formula
   depends_on 'libpng'
   depends_on 'staticfloat/juliadeps/pixman'
   depends_on 'staticfloat/juliadeps/glib'
-  depends_on 'xz'=> :build
 
   def install
     ENV.universal_binary if build.universal?
