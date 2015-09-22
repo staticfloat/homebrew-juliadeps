@@ -4,8 +4,8 @@
 class Mbedtls < Formula
   desc "Cryptographic & SSL/TLS library"
   homepage "https://tls.mbed.org/"
-  url "https://tls.mbed.org/download/mbedtls-2.1.0-apache.tgz"
-  sha256 "debd652ecf621ba3eea32c4a7eefb4c477d014d651f8ac117696e46ddaaf1b55"
+  url "https://tls.mbed.org/download/mbedtls-2.1.1-apache.tgz"
+  sha256 "8f25b6f156ae5081e91bcc58b02455926d9324035fe5f7028a6bb5bc0139a757"
   head "https://github.com/ARMmbed/mbedtls.git"
 
   depends_on "cmake" => :build
@@ -13,9 +13,9 @@ class Mbedtls < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "fe71507229398ac801b89eb68878589355acaa94c2f5e792db87f1a055367f6c" => :mountain_lion
-    sha256 "5ed65f25a10c97a6153099884ab6faed94ab159e67e7f31c58a1141091b5f6e7" => :mavericks
-    sha256 "7c8cf7e174e16f4fb522f71005822fae4ea3c414ec9119feb1a35520df0a29ab" => :yosemite
+    sha256 "b88d0e596a904925c4065f94421515cfd41124f6915fbdb66af4a4a7865b4e66" => :mountain_lion
+    sha256 "255a3704b37a7a151b9666a331e3be470193fea97ea629c3e85776b751046216" => :mavericks
+    sha256 "631606cd2edc6b3aa1133f346367081a87cf0472e7f54ed1c983f083bebc686c" => :yosemite
   end
 
   def install
