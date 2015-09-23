@@ -1,21 +1,19 @@
 require 'formula'
 
 class Atk < Formula
+  desc "GNOME accessibility toolkit"
   homepage 'http://library.gnome.org/devel/atk/'
-  url "http://ftp.gnome.org/pub/gnome/sources/atk/2.14/atk-2.14.0.tar.xz"
-  sha256 "2875cc0b32bfb173c066c22a337f79793e0c99d2cc5e81c4dac0d5a523b8fbad"
+  url "https://download.gnome.org/sources/atk/2.16/atk-2.16.0.tar.xz"
+  sha256 "095f986060a6a0b22eb15eef84ae9f14a1cf8082488faa6886d94c37438ae562"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 "4f443152b4d70f54915cc5fb40b25f5c96d481e7" => :mountain_lion
-    sha1 "c9131aa8b9ec4332d41b568a577374719f4e89a6" => :mavericks
-    sha1 "5057b7eb46f80a53b86d243a95e67920145eb659" => :yosemite
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/glib'
-  depends_on 'staticfloat/juliadeps/gobject-introspection'
+  depends_on 'gobject-introspection'
 
   option :universal
 
