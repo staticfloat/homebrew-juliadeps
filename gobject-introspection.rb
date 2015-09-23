@@ -9,6 +9,7 @@ class GobjectIntrospection < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     revision 2
+    cellar :any
     sha256 "e29497a4aa084f25f7d53988beab1999c4b3145896f0ef6a993b0d7736269cbd" => :yosemite
     sha256 "1e0e84d4d114f39d89549bc5a6bfae59a84655a1aefce926d8dd6e53495390ae" => :mavericks
     sha256 "3dcfedfe989ec4d9c6558def0190ef3bd3214bafa4d2f53fd28aa1abbc1403f2" => :mountain_lion
