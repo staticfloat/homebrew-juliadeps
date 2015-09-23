@@ -30,7 +30,7 @@ class Pango < Formula
   depends_on 'staticfloat/juliadeps/cairo'
   depends_on 'staticfloat/juliadeps/harfbuzz'
   depends_on 'staticfloat/juliadeps/fontconfig'
-  depends_on 'gobject-introspection'
+  depends_on 'staticfloat/juliadeps/gobject-introspection'
 
   fails_with :llvm do
     build 2326

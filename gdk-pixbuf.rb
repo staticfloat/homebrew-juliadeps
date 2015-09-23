@@ -21,7 +21,7 @@ class GdkPixbuf < Formula
   depends_on "jpeg"
   depends_on "libtiff"
   depends_on "libpng"
-  depends_on "gobject-introspection"
+  depends_on "staticfloat/juliadeps/gobject-introspection"
 
   # 'loaders.cache' must be writable by other packages
   skip_clean 'lib/gdk-pixbuf-2.0'

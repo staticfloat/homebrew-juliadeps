@@ -13,7 +13,7 @@ class Atk < Formula
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/glib'
-  depends_on 'gobject-introspection'
+  depends_on 'staticfloat/juliadeps/gobject-introspection'
 
   option :universal
 

@@ -13,7 +13,7 @@ class Gtkx3 < Formula
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'xz' => :build
   depends_on 'staticfloat/juliadeps/glib'
-  depends_on 'gobject-introspection'
+  depends_on 'staticfloat/juliadeps/gobject-introspection'
   depends_on 'jpeg'
   depends_on 'libtiff'
   depends_on 'staticfloat/juliadeps/gdk-pixbuf'
