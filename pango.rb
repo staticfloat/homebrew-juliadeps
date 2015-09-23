@@ -30,7 +30,6 @@ class Pango < Formula
   depends_on 'staticfloat/juliadeps/cairo'
   depends_on 'staticfloat/juliadeps/harfbuzz'
   depends_on 'staticfloat/juliadeps/fontconfig'
-  depends_on :x11 => :recommended
   depends_on 'staticfloat/juliadeps/gobject-introspection'
 
   fails_with :llvm do
@@ -48,13 +47,8 @@ class Pango < Formula
       --enable-man
       --with-html-dir=#{share}/doc
       --enable-introspection=yes
+      --without-xft
     ]
-
-    if build.without? "x11"
-      args << '--without-xft'
-    else
-      args << '--with-xft'
-    end
 
     system "./autogen.sh" if build.head?
     system "./configure", *args
