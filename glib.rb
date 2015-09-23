@@ -2,12 +2,15 @@ require 'formula'
 
 class Glib < Formula
   homepage "http://developer.gnome.org/glib/"
-  url "https://download.gnome.org/sources/glib/2.44/glib-2.44.1.tar.xz"
+  url "https://s3.amazonaws.com/juliacache/glib-2.44.1.tar.xz"
   sha256 "8811deacaf8a503d0a9b701777ea079ca6a4277be10e3d730d2112735d5eca07"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "8f526be697a62f81ba1edda8634ed5380f24de171866c07060778680fd48d562" => :mountain_lion
+    sha256 "344764e6a0d019150359d7f5c9dbe321cc7461e16a5f3e17ddda5e2f5537079a" => :mavericks
+    sha256 "366e09fdd6f495a399691d4e5cee0b15f831e7ff9a5a81557b13d384f403550d" => :yosemite
   end
 
   option :universal
