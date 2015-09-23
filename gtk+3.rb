@@ -2,16 +2,12 @@ require 'formula'
 
 class Gtkx3 < Formula
   homepage 'http://gtk.org/'
-  url "http://ftp.gnome.org/pub/gnome/sources/gtk+/3.14/gtk+-3.14.6.tar.xz"
-  sha256 "cfc424e6e10ffeb34a33762aeb77905c3ed938f0b4006ddb7e880aad234ef119"
-  revision 1
+  url "https://download.gnome.org/sources/gtk+/3.16/gtk+-3.16.6.tar.xz"
+  sha256 "4d12726d0856a968b41802ae5c5971d7e9bac532717e309d3f81b9989da5ffbe"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 "af96d59d04494cbe4fdb3ce5fb15e6cf974fb485" => :yosemite
-    sha1 "47189a853fbeac6eb686efb9d060cce0020c49f4" => :mavericks
-    sha1 "6c542f5d3b84314c6a607daccd4279e43e559182" => :mountain_lion
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
@@ -24,6 +20,7 @@ class Gtkx3 < Formula
   depends_on 'staticfloat/juliadeps/pango'
   depends_on 'staticfloat/juliadeps/cairo'
   depends_on 'staticfloat/juliadeps/atk'
+  depends_on 'hicolor-icon-theme'
 
   def install
     ENV.universal_binary if build.universal?
@@ -41,12 +38,14 @@ class Gtkx3 < Formula
     ]
 
     system "./configure", *args
+    # necessary to avoid gtk-update-icon-cache not being found during make install
+    bin.mkpath
+    ENV.prepend_path "PATH", "#{bin}"
     system "make", "install"
     # Prevent a conflict between this and Gtk+2
     mv bin/"gtk-update-icon-cache", bin/"gtk3-update-icon-cache"
   end
 
-  # Note that you need to define XDG_DATA_DIRS="#{HOMEBREW_PREFIX}/share" to use the schemas properly
   def post_install
     system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"
   end
