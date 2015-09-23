@@ -21,7 +21,7 @@ class Gtkx3 < Formula
   depends_on 'staticfloat/juliadeps/cairo'
   depends_on 'staticfloat/juliadeps/atk'
   depends_on 'hicolor-icon-theme'
-  depends_on 'libepoxy'
+  depends_on 'staticfloat/juliadeps/libepoxy'
 
   def install
     ENV.universal_binary if build.universal?
