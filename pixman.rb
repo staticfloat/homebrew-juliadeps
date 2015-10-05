@@ -35,6 +35,7 @@ class Pixman < Formula
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
+                          "--disable-mmx", # MMX assembler fails with Xcode 7 / osx El Capitan
                           "--disable-gtk"
     system "make", "install"
   end
