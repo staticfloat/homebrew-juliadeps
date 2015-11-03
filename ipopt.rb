@@ -3,16 +3,15 @@ require "#{File.dirname(__FILE__)}/libgfortran"
 
 class Ipopt < Formula
   homepage 'https://projects.coin-or.org/Ipopt'
-  url 'http://www.coin-or.org/download/source/Ipopt/Ipopt-3.12.1.tgz'
-  sha1 'cbb197f6a90e0e1d64e438a5159da5f33f06aa08'
-  revision 2
+  url 'http://www.coin-or.org/download/source/Ipopt/Ipopt-3.12.4.tgz'
+  sha256 '292afd952c25ec9fe6225041683dcbd3cb76e15a128764671927dbaf881c2e89'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "c46db8ce06d8586535f2067f8bff8774f6a241591e30a29dc2befa98bd8bca44" => :mountain_lion
-    sha256 "5694b945d19acbbe3c869426fa72014c6caf8c97689d1f4fa96d3570bf8770b4" => :mavericks
-    sha256 "6fe5a5dd701a82f97a5ecacdc01ce95176817ce3cca7690207d914d598945ce2" => :yosemite
+    sha256 "b8f2f83776830d969841d96a3f35d62015b747f6d95378f17d9c6ba90a4ff70a" => :mavericks
+    sha256 "83926ec5293dc95ce0bce1a4e8c8cc6d5c4a5ae2056c790e3172663b1fcde851" => :yosemite
+    sha256 "14ad4d4689b3dbb061c6d68b9a57113f7a27b823d297d54c56c3f61d8208087c" => :el_capitan
   end
 
   # Need this snippet in every formula that has a runtime dependency on libgfortran
