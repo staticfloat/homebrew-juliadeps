@@ -9,6 +9,9 @@ class Ipopt < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "b8f2f83776830d969841d96a3f35d62015b747f6d95378f17d9c6ba90a4ff70a" => :mavericks
+    sha256 "83926ec5293dc95ce0bce1a4e8c8cc6d5c4a5ae2056c790e3172663b1fcde851" => :yosemite
+    sha256 "14ad4d4689b3dbb061c6d68b9a57113f7a27b823d297d54c56c3f61d8208087c" => :el_capitan
   end
 
   # Need this snippet in every formula that has a runtime dependency on libgfortran
