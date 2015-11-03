@@ -2,16 +2,14 @@ require 'formula'
 
 class Zeromq32 < Formula
   homepage 'http://www.zeromq.org/'
-  url 'http://download.zeromq.org/zeromq-3.2.4.tar.gz'
-  sha1 '08303259f08edd1faeac2e256f5be3899377135e'
+  url 'http://download.zeromq.org/zeromq-3.2.5.tar.gz'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '108a85f8909ac01aec2a79f79d89bb22f647e0be' => :lion
-    sha1 '8a86c0e14ce29098171070b1b053390af1604fbf' => :mavericks
-    sha1 '36af54400e7e3334fae374fdc79d0eb66a985b10' => :mountain_lion
-    sha1 "7d4ca42eb9ec92140cc4c8b4603a8a9bbf8554c1" => :yosemite
+    sha256 "2385b1c76c5d0db6b9cb34e9ce7e14ebafe02860a7ee8a4db12204172f1adc62" => :mavericks
+    sha256 "d26aae3f53183bf32e0baab81d710eb98002e297ae57b04d05506fb6f86b68c4" => :yosemite
+    sha256 "052c0e863530a6b261d08b1602d474cf993c7c2081586914cf21f6678958b47f" => :el_capitan
   end
 
   option :universal
