@@ -11,6 +11,9 @@ class PkgConfig < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "be226eb19c200f40ef04401ab67153e0dd2645e49975d4a95f7b47911240ae40" => :mavericks
+    sha256 "e357e262b7101c791172eab5a3c344941331ae21aa4de160a7fe043d01f5426e" => :yosemite
+    sha256 "a602ca372acde5bece03ce09dcbb97612365752079fff58395f9980b84879bd4" => :el_capitan
   end
 
   def install
