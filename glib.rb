@@ -2,7 +2,8 @@ require 'formula'
 
 class Glib < Formula
   homepage "http://developer.gnome.org/glib/"
-  url "https://s3.amazonaws.com/juliacache/glib-2.46.1.tar.xz"
+  url 'http://ftp.gnome.org/pub/gnome/sources/glib/2.46/glib-2.46.1.tar.xz'
+  sha256 '5a1f03b952ebc3a7e9f612b8724f70898183e31503db329b4f15d07163c8fdfb'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
