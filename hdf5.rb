@@ -9,6 +9,9 @@ class Hdf5 < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "c7cfa56cddd7a6a80b9c9bd7c40ecb3ce9b513bb5b6c0d65c1818fafc26c5891" => :mavericks
+    sha256 "8a86c1e64c45c55f949ebd77d964e53b5c409d04bf17c002d5d8b1709fc5898f" => :yosemite
+    sha256 "e5cb6648fd9106df38e530c15687645f8d052fea89ef916334efa1f796fff5f4" => :el_capitan
   end
 
   # TODO - warn that these options conflict
