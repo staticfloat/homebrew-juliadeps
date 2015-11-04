@@ -38,14 +38,6 @@ class Glib < Formula
     sha256 "a4cb96b5861672ec0750cb30ecebe1d417d38052cac12fbb8a77dbf04a886fcb"
   end
 
-  # Fixes compilation with FSF GCC. Doesn't fix it on every platform, due
-  # to unrelated issues in GCC, but improves the situation.
-  # Patch submitted upstream: https://bugzilla.gnome.org/show_bug.cgi?id=672777
-  patch do
-    url "https://gist.githubusercontent.com/jacknagel/9835034/raw/282d36efc126272f3e73206c9865013f52d67cd8/gio.patch"
-    sha256 "d285c70cfd3434394a1c77c92a8d2bad540c954aad21e8bb83777482c26aab9a"
-  end
-
   patch do
     url "https://raw.githubusercontent.com/Homebrew/patches/59e4d32/glib/universal.patch"
     sha256 "7e1ad7667c7d89fcd08950c9c32cd66eb9c8e2ee843f023d1fadf09a9ba39fee"
