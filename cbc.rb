@@ -2,15 +2,12 @@ require 'formula'
 
 class Cbc < Formula
   homepage 'http://www.coin-or.org/projects/Cbc.xml'
-  url 'http://www.coin-or.org/download/source/Cbc/Cbc-2.9.2.tgz'
-  sha1 '60c0b9be005f3bfcf21d22167ff9539eaf337876'
+  url 'http://www.coin-or.org/download/source/Cbc/Cbc-2.9.7.tgz'
+  sha256 '637d080d381e620888d032cba28a3f1f8199f3b5619a3b763aa1470fda543817'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 "bc732054768c20a2deb0245ebb7a4bd1dcef3e28" => :mountain_lion
-    sha1 "c660693aa67122abf24b14b1284117b7178952c2" => :yosemite
-    sha1 "b7ba397c0151f96057bcb6573346b6d295cd8099" => :mavericks
   end
 
   def install
