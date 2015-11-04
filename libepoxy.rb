@@ -10,6 +10,7 @@ class Libepoxy < Formula
     sha256 "4c4c34f77832f75974a9ce48020391a03830b5649a6759253ce208a6eca63074" => :yosemite
     sha256 "edc04249dcc083ed487de29eb8401d788fbcfed58988ebe6a75e1cae5613831f" => :mavericks
     sha256 "495b9da3d417b836eaf1cdd1aba41782d975d0b3d007e1f9c91fab7e57c2a197" => :mountain_lion
+    sha256 "b96f08165618d52c16ce61bc65299583da9f1080a233f1490d473513fba18ac1" => :el_capitan
   end
 
   depends_on "staticfloat/juliadeps/pkg-config" => :build
