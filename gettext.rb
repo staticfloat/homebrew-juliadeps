@@ -1,17 +1,13 @@
 require "formula"
 
 class Gettext < Formula
-  homepage "https://www.gnu.org/software/gettext/"
-  url "http://ftpmirror.gnu.org/gettext/gettext-0.19.4.tar.xz"
-  mirror "https://ftp.gnu.org/gnu/gettext/gettext-0.19.4.tar.xz"
-  sha256 "719adadb8bf3e36bac52c243a01c0add18d23506a3a40437e6f5899ceab18d20"
+  homepage 'https://www.gnu.org/software/gettext/'
+  url 'http://ftpmirror.gnu.org/gettext/gettext-0.19.6.tar.xz'
+  mirror 'https://ftp.gnu.org/gnu/gettext/gettext-0.19.6.tar.xz'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 "7508312673e0ee49444d14b55e4d3feaa72af7a4" => :mavericks
-    sha1 "d2c78ec3eb8f83054f5e02652c44a03e3c1c4a5c" => :mountain_lion
-    sha1 "a14136e5c8126567a4628e9ee1a4920e8ec276f9" => :yosemite
   end
 
   option :universal
