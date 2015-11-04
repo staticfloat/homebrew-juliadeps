@@ -15,6 +15,7 @@ class Portaudio < Formula
     cellar :any
     sha1 '316130397237ff3fb01cd866f0e6e151d63e0f5d' => :mavericks
     sha1 "876acc12c9699e12399c96c6bc3af57c200e97d1" => :yosemite
+    sha256 "4a7772783ae36d803172d15a5356bb821991ff4f47580dd1fe2b7dce8cded984" => :el_capitan
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
