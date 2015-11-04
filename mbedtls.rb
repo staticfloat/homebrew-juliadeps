@@ -13,6 +13,9 @@ class Mbedtls < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "218b924cdf514e7d627359638ef80444b39625cc84c16aa83fce0da6a9b2f6f2" => :mavericks
+    sha256 "5f2608009ea5f41ce956f46d78bc2f0b5497c8c4b4ad175a52ca420281a5b94f" => :yosemite
+    sha256 "d525b38898b923fb8db69ee8b883c1fb80691c0bdcc01e81080ab7689f21b239" => :el_capitan
   end
 
   def install
