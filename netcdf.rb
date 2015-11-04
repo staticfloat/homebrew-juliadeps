@@ -2,16 +2,11 @@ require 'formula'
 
 class Netcdf < Formula
   homepage 'http://www.unidata.ucar.edu/software/netcdf'
-  url 'http://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-4.3.2.tar.gz'
-  sha1 '6e1bacab02e5220954fe0328d710ebb71c071d19'
+  url 'ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-4.3.3.1.tar.gz'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '64235bcb7f603251551f22c513b0594446dd9ea2' => :lion
-    sha1 '4a02f21386f9e6a386213da3d1ac1ee7f021807a' => :mavericks
-    sha1 '7bcbab83681835803cb1aa368f669016d7e97b3f' => :mountain_lion
-    sha1 "db4e7179a7bd919fdba881bcecf6b6cbd89b3147" => :yosemite
   end
 
   depends_on :fortran if build.include? 'enable-fortran'
