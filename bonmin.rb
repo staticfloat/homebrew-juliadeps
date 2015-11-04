@@ -2,8 +2,8 @@ require 'formula'
 
 class Bonmin < Formula
   homepage 'https://projects.coin-or.org/Bonmin'
-  url 'http://www.coin-or.org/download/pkgsource/Bonmin/Bonmin-1.8.2.tgz'
-  sha1 'c2ca2ae318088ad176e9153825b82c4bb9e5ade9'
+  url 'http://www.coin-or.org/download/pkgsource/Bonmin/Bonmin-1.8.4.tgz'
+  sha256 'f533d351c1965ccdac823e8758e435b806786833fc2eff67ca5004013b25db51'
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/cbc'
@@ -12,8 +12,6 @@ class Bonmin < Formula
   bottle do
     cellar :any
     root_url 'https://juliabottles.s3.amazonaws.com'
-    sha256 "fb0a2c997fcc7492fa184451fad8e42be4e80e6ff107da8ecd9b0df9fd2c7fa6" => :mavericks
-    sha256 "0d03a0f59ba3135bedc954871f972e6e5746345cfaa333af3f70931345b57c6a" => :yosemite
   end
 
   def install
