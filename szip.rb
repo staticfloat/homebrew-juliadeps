@@ -9,6 +9,9 @@ class Szip < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "ec54e3c66ac599d71b44d971b2b25a09158b01400ff546190a5b3176313dc1ed" => :mavericks
+    sha256 "95a96ce6a89b106c207c101cf558ee48d426d785d74701117f00aae1757ad0b0" => :yosemite
+    sha256 "b4b4099411b1d91af315c59cbe7deec08cb8b049db151ec3e78a76c6f62b81ef" => :el_capitan
   end
 
   option :universal
