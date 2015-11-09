@@ -3,18 +3,13 @@ require 'formula'
 class Imagemagick < Formula
   homepage 'http://www.imagemagick.org'
 
-  # upstream's stable tarballs tend to disappear, so we provide our own mirror
-  # Tarball and checksum from: http://www.imagemagick.org/download
-  url 'http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.9-1.tar.xz'
-  sha256 '88e9f72cff22b91738494abe8b87f53c5b0c6932c4b08f944bf79846f035e642'
-  revision 1
+  url "http://www.imagemagick.org/download/releases/ImageMagick-6.9.2-4.tar.xz"
+  mirror "http://ftp.nluug.nl/ImageMagick/ImageMagick-6.9.2-4.tar.xz"
+  sha256 "05b1c499415048099a1464ebd03f0cfaae8d0994c681bcf7e0319b26e5e8d848"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 "1146e5bc7d4f585e4c3c40c88f022e068dcb8a3a" => :yosemite
-    sha1 "b691b16e44b28a720829d91f52444639e8f86eee" => :mountain_lion
-    sha1 "6ea37685eb15240ceb3f3e1658aa097c81639ac2" => :mavericks
   end
 
   head 'https://www.imagemagick.org/subversion/ImageMagick/trunk',
