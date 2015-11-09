@@ -17,7 +17,7 @@ class Harfbuzz < Formula
   depends_on "staticfloat/juliadeps/glib"
   depends_on "staticfloat/juliadeps/cairo"
   depends_on "staticfloat/juliadeps/icu4c" => :recommended
-  depends_on "staticfloat/juliadeps/freetype"
+  depends_on "freetype"
 
   def install
     args = %W[--disable-dependency-tracking --prefix=#{prefix}]

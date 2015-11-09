@@ -17,7 +17,7 @@ class Cairo < Formula
   option :universal
 
   depends_on "staticfloat/juliadeps/pkg-config" => :build
-  depends_on "staticfloat/juliadeps/freetype"
+  depends_on "freetype"
   depends_on "staticfloat/juliadeps/fontconfig"
   depends_on "libpng"
   depends_on "staticfloat/juliadeps/pixman"
