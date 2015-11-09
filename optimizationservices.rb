@@ -2,8 +2,7 @@ require 'formula'
 
 class Optimizationservices < Formula
   homepage 'https://projects.coin-or.org/OS'
-  url 'http://www.coin-or.org/download/pkgsource/OS/OS-2.10.1.tgz'
-  sha256 'fb171e705b81be59f7ede188f29aa0720c558e1e00da74920dce894e7f9e72eb'
+  url 'http://www.coin-or.org/download/pkgsource/OS/OS-2.9.3.tgz'
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/couenne'
