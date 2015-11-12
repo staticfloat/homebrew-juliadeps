@@ -8,9 +8,6 @@ class Pixman < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "68eb4a28ea7b30ae232b10c53dff7d8d8cc3cb556705d5f047f42182e81246e8" => :mavericks
-    sha256 "d8d04fe405352616d2fbad1df8d782de0654677a7faa1a1553fbc7b93f9dd6c1" => :yosemite
-    sha256 "7e958967acf5f4ce7af14f397d7061fc5c93e0e19ae4a14bef0a9154ef221df2" => :el_capitan
   end
 
   depends_on "staticfloat/juliadeps/pkg-config" => :build
