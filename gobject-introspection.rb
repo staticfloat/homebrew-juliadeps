@@ -1,13 +1,17 @@
 # We are using the mainline formula here, EXCEPT FOR THE DEPS!
 
 class GobjectIntrospection < Formula
-  desc "Generate interface introspection data for GObject libraries"
-  homepage "https://live.gnome.org/GObjectIntrospection"
-  url "https://download.gnome.org/sources/gobject-introspection/1.46/gobject-introspection-1.46.0.tar.xz"
+  desc 'Generate interface introspection data for GObject libraries'
+  homepage 'https://live.gnome.org/GObjectIntrospection'
+  url 'https://download.gnome.org/sources/gobject-introspection/1.46/gobject-introspection-1.46.0.tar.xz'
+  sha256 '6658bd3c2b8813eb3e2511ee153238d09ace9d309e4574af27443d87423e4233'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "9e29cdf8729bed7cba6d8098731d794b4330e333ab582a36c570890da7dd6983" => :mavericks
+    sha256 "b401dd7220479654fb66b9df56168ef1062919f339f65a0a98e9c653b437dc3d" => :yosemite
+    sha256 "a87abf73da8de680219811431254ca05fbff113c41a260ddb7c948a4a0408bf3" => :el_capitan
   end
 
   option :universal
