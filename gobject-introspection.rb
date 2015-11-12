@@ -3,11 +3,11 @@
 class GobjectIntrospection < Formula
   desc "Generate interface introspection data for GObject libraries"
   homepage "https://live.gnome.org/GObjectIntrospection"
-  url "https://download.gnome.org/sources/gobject-introspection/1.47/gobject-introspection-1.47.1.tar.xz"
-  sha256 "e5f6e18a4362af9a77790422f61f52ae3a038bf3f0cc1f912ef3183c2a511593"
+  url "https://download.gnome.org/sources/gobject-introspection/1.46/gobject-introspection-1.46.0.tar.xz"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
   end
 
   option :universal
