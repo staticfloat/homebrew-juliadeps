@@ -9,6 +9,9 @@ class GdkPixbuf < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "269ca2ba97733f0da5e5f905a2bc3bcc1adb284b48993dd88a64152d186a7e51" => :mavericks
+    sha256 "b74046ea7ae265a0d5cf497897b7a6feb21acdf136263fe41b6c419745eb3dc4" => :yosemite
+    sha256 "f5f260a970022fd9cbc81b64f2e8781f02a8ce638afa82c0ebdc3e6161861a2e" => :el_capitan
   end
 
   option :universal
