@@ -2,16 +2,11 @@ require 'formula'
 
 class GdkPixbuf < Formula
   homepage 'http://gtk.org'
-  url 'http://ftp.gnome.org/pub/GNOME/sources/gdk-pixbuf/2.30/gdk-pixbuf-2.30.8.tar.xz'
-  sha256 '4853830616113db4435837992c0aebd94cbb993c44dc55063cee7f72a7bef8be'
-  revision 1
+  url 'http://ftp.acc.umu.se/pub/GNOME/sources/gdk-pixbuf/2.33/gdk-pixbuf-2.33.1.tar.xz'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "8760c5d014b4a51fdb432723164bf9b6a1a959e0330386ae5f68351d733a0c97" => :yosemite
-    sha256 "cc1e387779eb18cff7154988d4abad845cf3c85afc201f673eccd7caeddfb78d" => :mavericks
-    sha256 "f41eeb44906fecf8e23455328497b5eef9b47d41953b45cb7be9fc4c172a5f5d" => :mountain_lion
   end
 
   option :universal
