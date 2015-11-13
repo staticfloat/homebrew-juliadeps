@@ -2,7 +2,7 @@ class Chemharp < Formula
     desc "Chemharp, an efficient IO library for chemistry file formats"
     homepage "http://chemharp.readthedocs.org/"
     url "https://github.com/Luthaf/Chemharp/archive/0.3.0.tar.gz"
-    sha256 "a4a4378be76170cd730d3bdfaab5c48e79e72c166fc690486d4127596979ce20"
+    sha256 "ed26393766a8cf164a90df27d6974fdc7fa9ab011919ccb58297c0e5dc2d7901"
 
     head "https://github.com/Luthaf/Chemharp.git"
 
