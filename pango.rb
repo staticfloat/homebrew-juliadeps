@@ -3,6 +3,7 @@ require 'formula'
 class Pango < Formula
   homepage "http://www.pango.org/"
   url "http://ftp.gnome.org/pub/GNOME/sources/pango/1.38/pango-1.38.1.tar.xz"
+  pango '1320569f6c6d75d6b66172b2d28e59c56ee864ee9df202b76799c4506a214eb7'
 
   head do
     url 'https://git.gnome.org/browse/pango'
@@ -16,6 +17,9 @@ class Pango < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "7eba4f7ad79a733494970fc18e50b03d5c0c09962436e4067b9a23d1cc1ae00d" => :mavericks
+    sha256 "b5020134597a2fe4dc8165acd4b8653d2379ec7febf24b7454b793a0eb200e41" => :yosemite
+    sha256 "26d5ce15f9d137637c5435f360477162216e3ab085096901b71c59ace12b404a" => :el_capitan
   end
 
   option :universal
