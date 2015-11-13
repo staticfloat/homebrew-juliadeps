@@ -12,6 +12,7 @@ class Graphviz < Formula
     sha1 "794aa82d238050ac242d8d7cc31609f104ba4e59" => :yosemite
     sha1 "276272b654eb1a357ef063a9f70bc9c137584fac" => :mavericks
     sha1 "6fddf51b6d5f659aa34cc07df0710d36b205b370" => :mountain_lion
+    sha256 "60ef4cc0ab387b391d8aeb0ffdd2a2c4883f7a065c8695db2897f9c9f86d4f45" => :el_capitan
   end
 
   # To find Ruby and Co.
