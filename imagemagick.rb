@@ -30,18 +30,18 @@ class Imagemagick < Formula
   depends_on 'libpng' => :recommended
   depends_on 'freetype' => :recommended
 
-  depends_on :x11 => :optional
-  depends_on :fontconfig => :optional
+  #depends_on :x11 => :optional
+  depends_on 'staticfloat/juliadeps/fontconfig'
   depends_on 'libtiff'
-  depends_on 'little-cms' => :optional
-  depends_on 'little-cms2' => :optional
-  depends_on 'jasper' => :optional
-  depends_on 'libwmf' => :optional
-  depends_on 'librsvg' => :optional
-  depends_on 'liblqr' => :optional
-  depends_on 'openexr' => :optional
-  depends_on 'ghostscript' => :optional
-  depends_on 'webp' => :optional
+  #depends_on 'little-cms' => :optional
+  #depends_on 'little-cms2' => :optional
+  #depends_on 'jasper' => :optional
+  #depends_on 'libwmf' => :optional
+  #depends_on 'librsvg' => :optional
+  #depends_on 'liblqr' => :optional
+  #depends_on 'openexr' => :optional
+  #depends_on 'ghostscript' => :optional
+  #depends_on 'webp' => :optional
 
   opoo '--with-ghostscript is not recommended' if build.with? 'ghostscript'
 
