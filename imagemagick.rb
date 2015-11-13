@@ -3,13 +3,16 @@ require 'formula'
 class Imagemagick < Formula
   homepage 'http://www.imagemagick.org'
 
-  url "http://www.imagemagick.org/download/releases/ImageMagick-6.9.2-5.tar.xz"
-  mirror "http://ftp.nluug.nl/ImageMagick/ImageMagick-6.9.2-5.tar.xz"
+  url 'http://www.imagemagick.org/download/releases/ImageMagick-6.9.2-5.tar.xz'
+  mirror 'http://ftp.nluug.nl/ImageMagick/ImageMagick-6.9.2-5.tar.xz'
   sha256 '19fb341725a13c01458cfce23d0a260fd032432a5daeebdd4f06c92d716ded40'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "5f4aaefcebb33952277304016015d6b64c501f1eb5036a289d3591687a687840" => :mavericks
+    sha256 "527b3f2981c2ee483883ea492316e542ffb79a8948fd44ed187dd22b7252b3cc" => :yosemite
+    sha256 "38c4edd3b91c5f8564057ca53d76379948f8cb5b1fd95385aaceb04535f81cf4" => :el_capitan
   end
 
   head 'https://www.imagemagick.org/subversion/ImageMagick/trunk',
