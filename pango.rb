@@ -56,23 +56,6 @@ class Pango < Formula
     system "make install"
   end
 
-  def post_install
-    if (Tab.for_formula self).poured_from_bottle
-      # Fixup pango module paths
-      inreplace prefix+'etc/pango/pango.modules', %r[.*/(lib/pango/[\d\.]+/modules/.*)], prefix+'\1'
-
-      # Tell pango where to find pango.modules
-      (rm etc+'pango/pangorc') if File.exist? etc+'pango/pangorc'
-      (etc+'pango/pangorc').write <<-EOS.undent
-      #
-      # pangorc file to setup proper ModuleFiles path
-      #
-      [Pango]
-      ModulesPath = #{lib}/1.8.0/modules/
-      EOS
-    end
-  end
-
   test do
     system "#{bin}/pango-querymodules", "--version"
   end
