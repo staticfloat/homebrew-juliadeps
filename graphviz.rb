@@ -36,7 +36,7 @@ class Graphviz < Formula
   end
 
   patch :p0 do
-    url "https://trac.macports.org/export/103168/trunk/dports/graphics/graphviz/files/patch-project.pbxproj.diff"
+    url "https://gist.githubusercontent.com/staticfloat/f140f00af511f1ee961a/raw/d2cd384e4ae589c2d139c59dbb69150260b5743e/patch-project.pbxproj.diff"
     sha1 "b242fb8fa81489dd16830e5df6bbf5448a3874d5"
   end
 
