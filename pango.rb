@@ -17,9 +17,9 @@ class Pango < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "7eba4f7ad79a733494970fc18e50b03d5c0c09962436e4067b9a23d1cc1ae00d" => :mavericks
-    sha256 "b5020134597a2fe4dc8165acd4b8653d2379ec7febf24b7454b793a0eb200e41" => :yosemite
-    sha256 "26d5ce15f9d137637c5435f360477162216e3ab085096901b71c59ace12b404a" => :el_capitan
+    sha256 "8de8a2fa2f1588d6873c036a4a90418352a006eaa74a1ca6a9ad540b0514825c" => :mavericks
+    sha256 "0058ff1f79b74a912388dd4a31a6020f64cbdd5b6e08b7424a7214d32940826e" => :yosemite
+    sha256 "b5b15406065b131bfa2a163eb6caa58e57404a4d60b45943f14dbd0bf777bffa" => :el_capitan
   end
 
   option :universal
