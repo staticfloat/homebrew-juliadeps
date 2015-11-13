@@ -2,15 +2,11 @@ require 'formula'
 
 class Gtkx3 < Formula
   homepage 'http://gtk.org/'
-  url "https://download.gnome.org/sources/gtk+/3.16/gtk+-3.16.6.tar.xz"
-  sha256 "4d12726d0856a968b41802ae5c5971d7e9bac532717e309d3f81b9989da5ffbe"
+  url "https://download.gnome.org/sources/gtk+/3.19/gtk+-3.19.1.tar.xz"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "fd13958a60a0506743efe9aba7f01e82826ba36210911de4a581b9137cde0c4a" => :mountain_lion
-    sha256 "976ccd76850e37a9165624875a27e4acd57815c2d29ab0f28d5ba868efa8bdd7" => :yosemite
-    sha256 "d5b1aea73ddb9476f73726182af72a0f064699a4e1611f0d1866bd86b4e32eba" => :mavericks
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
