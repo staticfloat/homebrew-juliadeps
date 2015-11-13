@@ -4,6 +4,7 @@ class Pango < Formula
   homepage "http://www.pango.org/"
   url "http://ftp.gnome.org/pub/GNOME/sources/pango/1.38/pango-1.38.1.tar.xz"
   sha256 '1320569f6c6d75d6b66172b2d28e59c56ee864ee9df202b76799c4506a214eb7'
+  revision 1
 
   head do
     url 'https://git.gnome.org/browse/pango'
