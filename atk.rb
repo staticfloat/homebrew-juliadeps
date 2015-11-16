@@ -1,17 +1,17 @@
 require 'formula'
 
 class Atk < Formula
-  desc "GNOME accessibility toolkit"
+  desc 'GNOME accessibility toolkit'
   homepage 'http://library.gnome.org/devel/atk/'
-  url "https://download.gnome.org/sources/atk/2.16/atk-2.16.0.tar.xz"
-  sha256 "095f986060a6a0b22eb15eef84ae9f14a1cf8082488faa6886d94c37438ae562"
+  url 'https://download.gnome.org/sources/atk/2.18/atk-2.18.0.tar.xz'
+  sha256 'ce6c48d77bf951083029d5a396dd552d836fff3c1715d3a7022e917e46d0c92b'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "3d1fac6d50e12d5f0337b9849035afd2abadb4d4438894495ae01ce2c2df1ce2" => :mavericks
-    sha256 "26381cb8d5aa0958c84ffd2803d419953369af6a57ea5d41b46ce471e6efb4f8" => :mountain_lion
-    sha256 "bff491c7eb8c6de9fff1717f2af281cf7a4e0a72d9c597d9e7c4945e3a6f6abf" => :yosemite
+    sha256 "5dd63c0c8e06420c0416842b03b0ba8d395e81a92dc28281b30bc0660f2c25e1" => :mavericks
+    sha256 "7ec079fb33d286c1c44134bc71d986118570de730894cd5cd22ba4b7ceb067e2" => :yosemite
+    sha256 "0e1ed39f74e96dd838371d026b3b888d2dcda2dc5bb8c4443be71ba25a3c5067" => :el_capitan
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build

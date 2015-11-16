@@ -1,23 +1,23 @@
 require "formula"
 
 class Harfbuzz < Formula
-  homepage "http://www.freedesktop.org/wiki/Software/HarfBuzz"
-  url "http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.37.tar.bz2"
-  sha256 "255f3b3842dead16863d1d0c216643d97b80bfa087aaa8fc5926da24ac120207"
+  homepage 'http://www.freedesktop.org/wiki/Software/HarfBuzz'
+  url 'http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.42.tar.bz2'
+  sha256 'c27240b6bdca7c497e5d0bebdb6d411cfcd4c1662815f3edbd8cc96246216ce2'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 "6a768391ea765c78d4a6d39ccad701f68f067b65" => :yosemite
-    sha1 "fb56592f5d2cd5f70d6d0dacb3340e193c76f7c3" => :mavericks
-    sha1 "c4c61e3e044ea550f089f3e3a1bafc19c39d8bd4" => :mountain_lion
+    sha256 "d84f8329c29bc43a2e5f601c4bc4e5c1956d8b18327b2dab8097f8620efd7114" => :mavericks
+    sha256 "8b93f9447f0cf27e0c78ac3236fb234d8137bce1dc9e37999da405ae39862dba" => :yosemite
+    sha256 "fdc9ed3e17dcdfe9d1655c296b4d2c797dd89a5c48a95bfc88c7e1cbcdbf5d82" => :el_capitan
   end
 
   depends_on "staticfloat/juliadeps/pkg-config" => :build
   depends_on "staticfloat/juliadeps/glib"
   depends_on "staticfloat/juliadeps/cairo"
   depends_on "staticfloat/juliadeps/icu4c" => :recommended
-  depends_on "staticfloat/juliadeps/freetype"
+  depends_on "freetype"
 
   def install
     args = %W[--disable-dependency-tracking --prefix=#{prefix}]

@@ -2,8 +2,7 @@ require 'formula'
 
 class Optimizationservices < Formula
   homepage 'https://projects.coin-or.org/OS'
-  url 'http://www.coin-or.org/download/pkgsource/OS/OS-2.9.2.tgz'
-  sha1 '90340631a5ce7fa05a67484d624d1692473e9763'
+  url 'http://www.coin-or.org/download/pkgsource/OS/OS-2.9.3.tgz'
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
   depends_on 'staticfloat/juliadeps/couenne'
@@ -12,8 +11,9 @@ class Optimizationservices < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "939e7d3a5d990cb5b14d840f414f7b1b76155474bd9e5b6079c311b6590e2f29" => :mavericks
-    sha256 "9349c42d184cb80bcb1566d2def3e325d2b6a7b85af8eeb8430cf60719e21654" => :yosemite
+    sha256 "2aa3c32d2a2c9b8ead4edf05bf66cc97f585407f7dc3caafb8f1dfbbb418305a" => :mavericks
+    sha256 "2d97543470f5d7518b54ee4129176578ee7356c05a1e946d6c3fb9280d8b2e41" => :yosemite
+    sha256 "9ec6978287a9536b13a9d165f2c6d69c1e43432a9b56456b3ed922969344e860" => :el_capitan
   end
 
   def install

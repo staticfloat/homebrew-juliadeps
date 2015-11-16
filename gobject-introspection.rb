@@ -1,18 +1,17 @@
 # We are using the mainline formula here, EXCEPT FOR THE DEPS!
 
 class GobjectIntrospection < Formula
-  desc "Generate interface introspection data for GObject libraries"
-  homepage "https://live.gnome.org/GObjectIntrospection"
-  url "https://download.gnome.org/sources/gobject-introspection/1.44/gobject-introspection-1.44.0.tar.xz"
-  sha256 "6f0c2c28aeaa37b5037acbf21558098c4f95029b666db755d3a12c2f1e1627ad"
+  desc 'Generate interface introspection data for GObject libraries'
+  homepage 'https://live.gnome.org/GObjectIntrospection'
+  url 'https://download.gnome.org/sources/gobject-introspection/1.46/gobject-introspection-1.46.0.tar.xz'
+  sha256 '6658bd3c2b8813eb3e2511ee153238d09ace9d309e4574af27443d87423e4233'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
-    revision 2
     cellar :any
-    sha256 "e29497a4aa084f25f7d53988beab1999c4b3145896f0ef6a993b0d7736269cbd" => :yosemite
-    sha256 "1e0e84d4d114f39d89549bc5a6bfae59a84655a1aefce926d8dd6e53495390ae" => :mavericks
-    sha256 "3dcfedfe989ec4d9c6558def0190ef3bd3214bafa4d2f53fd28aa1abbc1403f2" => :mountain_lion
+    sha256 "9e29cdf8729bed7cba6d8098731d794b4330e333ab582a36c570890da7dd6983" => :mavericks
+    sha256 "b401dd7220479654fb66b9df56168ef1062919f339f65a0a98e9c653b437dc3d" => :yosemite
+    sha256 "a87abf73da8de680219811431254ca05fbff113c41a260ddb7c948a4a0408bf3" => :el_capitan
   end
 
   option :universal

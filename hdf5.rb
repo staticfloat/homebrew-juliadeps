@@ -2,16 +2,16 @@ require 'formula'
 
 class Hdf5 < Formula
   homepage 'http://www.hdfgroup.org/HDF5'
-  url 'http://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.13/src/hdf5-1.8.13.tar.bz2'
-  sha1 '712955025f03db808f000d8f4976b8df0c0d37b5'
+  url 'https://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.15-patch1/src/hdf5-1.8.15-patch1.tar.bz2'
+  version '1.8.15p1'
+  sha256 'a5afc630c4443547fff15e9637b5b10404adbed4c00206d89517d32d6668fb32'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '9d5484e35913af5415c00ac01d641afdd86b6a25' => :lion
-    sha1 'eaa5395ac74a962bd7e01762c435e7de12e5737e' => :mavericks
-    sha1 'd37805e92f876579bc10d9a83633cf14878d0866' => :mountain_lion
-    sha1 "49b234653e40cc1a32515380e31ff28ef38690d8" => :yosemite
+    sha256 "c7cfa56cddd7a6a80b9c9bd7c40ecb3ce9b513bb5b6c0d65c1818fafc26c5891" => :mavericks
+    sha256 "8a86c1e64c45c55f949ebd77d964e53b5c409d04bf17c002d5d8b1709fc5898f" => :yosemite
+    sha256 "e5cb6648fd9106df38e530c15687645f8d052fea89ef916334efa1f796fff5f4" => :el_capitan
   end
 
   # TODO - warn that these options conflict

@@ -2,8 +2,9 @@ require 'formula'
 
 class Pango < Formula
   homepage "http://www.pango.org/"
-  url "http://ftp.gnome.org/pub/GNOME/sources/pango/1.36/pango-1.36.8.tar.xz"
-  sha256 "18dbb51b8ae12bae0ab7a958e7cf3317c9acfc8a1e1103ec2f147164a0fc2d07"
+  url "http://ftp.gnome.org/pub/GNOME/sources/pango/1.38/pango-1.38.1.tar.xz"
+  sha256 '1320569f6c6d75d6b66172b2d28e59c56ee864ee9df202b76799c4506a214eb7'
+  revision 1
 
   head do
     url 'https://git.gnome.org/browse/pango'
@@ -17,11 +18,10 @@ class Pango < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    revision 1
-    sha1 "b30d81e5b4b90792e14aa02b273fcf93e9675fc7" => :yosemite
-    sha1 "eb30e96c1d896cd8fc7e1053513b3e298645c9af" => :mavericks
-    sha1 "ea288645c2ca58b4addf29c0140fb3ecec6ea3ab" => :mountain_lion
-  end
+    sha256 "a8be01f6fad1a75a7188e23ec38783dc763bb5444134c644977f3f8c7f88066d" => :mavericks
+    sha256 "cbbea64d6fb182fb2b2a2991ac66ec6c79cb655fe8cf16466533f02ee3e88a1f" => :yosemite
+    sha256 "43c2b7efa8571d7399ab02673f43ae5f696b79a6bb4cc7f64c8bd03de42a7e11" => :el_capitan
+ end
 
   option :universal
 
@@ -54,23 +54,6 @@ class Pango < Formula
     system "./configure", *args
     system "make"
     system "make install"
-  end
-
-  def post_install
-    if (Tab.for_formula self).poured_from_bottle
-      # Fixup pango module paths
-      inreplace prefix+'etc/pango/pango.modules', %r[.*/(lib/pango/[\d\.]+/modules/.*)], prefix+'\1'
-
-      # Tell pango where to find pango.modules
-      (rm etc+'pango/pangorc') if File.exist? etc+'pango/pangorc'
-      (etc+'pango/pangorc').write <<-EOS.undent
-      #
-      # pangorc file to setup proper ModuleFiles path
-      #
-      [Pango]
-      ModulesPath = #{lib}/1.8.0/modules/
-      EOS
-    end
   end
 
   test do

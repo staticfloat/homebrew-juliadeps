@@ -2,16 +2,16 @@ require 'formula'
 
 class GdkPixbuf < Formula
   homepage 'http://gtk.org'
-  url 'http://ftp.gnome.org/pub/GNOME/sources/gdk-pixbuf/2.30/gdk-pixbuf-2.30.8.tar.xz'
-  sha256 '4853830616113db4435837992c0aebd94cbb993c44dc55063cee7f72a7bef8be'
-  revision 1
+  url 'http://ftp.acc.umu.se/pub/GNOME/sources/gdk-pixbuf/2.33/gdk-pixbuf-2.33.1.tar.xz'
+  sha256 '132358b39bd8204e2ef0571c14206dfdca1f44bcc94c21751d6e6b0433b5088b'
+  revision 2
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "8760c5d014b4a51fdb432723164bf9b6a1a959e0330386ae5f68351d733a0c97" => :yosemite
-    sha256 "cc1e387779eb18cff7154988d4abad845cf3c85afc201f673eccd7caeddfb78d" => :mavericks
-    sha256 "f41eeb44906fecf8e23455328497b5eef9b47d41953b45cb7be9fc4c172a5f5d" => :mountain_lion
+    sha256 "ad31bdf0b476012be0707d2e7bab4e7b0e59ce80dfa686a166a2f5fb3bb7b9d7" => :mavericks
+    sha256 "70e8396c41d115e227ced8d8dfac2b10771837b74cc6b8514cef2e4b599e0146" => :yosemite
+    sha256 "9aea9dbda08852d351b63f437d9fadea9972d6b7c97970736043b22fc314e930" => :el_capitan
   end
 
   option :universal

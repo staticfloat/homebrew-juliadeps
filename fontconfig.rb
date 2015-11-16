@@ -9,6 +9,7 @@ class Fontconfig < Formula
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
     revision 3
+    sha256 "1bfd3fe75bf477dcc0942cba4d1b4ceae1a8f47f1ad2ac8884e2e5110577f224" => :el_capitan
     sha1 "aa8cd844a4740cb6458a4c4bd74746de6e75a02b" => :yosemite
     sha1 "5d273ae804ff4c3f2ad735d77e9d25b2cb1ce910" => :mavericks
     sha1 "17c0696a6e075db8d6822bdde341616d36cb0c0d" => :mountain_lion
@@ -19,7 +20,7 @@ class Fontconfig < Formula
   option :universal
 
   depends_on "staticfloat/juliadeps/pkg-config" => :build
-  depends_on "staticfloat/juliadeps/freetype"
+  depends_on "freetype"
 
   # Reverts commit http://cgit.freedesktop.org/fontconfig/commit/?id=7a6622f25cdfab5ab775324bef1833b67109801b,
   # which breaks caching font directories containing subdirectories

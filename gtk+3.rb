@@ -2,15 +2,15 @@ require 'formula'
 
 class Gtkx3 < Formula
   homepage 'http://gtk.org/'
-  url "https://download.gnome.org/sources/gtk+/3.16/gtk+-3.16.6.tar.xz"
-  sha256 "4d12726d0856a968b41802ae5c5971d7e9bac532717e309d3f81b9989da5ffbe"
+  url 'https://download.gnome.org/sources/gtk+/3.19/gtk+-3.19.1.tar.xz'
+  sha256 'cd87b47a6f6436f16f15ebc1f0cbb113c92c603f572f920235405faaadc7bed9'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "fd13958a60a0506743efe9aba7f01e82826ba36210911de4a581b9137cde0c4a" => :mountain_lion
-    sha256 "976ccd76850e37a9165624875a27e4acd57815c2d29ab0f28d5ba868efa8bdd7" => :yosemite
-    sha256 "d5b1aea73ddb9476f73726182af72a0f064699a4e1611f0d1866bd86b4e32eba" => :mavericks
+    sha256 "b3f3d39d585116ecc000ad153afa32bf6fee9b10540faf2736d3629c48dcd172" => :mavericks
+    sha256 "3973f23b9db563c3ddb2da85d9bb6fde7b14d2f566a6701daa8c63faaf0ad9ae" => :yosemite
+    sha256 "a62747dd7cb31b39c45feb8490d53734a9b18ad800780ab7954fdbc98538a0b8" => :el_capitan
   end
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build

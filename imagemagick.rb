@@ -3,18 +3,16 @@ require 'formula'
 class Imagemagick < Formula
   homepage 'http://www.imagemagick.org'
 
-  # upstream's stable tarballs tend to disappear, so we provide our own mirror
-  # Tarball and checksum from: http://www.imagemagick.org/download
-  url 'http://downloads.sf.net/project/machomebrew/mirror/ImageMagick-6.8.9-1.tar.xz'
-  sha256 '88e9f72cff22b91738494abe8b87f53c5b0c6932c4b08f944bf79846f035e642'
-  revision 1
+  url 'http://www.imagemagick.org/download/releases/ImageMagick-6.9.2-5.tar.xz'
+  mirror 'http://ftp.nluug.nl/ImageMagick/ImageMagick-6.9.2-5.tar.xz'
+  sha256 '19fb341725a13c01458cfce23d0a260fd032432a5daeebdd4f06c92d716ded40'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 "1146e5bc7d4f585e4c3c40c88f022e068dcb8a3a" => :yosemite
-    sha1 "b691b16e44b28a720829d91f52444639e8f86eee" => :mountain_lion
-    sha1 "6ea37685eb15240ceb3f3e1658aa097c81639ac2" => :mavericks
+    sha256 "5f4aaefcebb33952277304016015d6b64c501f1eb5036a289d3591687a687840" => :mavericks
+    sha256 "527b3f2981c2ee483883ea492316e542ffb79a8948fd44ed187dd22b7252b3cc" => :yosemite
+    sha256 "38c4edd3b91c5f8564057ca53d76379948f8cb5b1fd95385aaceb04535f81cf4" => :el_capitan
   end
 
   head 'https://www.imagemagick.org/subversion/ImageMagick/trunk',
@@ -33,20 +31,20 @@ class Imagemagick < Formula
 
   depends_on 'jpeg' => :recommended
   depends_on 'libpng' => :recommended
-  depends_on 'staticfloat/juliadeps/freetype' => :recommended
+  depends_on 'freetype' => :recommended
 
-  depends_on :x11 => :optional
-  depends_on :fontconfig => :optional
+  #depends_on :x11 => :optional
+  depends_on 'staticfloat/juliadeps/fontconfig'
   depends_on 'libtiff'
-  depends_on 'little-cms' => :optional
-  depends_on 'little-cms2' => :optional
-  depends_on 'jasper' => :optional
-  depends_on 'libwmf' => :optional
-  depends_on 'librsvg' => :optional
-  depends_on 'liblqr' => :optional
-  depends_on 'openexr' => :optional
-  depends_on 'ghostscript' => :optional
-  depends_on 'webp' => :optional
+  #depends_on 'little-cms' => :optional
+  #depends_on 'little-cms2' => :optional
+  #depends_on 'jasper' => :optional
+  #depends_on 'libwmf' => :optional
+  #depends_on 'librsvg' => :optional
+  #depends_on 'liblqr' => :optional
+  #depends_on 'openexr' => :optional
+  #depends_on 'ghostscript' => :optional
+  #depends_on 'webp' => :optional
 
   opoo '--with-ghostscript is not recommended' if build.with? 'ghostscript'
 

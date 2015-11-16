@@ -12,6 +12,7 @@ class Graphviz < Formula
     sha1 "794aa82d238050ac242d8d7cc31609f104ba4e59" => :yosemite
     sha1 "276272b654eb1a357ef063a9f70bc9c137584fac" => :mavericks
     sha1 "6fddf51b6d5f659aa34cc07df0710d36b205b370" => :mountain_lion
+    sha256 "60ef4cc0ab387b391d8aeb0ffdd2a2c4883f7a065c8695db2897f9c9f86d4f45" => :el_capitan
   end
 
   # To find Ruby and Co.
@@ -27,7 +28,7 @@ class Graphviz < Formula
   depends_on 'swig' if build.with? "bindings"
   depends_on 'gts' => :optional
   depends_on "librsvg" => :optional
-  depends_on "staticfloat/juliadeps/freetype" => :optional
+  depends_on "freetype" => :optional
   depends_on :x11 if build.with? "x"
   depends_on :xcode => :build if build.with? "app"
 
@@ -36,7 +37,7 @@ class Graphviz < Formula
   end
 
   patch :p0 do
-    url "https://trac.macports.org/export/103168/trunk/dports/graphics/graphviz/files/patch-project.pbxproj.diff"
+    url "https://gist.githubusercontent.com/staticfloat/f140f00af511f1ee961a/raw/d2cd384e4ae589c2d139c59dbb69150260b5743e/patch-project.pbxproj.diff"
     sha1 "b242fb8fa81489dd16830e5df6bbf5448a3874d5"
   end
 

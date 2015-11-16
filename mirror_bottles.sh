@@ -5,7 +5,7 @@ function grab_all_bottles
 	# Get download url from brew
 	DOWNLOAD_URL=$(brew fetch $1 | grep "==> Downloading " | awk '{ print $3 }')
 	OS_MARKER="thisismyosmarkerthatprobably"
-	OS_LIST="yosemite mountain_lion mavericks"
+	OS_LIST="yosemite mavericks el_capitan"
 
 	for OS in $OS_LIST; do
 		DOWNLOAD_URL=$(echo $DOWNLOAD_URL | sed "s/$OS/$OS_MARKER/g")
