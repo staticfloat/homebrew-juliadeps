@@ -22,6 +22,7 @@ class Imagemagick < Formula
   option 'without-magick-plus-plus', 'disable build/install of Magick++'
 
   depends_on 'staticfloat/juliadeps/pkg-config' => :build
+  depends_on 'autoconf' => :build
   depends_on 'libtool'
   depends_on 'xz'
   depends_on 'fftw'
