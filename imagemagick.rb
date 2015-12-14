@@ -10,6 +10,9 @@ class Imagemagick < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "e404af83561186d293dc20c08b9100c7795d1696d2aa37b829744e1d40b4b39c" => :mavericks
+    sha256 "940ba3f7c8a7dc34381ef7da6ce44287e0150a941cff4de77aff6e5b25e2cdab" => :yosemite
+    sha256 "2a9172a60eebd1f3ae8b69d53a08673dd80333794e713a5151a3306a398fccb0" => :el_capitan
   end
 
   head 'https://www.imagemagick.org/subversion/ImageMagick/trunk',
