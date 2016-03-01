@@ -12,7 +12,7 @@ class Libcroco < Formula
   end
 
   depends_on "staticfloat/juliadeps/pkg-config" => :build
-  depends_on "staticfloat/juliadeps/intltool" => :build
+  depends_on "intltool" => :build
   depends_on "staticfloat/juliadeps/glib"
 
   def install
