@@ -4,14 +4,12 @@ class Librsvg < Formula
   url "https://download.gnome.org/sources/librsvg/2.40/librsvg-2.40.13.tar.xz"
   sha256 "4d6ea93ec05f5dabe7262d711d246a0a99b2311e215360dd3dcabd6afe3b9804"
 
-  depends_on "pkg-config" => :build
-  depends_on "cairo"
-  depends_on "gdk-pixbuf"
-  depends_on "glib"
-  depends_on "gtk+3" => :optional
-  depends_on "libcroco"
-  depends_on "libgsf" => :optional
-  depends_on "pango"
+  depends_on "staticfloat/juliadeps/pkg-config" => :build
+  depends_on "staticfloat/juliadeps/cairo"
+  depends_on "staticfloat/juliadeps/gdk-pixbuf"
+  depends_on "staticfloat/juliadeps/glib"
+  depends_on "staticfloat/juliadeps/libcroco"
+  depends_on "staticfloat/juliadeps/pango"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
