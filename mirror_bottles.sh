@@ -31,3 +31,8 @@ for name in $FORMULA_NAME; do
 	echo "Processing ${name%.*}..."
 	grab_all_bottles "${name%.*}"
 done
+
+for name in /tmp/bottle_downloads/$FORMULA_NAME*; do
+	echo "Uploading $(basename $name)..."
+	aws put --public "juliabottles/$(basename $name)" "$name"
+done
