@@ -13,6 +13,14 @@ class Librsvg < Formula
   depends_on "libgsf" => :optional
   depends_on "pango"
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha256 "8948e182517f5af7a8fb09643276b72005a1df8cd8119a56fe62f96ee4217cb3" => :mavericks
+    sha256 "b4ccf7ac3a6f33cb0982f21557f7a5456c847f5ab443157225f1531db61d3740" => :yosemite
+    sha256 "6fc36e831f41180929afbea9acf8c7c7bcdf5d88afafba5821074684b6e40310" => :el_capitan
+  end
+
   def install
     args = ["--disable-dependency-tracking",
             "--prefix=#{prefix}",
