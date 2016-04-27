@@ -5,6 +5,9 @@ class Opusfile < Formula
   sha256 "9e2bed13bc729058591a0f1cab2505e8cfd8e7ac460bf10a78bcc3b125e7c301"
 
   bottle do
+    sha256 "01af6fb4d5b7a952d717dc81550b52a940657ac62c290c54b5fd2be5c1232ac3" => :mavericks
+    sha256 "80e2993f162a41289ac83d9c24c2ed8862ca70252386d1ecae4c9c50c549fe3a" => :el_capitan
+    sha256 "fd372edb2fc305baa68a65ee0d0fff2a8834346924247a3fc921888d9409f74c" => :yosemite
   end
 
   head do
