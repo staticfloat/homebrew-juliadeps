@@ -18,3 +18,6 @@
 !optimizationservices.rb
 !scs.rb
 !zeromq32.rb
+
+# fontconfig is special-cased by it's `pour_bottle?` method, so we have to carry our own here
+!fontconfig.rb
