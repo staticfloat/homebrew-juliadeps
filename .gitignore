@@ -1,0 +1,5 @@
+*.rb
+
+# We list exceptions here for each .rb file we want to keep
+!ipopt.rb
+!libgfortran.rb
