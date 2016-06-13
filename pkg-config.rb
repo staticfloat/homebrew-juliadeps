@@ -1,19 +1,17 @@
-require 'formula'
-
 class PkgConfig < Formula
   desc "Manage compile and link flags for libraries"
-  homepage 'http://pkgconfig.freedesktop.org'
-  url 'http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz'
-  mirror 'https://fossies.org/linux/misc/pkg-config-0.28.tar.gz'
-  sha256 '6b6eb31c6ec4421174578652c7e141fdaae2dabad1021f420d8713206ac1f845'
-  revision 1
+  homepage "https://freedesktop.org/wiki/Software/pkg-config/"
+  url "https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.1.tar.gz"
+  mirror "https://fossies.org/linux/misc/pkg-config-0.29.1.tar.gz"
+  sha256 "beb43c9e064555469bd4390dcfd8030b1536e0aa103f08d7abf7ae8cac0cb001"
+
 
   bottle do
-    root_url 'https://juliabottles.s3.amazonaws.com'
+    root_url "https://homebrew.bintray.com/bottles"
     cellar :any
-    sha256 "be226eb19c200f40ef04401ab67153e0dd2645e49975d4a95f7b47911240ae40" => :mavericks
-    sha256 "e357e262b7101c791172eab5a3c344941331ae21aa4de160a7fe043d01f5426e" => :yosemite
-    sha256 "a602ca372acde5bece03ce09dcbb97612365752079fff58395f9980b84879bd4" => :el_capitan
+    sha256 "6bf11398f37f686faf47bf5fa96138423950428cd08316d9f0edcce6cda53561" => :el_capitan
+    sha256 "8b908a88bf6a073824861647a074244fa24997f502ba3ac6a55411e05b54e736" => :yosemite
+    sha256 "a27ddccd93c19c3e492c6dba674140340b9ac18253066b5a91933d7ca4dd0992" => :mavericks
   end
 
   def install
@@ -25,6 +23,7 @@ class PkgConfig < Formula
       #{HOMEBREW_LIBRARY}/ENV/pkgconfig/#{MacOS.version}
     ].uniq.join(File::PATH_SEPARATOR)
 
+    ENV.append "LDFLAGS", "-framework Foundation -framework Cocoa"
     system "./configure", "--disable-debug",
                           "--prefix=#{prefix}",
                           "--disable-host-tool",
