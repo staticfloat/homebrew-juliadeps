@@ -15,7 +15,7 @@ class Zeromq32 < Formula
   option :universal
   option 'with-pgm', 'Build with PGM extension'
 
-  depends_on 'staticfloat/juliadeps/pkg-config' => :build
+  depends_on 'pkg-config' => :build
   depends_on 'libpgm'
 
   def install

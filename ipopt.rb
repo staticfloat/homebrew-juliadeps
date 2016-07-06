@@ -5,14 +5,15 @@ class Ipopt < Formula
   homepage 'https://projects.coin-or.org/Ipopt'
   url 'http://www.coin-or.org/download/source/Ipopt/Ipopt-3.12.4.tgz'
   sha256 '292afd952c25ec9fe6225041683dcbd3cb76e15a128764671927dbaf881c2e89'
+  revision 1
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "b8f2f83776830d969841d96a3f35d62015b747f6d95378f17d9c6ba90a4ff70a" => :mavericks
-    sha256 "83926ec5293dc95ce0bce1a4e8c8cc6d5c4a5ae2056c790e3172663b1fcde851" => :yosemite
-    sha256 "14ad4d4689b3dbb061c6d68b9a57113f7a27b823d297d54c56c3f61d8208087c" => :el_capitan
-  end
+    sha256 "1866df675a818e3f3bca6539edb7b2f55078df4e02fbea00755a8965a0bad134" => :mavericks
+    sha256 "1b82449de95a197d97721aa6592f4acc245f8006727fb9af9cd6aaaf71c9181c" => :yosemite
+    sha256 "646df8e7f7b4799a26f08df1716cf4947fb4ee86409745e2073744d5e656d81d" => :el_capitan
+ end
 
   # Need this snippet in every formula that has a runtime dependency on libgfortran
   def post_install

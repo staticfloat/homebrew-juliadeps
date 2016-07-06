@@ -1,28 +1,29 @@
 class Fontconfig < Formula
-  homepage "http://fontconfig.org/"
-  url "http://fontconfig.org/release/fontconfig-2.11.1.tar.bz2"
-  sha1 "08565feea5a4e6375f9d8a7435dac04e52620ff2"
+  desc "XML-based font configuration API for X Windows"
+  homepage "https://wiki.freedesktop.org/www/Software/fontconfig/"
+  url "https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.11.1.tar.bz2"
+  sha256 "dc62447533bca844463a3c3fd4083b57c90f18a70506e7a9f4936b5a1e516a99"
+  revision 2
 
   # The bottle tooling is too lenient and thinks fontconfig
   # is relocatable, but it has hardcoded paths in the executables.
+
   bottle do
-    root_url 'https://juliabottles.s3.amazonaws.com'
+    root_url "https://homebrew.bintray.com/bottles"
     cellar :any
-    revision 3
-    sha256 "1bfd3fe75bf477dcc0942cba4d1b4ceae1a8f47f1ad2ac8884e2e5110577f224" => :el_capitan
-    sha1 "aa8cd844a4740cb6458a4c4bd74746de6e75a02b" => :yosemite
-    sha1 "5d273ae804ff4c3f2ad735d77e9d25b2cb1ce910" => :mavericks
-    sha1 "17c0696a6e075db8d6822bdde341616d36cb0c0d" => :mountain_lion
+    sha256 "6a2492b8e02a1b17cb2b2090917a5957934a25d24b13fe33cc213f07c7119955" => :el_capitan
+    sha256 "23574b814f3cd34dbbc00151038e50eee7d7db2cb0db9a581a06155a30b31b91" => :yosemite
+    sha256 "36104e396d373ff8c593ee61053534007f4436bf5c2d9ebbf29843aaccc51064" => :mavericks
   end
 
   keg_only :provided_pre_mountain_lion
 
   option :universal
 
-  depends_on "staticfloat/juliadeps/pkg-config" => :build
+  depends_on "pkg-config" => :build
   depends_on "freetype"
 
-  # Reverts commit http://cgit.freedesktop.org/fontconfig/commit/?id=7a6622f25cdfab5ab775324bef1833b67109801b,
+  # Reverts commit https://cgit.freedesktop.org/fontconfig/commit/?id=7a6622f25cdfab5ab775324bef1833b67109801b,
   # which breaks caching font directories containing subdirectories
   # See: https://github.com/Homebrew/homebrew/issues/28111
   # Reported upstream, message to mailing list is waiting moderation.
@@ -32,6 +33,7 @@ class Fontconfig < Formula
     ENV.universal_binary if build.universal?
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
+                          "--enable-static",
                           "--with-add-fonts=/System/Library/Fonts,/Library/Fonts,~/Library/Fonts",
                           "--prefix=#{prefix}",
                           "--localstatedir=#{var}",
@@ -40,6 +42,7 @@ class Fontconfig < Formula
   end
 
   def post_install
+    ohai "Regenerating font cache, this may take a while"
     system "#{bin}/fc-cache", "-frv"
   end
 
