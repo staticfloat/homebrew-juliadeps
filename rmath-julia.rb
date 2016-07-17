@@ -14,6 +14,9 @@ class RmathJulia < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
+    sha256 "99c81962499aba9d4cdb75dbb062a4933d7753a36dc0cef9b1128bb7f17f51a8" => :mavericks
+    sha256 "4a60304e855d01d05d06e3237f13de5d50b85d72dec7b0f5344bda59bca4b614" => :yosemite
+    sha256 "e755707095aeaf08b5a53adc48847ad1fb817202aafb2f4078d5f18a4dde2ee3" => :el_capitan
   end
 
   def install
