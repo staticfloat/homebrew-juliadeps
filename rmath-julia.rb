@@ -5,22 +5,27 @@ class RmathJulia < Formula
   version "0.1"
   sha256 "8ba59378273dea999f956cecf37d47723682f3a46b55ce76ec36a0ffdbe6c8f7"
   head "https://github.com/JuliaLang/Rmath-julia.git", :branch => "master"
+  revision 1
 
-  option "with-clang", "Compile using Clang instead of GCC"
+  option "with-gcc", "Compile using GCC instead of Clang"
 
-  depends_on :gcc => :build unless "with-clang"
+  depends_on 'gcc' => :build if "with-gcc"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "d02827639cdd69a3eebf76665bbe1c812a6ee6e20d50e3df5046eafe221f307b" => :mavericks
-    sha256 "32d8595c2c672c8065de7e6d3e304daaef1967333d101e39fcf3ed9cd78d6a92" => :yosemite
-    sha256 "7ecafc948e6bb94335e0a626b86e5ab588435af4420c16f40ff0b326e6f05cb4" => :el_capitan
+    sha256 "99c81962499aba9d4cdb75dbb062a4933d7753a36dc0cef9b1128bb7f17f51a8" => :mavericks
+    sha256 "4a60304e855d01d05d06e3237f13de5d50b85d72dec7b0f5344bda59bca4b614" => :yosemite
+    sha256 "e755707095aeaf08b5a53adc48847ad1fb817202aafb2f4078d5f18a4dde2ee3" => :el_capitan
   end
 
   def install
     args = []
-    args << "USECLANG=1" if build.with? "clang"
+    if build.with? "gcc"
+      args << "USEGCC=1"
+    else
+      args << "USECLANG=1"
+    end
 
     lib.mkdir
     system "make", *args
