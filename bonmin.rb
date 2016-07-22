@@ -5,7 +5,7 @@ class Bonmin < Formula
   url 'http://www.coin-or.org/download/pkgsource/Bonmin/Bonmin-1.8.4.tgz'
   sha256 'f533d351c1965ccdac823e8758e435b806786833fc2eff67ca5004013b25db51'
 
-  depends_on 'staticfloat/juliadeps/pkg-config' => :build
+  depends_on 'pkg-config' => :build
   depends_on 'staticfloat/juliadeps/cbc'
   depends_on 'staticfloat/juliadeps/ipopt'
 
