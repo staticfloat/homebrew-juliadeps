@@ -4,7 +4,7 @@ class Optimizationservices < Formula
   homepage 'https://projects.coin-or.org/OS'
   url 'http://www.coin-or.org/download/pkgsource/OS/OS-2.9.3.tgz'
 
-  depends_on 'staticfloat/juliadeps/pkg-config' => :build
+  depends_on 'pkg-config' => :build
   depends_on 'staticfloat/juliadeps/couenne'
   depends_on 'homebrew/science/cppad' => :build
 
