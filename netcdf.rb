@@ -21,17 +21,17 @@ class Netcdf < Formula
 
   resource 'cxx' do
     url 'http://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-cxx4-4.2.tar.gz'
-    sha1 '59628c9f06c211a47517fc00d8b068da159ffa9d'
+    sha256 '310b56ca9220ec709d2ebe6fcf46567fda5b26a20b7afa9744acbbc5a59b2226'
   end
 
   resource 'cxx-compat' do
     url 'http://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-cxx-4.2.tar.gz'
-    sha1 'bab9b2d873acdddbdbf07ab35481cd0267a3363b'
+    sha256 '95ed6ab49a0ee001255eac4e44aacb5ca4ea96ba850c08337a3e4c9a0872ccd1'
   end
 
   resource 'fortran' do
     url 'http://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-fortran-4.2.tar.gz'
-    sha1 'f1887314455330f4057bc8eab432065f8f6f74ef'
+    sha256 '070652100a5bbe04902578639f21498e533936a5de24820bf0fe1fd68386144b'
   end
 
   def install
