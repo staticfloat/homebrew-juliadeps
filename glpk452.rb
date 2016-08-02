@@ -9,8 +9,8 @@ class Glpk452 < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha1 '4e5035b64862a8ecf47637de9e7e2c0135e8d6e4' => :mavericks
-    sha1 "1ccd6325aafa76657f23366b6c8e0821f16a5ec0" => :yosemite
+    sha256 "75ad2a6a10fdb912b55fee99620b22016002326571b8aa93ea5703d741070f2e" => :mavericks
+    sha256 "aaf8bdcfee813a85d69c869bfd239fc08925a80e04a41abd949e77721df26ad1" => :yosemite
     sha256 "07cbe9cbdb3736fe6c558a3a1177de2a360a08527a27d88ab8a050599d119c1a" => :el_capitan
   end
 
