@@ -62,7 +62,7 @@ end
 # We're also going to modify paths found in .pc files
 def fixup_libgfortran(prefix)
   keg = Keg.for(prefix)
-  libgfortran = Formula.factory("libgfortran")
+  libgfortran = Formulary.factory("libgfortran")
 
   # For each dylib/executable within this keg
   keg.mach_o_files.each do |file|
@@ -82,7 +82,7 @@ def fixup_libgfortran(prefix)
     end
   end
 
-  gcc = Formula.factory("gcc")
+  gcc = Formulary.factory("gcc")
   # For each .pc file within this keg
   pkgconfig_files(keg).each do |file|
     # Make sure it's writable
