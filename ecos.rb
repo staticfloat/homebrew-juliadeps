@@ -2,17 +2,17 @@ require "formula"
 
 class Ecos < Formula
   homepage 'https://github.com/ifa-ethz/ecos'
-  url 'https://github.com/embotech/ecos/archive/v2.0.4.tar.gz'
+  url 'https://github.com/embotech/ecos/archive/v2.0.5.tar.gz'
   head 'https://github.com/ifa-ethz/ecos.git'
-  sha256 '07d467476b41ed9ec436ec894c4a2f1f5ee9100eeb8f18126bb84d5a2de2d795'
+  sha256 '14c6ef81dfe9dad6af353e3499ad3a7a0eb1ebd289a995b038e3bc67c6101151'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "8320143cfd5790a67a3d8eff601cd12362137763eb8dac3022677b1c1ee0783c" => :mavericks
-    sha256 "b9ad1bd609a23d104ef834b27997f5177fe333faa65272ae6ddc9d837915762d" => :yosemite
-    sha256 "2831946f7d4d12f9c62f2e2b337a69cb2b65913a99ee31b3a73b962f3741dd8e" => :el_capitan
-  end
+    sha256 "d72f245ec2decbd4803f484e8beac4a6dfd02d97d4001e15ea1c65232fe76ddb" => :mavericks
+    sha256 "2c78a18c209fe1f78176f1250386f39313dbc63000be224376acc25ee828defc" => :el_capitan
+    sha256 "9984135adb3e015a5294a9e9b769e26ff718f0a3b9c98a2870b7b03c1247958b" => :yosemite
+ end
 
   def install
     system "make", "shared"
