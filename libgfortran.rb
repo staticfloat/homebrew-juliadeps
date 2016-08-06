@@ -62,7 +62,7 @@ end
 # We're also going to modify paths found in .pc files
 def fixup_libgfortran(prefix)
   keg = Keg.for(prefix)
-  libgfortran = Formulary.factory("libgfortran")
+  libgfortran = Formulary.factory("staticfloat/juliadeps/libgfortran")
 
   # For each dylib/executable within this keg
   keg.mach_o_files.each do |file|
