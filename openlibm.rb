@@ -1,9 +1,9 @@
 class Openlibm < Formula
   desc "High quality, system independent, portable, open source libm implementation"
   homepage "http://www.openlibm.org"
-  url "https://github.com/JuliaLang/openlibm/archive/v0.5.2.tar.gz"
-  version "0.5.2"
-  sha256 "f394c90426356c8911333def8cee94971492a94ca94578e61ad857913c80122c"
+  url "https://github.com/JuliaLang/openlibm/archive/v0.5.3.tar.gz"
+  version "0.5.3"
+  sha256 "e86d001dfd05557e900e424bdc85024dbd5f00ad194d4607feb39c6f4d117512"
   head "https://github.com/JuliaLang/openlibm.git"
 
   def install
