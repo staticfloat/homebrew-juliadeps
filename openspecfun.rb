@@ -15,6 +15,14 @@ class Openspecfun < Formula
   depends_on "gcc" => :build
   depends_on "openlibm" if "with-openlibm"
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha256 "c67bd279ef2df2d23fbfcdf4b5d3f7d2435ae17ad443594183083edd5168246f" => :mavericks
+    sha256 "5407ae2c6ab9e194aaa2e064b27e0428985db14ac4423d70ec2c1397ca4c57dc" => :yosemite
+    sha256 "0ec3363a691148d85c038f293152fb760aadf68e2ded1eb31d3ab72fa7e1d02a" => :el_capitan
+  end
+
   def install
     args = []
     args << "USEGCC=1" if build.with? "gcc"
