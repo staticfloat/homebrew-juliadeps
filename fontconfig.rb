@@ -7,9 +7,9 @@ class Fontconfig < Formula
   bottle do
     root_url "https://homebrew.bintray.com/bottles"
     cellar :any
-    sha256 "297921c6444ba5f5bc0db5ed06b91fcc3185e0f6e457687623087eefa5e5926a" => :yosemite
-    sha256 "1294efa738fe47f04bad7835c6ca2550e9149bf65380c155493904fd9b7f78e8" => :el_capitan
-    sha256 "1cb9ef933a9092cded22a5094e234d0424f75fc77f90615cbc05c95eae607791" => :mavericks
+    sha256 "8e25522a54e6a127a090fc18c656e15d3380b1560300532d3471ae6a931452d3" => :el_capitan
+    sha256 "cb47cfa3ba993e1a98216ece515868f97120169cc5ec3d136656348c2da7b581" => :yosemite
+    sha256 "f24eb3f1a6a5d3d9c19ae54c6d8b818690d8d9353f53478c9baa5d2bde02c42b" => :mavericks
   end
 
   keg_only :provided_pre_mountain_lion
