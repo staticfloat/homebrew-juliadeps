@@ -75,7 +75,7 @@ def fixup_libgfortran(prefix)
           if bad_name =~ /.*#{f}\.dylib/
             # Rename the dependency!
             good_name = libgfortran.opt_lib + Pathname.new(bad_name).basename
-            keg.change_install_name(bad_name, good_name, file)
+            keg.change_install_name(bad_name.to_s, good_name.to_s, file.to_s)
           end
         end
       end
