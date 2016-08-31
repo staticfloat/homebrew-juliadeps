@@ -29,6 +29,11 @@ class Mbedtls < Formula
   end
 
   bottle do
+    cellar :any
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    sha256 "10d1abd78887395a3ca5ab11f3b439c258279b41c5bea09ba650319a54d8e90e" => :mavericks
+    sha256 "3ad3bee208385c9bfe4c61f778f510173bbba54ed37906b5bcd02f3a391f2edd" => :yosemite
+    sha256 "65944b9ee62d1d4cc1266a17922fadc7a93c20e4fab6a97439a09fbe33a3c62d" => :el_capitan
   end
 
   depends_on "cmake" => :build
