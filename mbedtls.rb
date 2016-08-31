@@ -29,6 +29,10 @@ class Mbedtls < Formula
   end
 
   bottle do
+      cellar :any_skip_relocation
+      sha256 "e33432d90c849cfc01cd77c43b122e8305dca211937b14bf9d9cceeb0a65ea94" => :mavericks
+      sha256 "66309d0d9984655d096cbc6d4913f9a5f05e5cb40c73588297f5fa8b3ac5c263" => :yosemite
+      sha256 "ad274c8eec85d290d61a47345682e5ccb412c8039153e194c58e1531bf9ca8a4" => :el_capitan
   end
 
   depends_on "cmake" => :build
