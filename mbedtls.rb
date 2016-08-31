@@ -2,7 +2,7 @@ class Mbedtls < Formula
   desc "Cryptographic & SSL/TLS library"
   homepage "https://tls.mbed.org/"
   head "https://github.com/ARMmbed/mbedtls.git", :branch => "development"
-  revision 2
+  revision 3
 
   stable do
     url "https://tls.mbed.org/download/mbedtls-2.3.0-apache.tgz"
@@ -29,10 +29,6 @@ class Mbedtls < Formula
   end
 
   bottle do
-      cellar :any_skip_relocation
-      sha256 "e33432d90c849cfc01cd77c43b122e8305dca211937b14bf9d9cceeb0a65ea94" => :mavericks
-      sha256 "66309d0d9984655d096cbc6d4913f9a5f05e5cb40c73588297f5fa8b3ac5c263" => :yosemite
-      sha256 "ad274c8eec85d290d61a47345682e5ccb412c8039153e194c58e1531bf9ca8a4" => :el_capitan
   end
 
   depends_on "cmake" => :build
@@ -47,7 +43,7 @@ class Mbedtls < Formula
       s.gsub! "//#define MBEDTLS_THREADING_C", "#define MBEDTLS_THREADING_C"
     end
 
-    system "cmake", *std_cmake_args
+    system "cmake", "-DUSE_SHARED_MBEDTLS_LIBRARY=On .", *std_cmake_args
     system "make"
     system "make", "install"
 
