@@ -1,16 +1,31 @@
 class Fontconfig < Formula
   desc "XML-based font configuration API for X Windows"
   homepage "https://wiki.freedesktop.org/www/Software/fontconfig/"
-  url "https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.12.1.tar.bz2"
-  sha256 "b449a3e10c47e1d1c7a6ec6e2016cca73d3bd68fbbd4f0ae5cc6b573f7d6c7f3"
-  revision 4
+  revision 2
+
+  stable do
+    url "https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.12.1.tar.bz2"
+    sha256 "b449a3e10c47e1d1c7a6ec6e2016cca73d3bd68fbbd4f0ae5cc6b573f7d6c7f3"
+
+    patch do
+      # Fixes https://bugs.freedesktop.org/show_bug.cgi?id=97546, "fc-cache
+      # failure with /System/Library/Fonts", and #4172.
+      #
+      # Patch from upstream maintainer Akira TAGOH. See
+      #   https://bugs.freedesktop.org/show_bug.cgi?id=97546#c7
+      #   https://bugs.freedesktop.org/attachment.cgi?id=126464
+      url "https://raw.githubusercontent.com/Homebrew/formula-patches/3790bcd/fontconfig/patch-2.12.1-fccache.diff"
+      sha256 "e7c074109a367bf3966578034b20d11f7e0b4a611785a040aef1fd11359af04d"
+    end
+  end
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles"
     cellar :any
-    sha256 "6c1bf06d44c732a3304b4b8c39511e336fcce9e4255c59b250e18b63e30fe660" => :el_capitan
-    sha256 "a643c5596ef3e7c11d46d0cf8766f1e8a6e16dfedef55f0e14a2094d2e6bd3f0" => :yosemite
-    sha256 "217ed41407f0027afac6f1b3e6748ca51fb45e60168d0ee2b86c8ce1093ee7c2" => :mavericks
+    sha256 "593f068ccb155b27dad21699b753020292beaaa31bcd984ff4e70375ed3e7f41" => :sierra
+    sha256 "151acfcc10e7d9c38aca5e23d5acdb953f3d627f05e206a097d039e6e8168a4a" => :el_capitan
+    sha256 "72c9f7932c02e7ad44d9bed147ea26f84a7bc5ba681da6eb00e52c381b6f7a68" => :yosemite
+    sha256 "644c80b9c9b8af2c13329043f6921cac3d0effdd6a5ecc696484113a46b90488" => :mavericks
   end
 
   keg_only :provided_pre_mountain_lion
@@ -22,6 +37,7 @@ class Fontconfig < Formula
 
   def install
     ENV.universal_binary if build.universal?
+    system "autoreconf", "-iv" if build.head?
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--enable-static",
