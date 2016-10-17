@@ -8,14 +8,11 @@ class Libgfortran < Formula
   homepage 'http://gcc.gnu.org/wiki/GFortran'
   url 'https://github.com/staticfloat/homebrew-libgfortran-formula/archive/master.tar.gz'
   sha256 'daa3d315c20d39504e94318254968d97f9de6096900de00ea0dc40bb541154b4'
-  version '6.1'
+  version '6.2'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "51a3ddd770fa725d75270eba725a5d97f374e80df98a8381c85fff44087348e8" => :el_capitan
-    sha256 "04844f55ee5324bfbabaa8d2a75d53765c3686afb57f0ddfbf56e55f5a3bd399" => :mavericks
-    sha256 "c34a4b0b7b0ba2ab086c6e41066d2ca24a45f54841b026122373dbc6446a20b3" => :yosemite
   end
 
   depends_on 'gcc' => :build
