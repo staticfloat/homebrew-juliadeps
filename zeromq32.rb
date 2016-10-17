@@ -7,9 +7,11 @@ class Zeromq32 < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "2385b1c76c5d0db6b9cb34e9ce7e14ebafe02860a7ee8a4db12204172f1adc62" => :mavericks
-    sha256 "d26aae3f53183bf32e0baab81d710eb98002e297ae57b04d05506fb6f86b68c4" => :yosemite
-    sha256 "052c0e863530a6b261d08b1602d474cf993c7c2081586914cf21f6678958b47f" => :el_capitan
+    rebuild 1
+    sha256 "ce1222bc5a71fa713c0ed79dd68b3de070e3bbada894583af035c75cdbcb1778" => :mavericks
+    sha256 "6426b2ac1e017b6af8619872cb0b2ccd2d3f72cde05aff6efea199b3e87785aa" => :yosemite
+    sha256 "36ef4cea5f51d0fc72f719b386d2d1767df84462716013435acf7581cf11f4ff" => :sierra
+    sha256 "8fb98b9f0552215a0adbb8be868736dcb0c98ccec9061e33d757f83333e0f757" => :el_capitan
   end
 
   option :universal
