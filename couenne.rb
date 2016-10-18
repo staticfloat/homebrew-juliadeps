@@ -11,9 +11,11 @@ class Couenne < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "5945884f8192d5705f6011db410a7466c2c65295d02d02b21b049d707df1fcdf" => :yosemite
-    sha256 "519ff4a8f8fd2a5cfb5cd8b7a6e4306f09c728195cb1c76b5156d4270b35b31d" => :el_capitan
-    sha256 "d47d6572c2a7b2157c014e2c0b2313b7f77a030a41d14b90325433b9b00362cc" => :mavericks
+    rebuild 1
+    sha256 "117edf458a9ac707de24ec480ec2a6f4ae4448525c6620b9c30f6600ef37a651" => :mavericks
+    sha256 "5d852dc3973ee24ebc3f5b924dd082fcfb16510ab62d1f1762060e91a7b43d73" => :yosemite
+    sha256 "c5f4160692286d5c24303f9a4163186042f4c249e04088182a2f59023cd8dc62" => :el_capitan
+    sha256 "aad61d4043da6f9ed4a837b48dc480dc3394b5ef6d713ab78f5d6e0ccc1634d0" => :sierra
   end
 
   def install
