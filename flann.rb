@@ -21,7 +21,7 @@ class Flann < Formula
   option "without-examples", "Do not build and install example binaries"
 
   depends_on "cmake" => :build
-  depends_on "staticfloat/juliadeps/hdf5"
+  depends_on "homebrew/science/hdf5"
   depends_on "python" => :optional
   depends_on "octave" => :optional
   depends_on "numpy" => :python if build.with? "python"
