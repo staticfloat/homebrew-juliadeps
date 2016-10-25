@@ -9,7 +9,7 @@ class RmathJulia < Formula
 
   option "with-gcc", "Compile using GCC instead of Clang"
 
-  depends_on 'gcc' => :build if "with-gcc"
+  depends_on 'gcc' => :build if build.with? "gcc"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
