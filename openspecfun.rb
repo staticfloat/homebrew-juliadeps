@@ -13,7 +13,7 @@ class Openspecfun < Formula
   # anyway because it includes gfortran, which apparently is no longer its own
   # Homebrew formula.
   depends_on "gcc" => :build
-  depends_on "openlibm" if "with-openlibm"
+  depends_on "openlibm" if build.with? "openlibm"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
