@@ -13,14 +13,16 @@ class Openspecfun < Formula
   # anyway because it includes gfortran, which apparently is no longer its own
   # Homebrew formula.
   depends_on "gcc" => :build
-  depends_on "openlibm" if "with-openlibm"
+  depends_on "openlibm" if build.with? "openlibm"
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "c67bd279ef2df2d23fbfcdf4b5d3f7d2435ae17ad443594183083edd5168246f" => :mavericks
-    sha256 "5407ae2c6ab9e194aaa2e064b27e0428985db14ac4423d70ec2c1397ca4c57dc" => :yosemite
-    sha256 "0ec3363a691148d85c038f293152fb760aadf68e2ded1eb31d3ab72fa7e1d02a" => :el_capitan
+    rebuild 1
+    sha256 "6184f63d70321cfa68508b92b989fe48fdde051f7b590081b7f17339cdf833d8" => :mavericks
+    sha256 "695a26a6b6c36a39a84cbd91aec10af85109eb354b44597864371583ba5ad6f9" => :yosemite
+    sha256 "059f263bdc5dbedfa652aa631d72780e7c6a5be81192258fa059aae1789c471d" => :el_capitan
+    sha256 "27d4b863e0f764690c2aa35df7043ef7f819aba6a3613d7f57312c408fde27f7" => :sierra
   end
 
   def install

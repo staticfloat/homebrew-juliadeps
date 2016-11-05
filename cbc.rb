@@ -8,9 +8,11 @@ class Cbc < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "064c755b2e58c1dbe9f785d2d06d577c9512c51e0534a1fd83a8a204ad49b3b4" => :mavericks
-    sha256 "c92032a65a43fe484e115d2104a5072925150eb18fb14edc8f346efc19f62034" => :yosemite
-    sha256 "39641cf3667671b186710f5744c1f0c4a499e07644f992c0d23636b456c97a60" => :el_capitan
+    rebuild 1
+    sha256 "169f90ae3e3bbd57319d56a04e956673eac26b11892d14934dc96660175cfe51" => :mavericks
+    sha256 "1ab5239df38ee1e9c34725296d77ae95f2e9397f2d9fdf1c680f2bcb3c9b507f" => :yosemite
+    sha256 "5da729509a252b06654cf0ee312dd8f74bd9e477ac7f9567c6d332e2cc84c40c" => :el_capitan
+    sha256 "f384ee062fe2ccabdfeaf07f83904d6b566553186e39885bb44aeb063b7a02dd" => :sierra
   end
 
   def install

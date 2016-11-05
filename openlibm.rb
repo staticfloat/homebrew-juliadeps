@@ -9,9 +9,11 @@ class Openlibm < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "f8e9385b667205fce607160791cdf2e2781876d009136308473694e40e18ddf6" => :yosemite
-    sha256 "9051654487ab54730ead540d959ad9178cb4c1987442949b78718c0992ebaace" => :el_capitan
-    sha256 "45bca6d71876814a8958320f5274158cf70b599ab9ee502a02de7e4a0a51f4d5" => :mavericks
+    rebuild 1
+    sha256 "142b7f0eb1486c995fff0a5a567ab123956f5c28993b3ef09e6874001a8d2287" => :mavericks
+    sha256 "2bae7ef96f9de269387bce991ee9a203577e9448a6fbe5aab89bcd7edb3b95ed" => :yosemite
+    sha256 "565df4b24280d2a025009ee7486c942b15841d515bc8913b428bf2073bb24053" => :el_capitan
+    sha256 "43d79fa9f82e93048183eb2e5ac8d5ee794193d4f4f70eb3b446ebe318327699" => :sierra
   end
 
   def install

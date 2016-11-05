@@ -9,10 +9,11 @@ class Glpk455 < Formula
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "bef343addd233b4898654df05cf2fc017ee6c5d1e1ed9bb5245118431dffafd8" => :mountain_lion
-    sha256 "5e4c0b71643e88bf4949f9a6929fe975ba6635ec5979b047442590fd7c26c11d" => :yosemite
-    sha256 "1465b8cd1eb4a6fa6c5a791422d24aa8496e224962c5d2fcd469deeb99caef6a" => :mavericks
-    sha256 "a90a3a97d466c71d50a79501b1f38cae845389388246b3041ae5477e1acb239a" => :el_capitan
+    rebuild 1
+    sha256 "d6df75161253b67c7bc2376b1e88ae4fb14a38cb0d8676a9a4555b1baf246004" => :mavericks
+    sha256 "ea0e706f602fd4dc19481f729bfc5806638b70086b082e2355678ae99978f79d" => :yosemite
+    sha256 "9ad7ab4e04c3244cbcc4f6f1bae4296b825000c06b2ccd5d796d423b8cdd450d" => :el_capitan
+    sha256 "99b0070abbe28a0b55416f6c9561a6e369039f2a88f9b4b479c1cde7cede20d3" => :sierra
   end
 
   def install
