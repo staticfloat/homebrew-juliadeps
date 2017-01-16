@@ -8,6 +8,15 @@ class ImagemagickAT6 < Formula
   mirror "https://www.imagemagick.org/download/ImageMagick-6.9.7-3.tar.xz"
   sha256 "801767344b835b810a5f88c26f062f0fa01a97264dfe9bf5e5adf59a0b5c91a1"
 
+  bottle do
+    root_url 'https://juliabottles.s3.amazonaws.com'
+    cellar :any
+    sha256 "1614d1a859e04e73dc0938557bff0956328227e98e0adee1ab5daf7606fe3f9f" => :el_capitan
+    sha256 "967dc1b011623b09e36375a171213eb03af7bfdfa602572912e05642afa39104" => :sierra
+    sha256 "e561c2ccd47abd5249dcc078987addaf04b58c0cef871f7f9acb7229b80e874f" => :mavericks
+    sha256 "069eb6702aa0c97b6afe648de00a9ecf32c143a7fe2e21d65e3fa169c5798ca9" => :yosemite
+  end
+
   option "with-fftw", "Compile with FFTW support"
   option "with-hdri", "Compile with HDRI support"
   option "with-opencl", "Compile with OpenCL support"
