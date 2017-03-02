@@ -2,18 +2,17 @@ require "formula"
 
 class Scs < Formula
   homepage 'https://github.com/cvxgrp/scs'
-  url 'https://github.com/cvxgrp/scs/archive/v1.1.8.tar.gz'
+  url 'https://github.com/cvxgrp/scs/archive/v1.2.6.tar.gz'
   head 'https://github.com/cvxgrp/scs.git'
-  sha256 '4249df60aa3c27d6b4d46a162a766d3e391f7771ef3a3a68edd5380176c3ae92'
+  sha256 'b4bebb43a1257b6e88a5f97c855c0559d6c8a8c0548d3156fc5a28d82bb9533f'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    rebuild 1
-    sha256 "19038a11b540bf6d951d63b38f4762d5761d66c2140a59f515a62ae042f5d0a9" => :mavericks
-    sha256 "742e7f8f875dc6182062e7b65f7ce04682192b9f6089d0429d0c9a7a7fef3754" => :yosemite
-    sha256 "4e245c8b9a3c0eb955056be7718343f120af69b67b767a88e44e3430eb8331b0" => :el_capitan
-    sha256 "d67e41f1d55d82fb984c6429e10e4dbb1074062d072f4dc0e33503f38b90069b" => :sierra
+    sha256 "d0e82e6519b697f93b4f079f023f0a7d9e4abf59b16ad6b03930573453dc6a96" => :mavericks
+    sha256 "bdfbfd8f7497476a867538ad92624c9417c0453915cb4b273d7154b1005cef60" => :sierra
+    sha256 "408df13d78f4786c609563ed1fa9e8ba25902a188267c96606c4a91e86ce9980" => :el_capitan
+    sha256 "7e1535a472f31879f24926080900242437235ae57396a8d7e468dbaf311f7e96" => :yosemite
   end
 
   def install
