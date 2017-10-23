@@ -21,12 +21,12 @@ class Libgfortran < Formula
     # To generate a libgfortran installation, steal libraries from gcc!
     mkdir_p lib
     gcc = Formula['gcc']
-    for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
+    for f in ['quadmath.0', 'gcc_s.1', 'gfortran.4']
       system 'cp', "#{gcc.lib}/gcc/#{gcc.version_suffix}/lib#{f}.dylib", lib
     end
 
     # Create symlinks to non-versioned library versions
-    ln_s "libgfortran.3.dylib", "#{lib}/libgfortran.dylib"
+    ln_s "libgfortran.4.dylib", "#{lib}/libgfortran.dylib"
     ln_s "libgcc_s.1.dylib", "#{lib}/libgcc_s.dylib"
     ln_s "libquadmath.0.dylib", "#{lib}/libquadmath.dylib"
 
