@@ -8,15 +8,11 @@ class Libgfortran < Formula
   homepage 'http://gcc.gnu.org/wiki/GFortran'
   url 'https://github.com/staticfloat/homebrew-libgfortran-formula/archive/master.tar.gz'
   sha256 'daa3d315c20d39504e94318254968d97f9de6096900de00ea0dc40bb541154b4'
-  version '6.2'
+  version '7.2'
 
   bottle do
     root_url 'https://juliabottles.s3.amazonaws.com'
     cellar :any
-    sha256 "ab951259958a865904c7cb1faa7692fee6c36e29881f8be94134bd053a096ff9" => :mavericks
-    sha256 "dfaea5ed4ed027cf39a031bcb0dc314df98c54131fa38fdc814dd6afce65f525" => :yosemite
-    sha256 "93e623b2422c656ae65b7074fd53688ac5881b66040cdd7188c044f0ca9f7657" => :el_capitan
-    sha256 "b43adce8de1cce59fe4a13767d036bf5c57d0b51e0909db471cee867d6a17d45" => :sierra
   end
 
   depends_on 'gcc' => :build
@@ -72,7 +68,7 @@ def fixup_libgfortran(prefix)
       # Search its dependent dylibs
       keg.each_install_name_for(file) do |bad_name|
         # If we find a quadmath, gcc, or gfortran,
-        for f in ['quadmath.0', 'gcc_s.1', 'gfortran.3']
+        for f in ['quadmath.0', 'gcc_s.1', 'gfortran.4']
           if bad_name =~ /.*#{f}\.dylib/
             # Rename the dependency!
             good_name = libgfortran.opt_lib + Pathname.new(bad_name).basename
