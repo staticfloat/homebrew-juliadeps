@@ -1,9 +1,9 @@
 require 'formula'
 
 class Glpk452 < Formula
-  homepage 'http://www.gnu.org/software/glpk/'
-  url 'http://ftpmirror.gnu.org/glpk/glpk-4.52.tar.gz'
-  mirror 'http://ftp.gnu.org/gnu/glpk/glpk-4.52.tar.gz'
+  homepage 'https://www.gnu.org/software/glpk/'
+  url 'https://ftpmirror.gnu.org/glpk/glpk-4.52.tar.gz'
+  mirror 'https://ftp.gnu.org/gnu/glpk/glpk-4.52.tar.gz'
   sha256 '9a5dab356268b4f177c33e00ddf8164496dc2434e83bd1114147024df983a3bb'
 
   bottle do

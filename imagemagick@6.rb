@@ -34,7 +34,7 @@ class ImagemagickAT6 < Formula
   deprecated_option "with-jp2" => "with-openjpeg"
 
   depends_on "pkg-config" => :build
-  depends_on "libtool" => :run
+  depends_on "libtool"
   depends_on "xz"
 
   depends_on "jpeg" => :recommended
@@ -55,7 +55,7 @@ class ImagemagickAT6 < Formula
   depends_on "openjpeg" => :optional
   depends_on "fftw" => :optional
   depends_on "pango" => :optional
-  depends_on :perl => ["5.5", :optional]
+  depends_on "perl" => ["5.5", :optional]
 
   needs :openmp if build.with? "openmp"
 
