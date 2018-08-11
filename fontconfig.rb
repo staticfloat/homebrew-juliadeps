@@ -12,8 +12,6 @@ class Fontconfig < Formula
     sha256 "664c8faf84a8bd6e80ebd8ca175c8e0a4cb6087f867e208cea4d9f8cda643134" => :el_capitan
   end
 
-  keg_only :provided_pre_mountain_lion
-
   depends_on "pkg-config" => :build
   depends_on "freetype"
 
