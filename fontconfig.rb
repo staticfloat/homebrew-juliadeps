@@ -5,7 +5,6 @@ class Fontconfig < Formula
   sha256 "91dde8492155b7f34bb95079e79be92f1df353fcc682c19be90762fd3e12eeb9"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles"
     cellar :any
     sha256 "66ad096a51d6253be02b4d3df0299d422c8bd1bccf571ed64a8b8b21a2e77bc7" => :high_sierra
     sha256 "d822bc26c6b556606087e5807293492814fedf9d408c857006b0886608010400" => :sierra
