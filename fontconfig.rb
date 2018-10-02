@@ -1,15 +1,16 @@
 class Fontconfig < Formula
   desc "XML-based font configuration API for X Windows"
   homepage "https://wiki.freedesktop.org/www/Software/fontconfig/"
-  url "https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.13.0.tar.bz2"
-  sha256 "91dde8492155b7f34bb95079e79be92f1df353fcc682c19be90762fd3e12eeb9"
+  url "https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.13.1.tar.bz2"
+  sha256 "f655dd2a986d7aa97e052261b36aa67b0a64989496361eca8d604e6414006741"
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles"
     cellar :any
-    sha256 "66ad096a51d6253be02b4d3df0299d422c8bd1bccf571ed64a8b8b21a2e77bc7" => :high_sierra
-    sha256 "d822bc26c6b556606087e5807293492814fedf9d408c857006b0886608010400" => :sierra
-    sha256 "a8016f2aff75677bab388a0ab138b4528d787c44c337f6ee7236e0de4a1cb268" => :el_capitan
+    sha256 "1c704a5a4249252bf42dc4f2a458f911a7858a931858ad257d9ec39978ca5095" => :mojave
+    sha256 "3b763143a4d6e3c74b3a8b237d2e5a383696347ea3599d07957f73a3f6521d23" => :high_sierra
+    sha256 "631531c4eb502bd97e4a5bef30760d1eef87dd50306ef2defb9460ac3338cfe1" => :sierra
+    sha256 "40d70137a970e257de5cf1251b10d56d7db835faee88a9f4c020b4a4e4f82eb1" => :el_capitan
   end
 
   depends_on "pkg-config" => :build
@@ -22,10 +23,8 @@ class Fontconfig < Formula
       ~/Library/Fonts
     ]
 
-    if MacOS.version == :sierra
-      font_dirs << "/System/Library/Assets/com_apple_MobileAsset_Font3"
-    elsif MacOS.version == :high_sierra
-      font_dirs << "/System/Library/Assets/com_apple_MobileAsset_Font4"
+    if MacOS.version >= :sierra
+      font_dirs << Dir["/System/Library/Assets/com_apple_MobileAsset_Font*"].max
     end
 
     system "autoreconf", "-iv" if build.head?
@@ -41,7 +40,7 @@ class Fontconfig < Formula
 
   def post_install
     ohai "Regenerating font cache, this may take a while"
-    system "#{bin}/fc-cache -frv"
+    system "#{bin}/fc-cache". "-frv"
   end
 
   test do
